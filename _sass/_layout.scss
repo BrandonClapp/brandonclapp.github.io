@@ -4,7 +4,7 @@
   background-color: $color2;
   $header-height: 60px;
   height: $header-height;
-  border-top: 5px solid $color1;
+  border-top: 5px solid $color3;
 
   .logo {
       $logo-font-size: 20px;
@@ -16,7 +16,7 @@
       float: left;
 
       a {
-        color: $color5;
+        color: $color-borders;
       }
   }
 
@@ -41,5 +41,6 @@
 /* Footer */
 .site-footer {
   height: 300px;
-  background-color: $color2;
+  border-top: 3px solid $color2;
+  background-color: $color3;
 }

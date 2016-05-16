@@ -1,35 +1,16 @@
 ---
 layout: post
-title:  "Benefits of Socratic Dev Team Environments"
+title:  "Test Blog Post"
 date:   2016-05-15 13:21:41 -0500
 categories: dev team
-permalink: /benefits-of-socratic-dev-team-environments/
+permalink: /test-blog-post/
 ---
-# You don’t know everything
-As a developer, I’ve always taken the opportunity to absorb information from those who know more about particular subjects than I. Ultimately, no one knows everything and to think that one’s entire knowledge base can come from first hand experiences is absurd. Collaboration and the exchange of ideas is, in my opinion, what makes or breaks a development team.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras tristique lorem et dui feugiat ultricies. In hac habitasse platea dictumst. Sed ultricies, lacus id scelerisque faucibus, lorem neque molestie ipsum, et hendrerit diam justo ac magna. Sed pulvinar suscipit dui, non bibendum mi commodo ac. Quisque eget erat ipsum. Praesent vitae nibh porta, viverra arcu nec, auctor elit. Ut ut diam laoreet, ullamcorper leo nec, interdum sem. Phasellus turpis est, ultrices quis ultrices eu, sodales vitae risus. Aenean sollicitudin diam sed egestas scelerisque. Sed sed euismod nulla, et sollicitudin metus. Pellentesque et est ut eros dignissim dignissim ut non orci.
 
-In the 1980s, the Sam Walton was arrested after crawling around in stores on his hands and knees. When Walton’s friends came to bail him out, he told them he’d been measuring aisle widths to determine exactly how they displayed their wares. If Sam Walton, the founder of the largest retailer in the world was willing to go to that length to learn from others then what’s your excuse?
+Integer ultrices nibh eu dignissim accumsan. Quisque commodo, neque a consequat ullamcorper, ante purus iaculis ex, nec posuere purus felis quis purus. Nullam hendrerit at nisi ut tempus. Sed vitae lorem mi. Interdum et malesuada fames ac ante ipsum primis in faucibus. Maecenas ullamcorper tellus id nisl ultricies, id condimentum elit tristique. Nunc et malesuada odio, sit amet hendrerit risus. Integer sit amet nisi felis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec et nisi ut massa laoreet scelerisque eu id lectus.
 
-# Most things are highly opinionated
-Most things published to the internet are cat pictures and highly opinionated rants. Unfortunately, most people don’t question the source or reasoning behind such information. When researching a new technology or concept, the first thing read immediately becomes cold hard fact. Once it’s read, it must be true.
+Donec dapibus eros ac viverra cursus. Nulla lacinia lacus in nunc elementum, a consectetur sapien pulvinar. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla facilisi. Duis vehicula condimentum elit. Aenean tincidunt et justo a mattis. In sed urna sit amet nisl accumsan ullamcorper. Mauris semper aliquam congue. Vivamus blandit pellentesque rutrum. Vestibulum vulputate urna eget lobortis cursus. Cras facilisis, mi vel bibendum laoreet, sem libero sollicitudin arcu, quis tincidunt massa urna ut nulla. In aliquet ipsum purus, sed faucibus justo dignissim vitae. Suspendisse faucibus lacus sit amet arcu sodales, ac scelerisque nisi dictum. Aliquam sit amet lorem quis augue consectetur vestibulum et sed lectus. Nam euismod, justo sed gravida faucibus, justo enim tristique magna, vitae condimentum nibh nulla a neque. Aliquam id nunc imperdiet, dapibus quam non, vestibulum dolor.
 
-I fell into this trap last week where I read that JavaScript was multi-threaded when used with node.js. This, of course, is not true. After pondering on the idea for a while, I realized that the information that I had read didn’t add up. After having a discussion with co-workers, doing further research, and trying it on my own I had a more in depth understanding of it. Had I not have thought for myself, I would still be carrying incorrect knowledge, spreading misinformation to all who were also as ignorant of the topic as I.
+Etiam lobortis diam lorem, vitae dictum nunc maximus vel. Nam ullamcorper ante ligula, ac varius quam scelerisque at. Vestibulum ut commodo lacus, non laoreet nulla. Vivamus quis nisi mauris. Nunc sit amet dictum libero, quis consequat orci. Nam nec posuere orci, scelerisque sollicitudin magna. Vestibulum commodo varius lacus, sit amet venenatis ex.
 
-https://github.com/BrandonClapp/get-off-my-thread
-
-# Asking question’s doesn’t make you sound dumb
-There seems to be this idea that asking questions is only for the junior developer or “one who needs guidance”. I mean, a “senior” developer would never be caught asking “THAT” question, right!?
-
-Asking questions helps the development team grow together. Chances are you’re not the only person that has the question (and if you are, so what?). There are too many frameworks, libraries, tools, concepts, design patterns…etc in the software development scene, that a single developer simply can not keep up with every single one of them. That being said, even if they could, they certainly would not be an expert at them.
-
-Collaboration between developers is healthy. More info why it’s important:
-
-https://en.wikipedia.org/wiki/Socratic_method
-
-# Be weary of those who claim to be experts
-
-…Unless they have a reputable backing of followers or have a track record of typically being a reliable source. Just as asking questions is a natural function of being human, reading an introductory article online doesn’t make someone an expert. Going through a 5 minute interactive tutorial does not constitute knowing the in’s and out’s of every details. Eliminate people with such claims from your trusted sources. Also, upgrade your BS detector.
-
-![space wallpaper]({{ site.url }}/assets/images/space.jpg)
-
-**Categories:** {% for cat in page.categories %} <span>{{ cat }}</span> {% endfor %}
+Nullam nec lacinia dui. Etiam sit amet lacus vulputate, aliquet velit a, mattis nibh. Curabitur non lacus libero. Praesent eget metus nec turpis iaculis aliquet. Nulla finibus pretium sem iaculis porttitor. Maecenas ut purus dui. Donec vestibulum dictum quam ac semper. Vivamus eleifend nisl sed purus eleifend, at rhoncus mi faucibus. Quisque diam nisi, malesuada et turpis quis, posuere tincidunt risus. Mauris non metus risus. Sed tristique dictum nibh, sit amet viverra urna aliquet nec.

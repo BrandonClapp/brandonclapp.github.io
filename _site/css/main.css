@@ -51,6 +51,8 @@ table {
 h1, h2, h3, h4, h5, h6,
 p, blockquote, pre,
 ul, ol, dl, figure,
+.page,
+.banner,
 .highlight {
   margin-bottom: 15px; }
 
@@ -58,30 +60,31 @@ body {
   font-family: 'Roboto Condensed', sans-serif;
   font-size: 14px;
   color: #000;
-  font-weight: 400; }
+  font-weight: 400;
+  background-color: #457B9D; }
 
 p {
   line-height: 24px; }
 
 a {
-  color: #C7EFCF;
+  color: #457B9D;
   text-decoration: none; }
   a:hover, a :focus, a :visited {
-    color: #D6D1B1; }
+    color: #A8DADC; }
 
 .page {
-  background-color: #c7efcf; }
+  background-color: #457b9d; }
   .page .content {
-    background-color: #EEF5DB;
+    background-color: #A8DADC;
     width: 1000px;
     padding: 1em;
     margin: 0 auto; }
 
 /* Header */
 .site-header {
-  background-color: #FE5F55;
+  background-color: #F1FAEE;
   height: 60px;
-  border-top: 5px solid #F0B67F; }
+  border-top: 5px solid #A8DADC; }
   .site-header .logo {
     text-transform: uppercase;
     font-size: 20px;
@@ -90,7 +93,7 @@ a {
     font-weight: 400;
     float: left; }
     .site-header .logo a {
-      color: #EEF5DB; }
+      color: #1D3557; }
   .site-header .wrapper {
     width: 1000px;
     margin: 0 auto; }
@@ -105,11 +108,26 @@ a {
 /* Footer */
 .site-footer {
   height: 300px;
-  background-color: #FE5F55; }
+  border-top: 3px solid #F1FAEE;
+  background-color: #A8DADC; }
 
 .banner {
-  background-color: #F0B67F;
-  height: 400px; }
+  background-color: #E63946;
+  border-top: 3px solid #457B9D;
+  height: 150px; }
+  .banner .banner-film {
+    background: rgba(0, 0, 0, 0.6);
+    height: 150px; }
+
+.banner-home {
+  background-image: url("/assets/images/sky2.jpg");
+  background-size: cover;
+  background-position: left bottom; }
+  .banner-home .greetings {
+    font-size: 32px;
+    color: white;
+    text-align: center;
+    padding-top: 40px; }
 
 /**
  * Syntax highlighting styles
