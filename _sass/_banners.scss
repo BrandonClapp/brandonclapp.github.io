@@ -1,7 +1,8 @@
 $banner-height: 150px;
 
 .banner {
-    @extend %vertical-rhythm;
+    // @extend %vertical-rhythm;
+    margin-bottom: ($spacing-unit/2);
   background-color: $color1;
   border-top: 3px solid $color4;
   height: $banner-height;

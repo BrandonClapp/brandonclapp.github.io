@@ -45,17 +45,6 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-/**
- * Set `margin-bottom` to maintain vertical rhythm
- */
-h1, h2, h3, h4, h5, h6,
-p, blockquote, pre,
-ul, ol, dl, figure,
-.page,
-.banner,
-.highlight {
-  margin-bottom: 15px; }
-
 body {
   font-family: 'Roboto Condensed', sans-serif;
   font-size: 14px;
@@ -69,8 +58,24 @@ p {
 a {
   color: #457B9D;
   text-decoration: none; }
-  a:hover, a :focus, a :visited {
+  a:hover,
+  a :focus,
+  a :visited {
     color: #A8DADC; }
+
+.pull-left {
+  float: left; }
+
+.pull-right {
+  float: right; }
+
+.clearfix {
+  clear: both;
+  margin-bottom: 30px; }
+
+.col-6 {
+  width: 50%;
+  box-sizing: border-box; }
 
 .page {
   background-color: #457b9d; }
@@ -78,7 +83,8 @@ a {
     background-color: #A8DADC;
     width: 1000px;
     padding: 1em;
-    margin: 0 auto; }
+    margin: 0 auto 20px;
+    box-sizing: border-box; }
 
 /* Header */
 .site-header {
@@ -95,7 +101,7 @@ a {
     .site-header .logo a {
       color: #1D3557; }
   .site-header .wrapper {
-    width: 1000px;
+    max-width: 1000px;
     margin: 0 auto; }
     .site-header .wrapper .site-nav {
       font-size: 14px;
@@ -105,6 +111,18 @@ a {
         text-transform: lowercase;
         margin-left: 1em; }
 
+.container {
+  max-width: 1000px;
+  margin: 0 auto; }
+
+.github-list {
+  border: 1px solid #E63946;
+  padding-right: 10px; }
+
+.twitter-list {
+  border: 1px solid #E63946;
+  padding-left: 10px; }
+
 /* Footer */
 .site-footer {
   height: 300px;
@@ -112,6 +130,7 @@ a {
   background-color: #A8DADC; }
 
 .banner {
+  margin-bottom: 15px;
   background-color: #E63946;
   border-top: 3px solid #457B9D;
   height: 150px; }
@@ -133,7 +152,8 @@ a {
  * Syntax highlighting styles
  */
 .highlight {
-  background: #fff; }
+  background: #fff;
+  margin-bottom: 15px; }
   .highlighter-rouge .highlight {
     background: #eef; }
   .highlight .c {

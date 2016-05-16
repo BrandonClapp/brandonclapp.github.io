@@ -21,7 +21,7 @@
   }
 
   .wrapper {
-    width: $content-width;
+    max-width: $content-width;
     margin: 0 auto;
 
     .site-nav {
@@ -36,6 +36,21 @@
       }
     }
   }
+}
+
+.container {
+    max-width: $content-width;
+    margin: 0 auto;
+}
+
+.github-list {
+    border: 1px solid $color1;
+    padding-right: 10px;
+}
+
+.twitter-list {
+    border: 1px solid $color1;
+    padding-left: 10px;
 }
 
 /* Footer */

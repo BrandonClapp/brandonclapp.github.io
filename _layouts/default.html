@@ -8,9 +8,8 @@
       {% assign banner = page.banner %}
       {% include banners/{{banner}}.html %}
       {% endif %}
-      <div class="content">
-        {{ content }}
-      </div>
+
+      {{content}}
     </div>
     {% include footer.html %}
   </body>
