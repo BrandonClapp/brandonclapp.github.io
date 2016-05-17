@@ -50,7 +50,26 @@ body {
   font-size: 14px;
   color: #000;
   font-weight: 400;
-  background-color: #457B9D; }
+  background-color: #457B9D;
+  margin-top: 80px; }
+
+h1 {
+  font-size: 32px; }
+
+h2 {
+  font-size: 28px; }
+
+h3 {
+  font-size: 24px; }
+
+h4 {
+  font-size: 20px; }
+
+h5 {
+  font-size: 18px; }
+
+h6 {
+  font-size: 16px; }
 
 p {
   line-height: 24px; }
@@ -77,6 +96,23 @@ a {
   width: 50%;
   box-sizing: border-box; }
 
+.panel {
+  border-radius: 3px;
+  border: 2px solid white; }
+  .panel .panel-header h2 {
+    font-size: 20px;
+    font-weight: 400;
+    padding: 10px;
+    letter-spacing: .03em; }
+  .panel .panel-body {
+    padding: 15px; }
+
+.transparent {
+  background: rgba(0, 0, 0, 0.4); }
+
+.transparent-inverse {
+  background: rgba(255, 255, 255, 0.6); }
+
 .page {
   background-color: #457b9d; }
   .page .content {
@@ -88,39 +124,44 @@ a {
 
 /* Header */
 .site-header {
-  background-color: #F1FAEE;
-  height: 60px;
-  border-top: 5px solid #A8DADC; }
+  background: rgba(255, 255, 255, 0.8);
+  height: 80px;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  border-bottom: 3px solid #1D3557; }
   .site-header .logo {
     text-transform: uppercase;
     font-size: 20px;
-    margin-top: 20px;
+    margin-top: 30px;
     letter-spacing: .1em;
     font-weight: 400;
     float: left; }
     .site-header .logo a {
-      color: #1D3557; }
+      color: black; }
   .site-header .wrapper {
     max-width: 1000px;
     margin: 0 auto; }
     .site-header .wrapper .site-nav {
       font-size: 14px;
       float: right;
-      margin-top: 23px; }
+      margin-top: 33px; }
       .site-header .wrapper .site-nav .page-link {
         text-transform: lowercase;
         margin-left: 1em; }
+
+#banner-widgets {
+  margin-top: 80px; }
 
 .container {
   max-width: 1000px;
   margin: 0 auto; }
 
 .github-list {
-  border: 1px solid #E63946;
   padding-right: 10px; }
 
 .twitter-list {
-  border: 1px solid #E63946;
   padding-left: 10px; }
 
 /* Footer */
@@ -131,22 +172,32 @@ a {
 
 .banner {
   margin-bottom: 15px;
-  background-color: #E63946;
-  border-top: 3px solid #457B9D;
-  height: 150px; }
+  padding-top: 1px;
+  height: 470px; }
   .banner .banner-film {
-    background: rgba(0, 0, 0, 0.6);
-    height: 150px; }
+    background: rgba(68, 64, 84, 0.6);
+    height: 479px;
+    height: 470px; }
 
 .banner-home {
-  background-image: url("/assets/images/sky2.jpg");
+  background-image: url("/assets/images/banner1.jpg");
   background-size: cover;
-  background-position: left bottom; }
+  background-position: left center; }
   .banner-home .greetings {
-    font-size: 32px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 48px;
+    text-transform: uppercase;
     color: white;
     text-align: center;
-    padding-top: 40px; }
+    padding-top: 120px;
+    text-shadow: 3px 3px 2px rgba(150, 150, 150, 0.75); }
+  .banner-home #tagline {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 200;
+    font-size: 24px;
+    color: white;
+    text-align: center;
+    padding-top: 20px; }
 
 /**
  * Syntax highlighting styles

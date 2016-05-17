@@ -5,7 +5,15 @@ body {
     color: #000;
     font-weight: 400;
     background-color: $color4;
+    margin-top: 80px;
 }
+
+h1 { font-size: 32px; }
+h2 { font-size: 28px; }
+h3 { font-size: 24px; }
+h4 { font-size: 20px; }
+h5 { font-size: 18px; }
+h6 { font-size: 16px; }
 
 p {
     line-height: 24px;
@@ -37,6 +45,36 @@ a {
 .col-6 {
     width: 50%;
     box-sizing: border-box;
+}
+
+.panel {
+  // background-color: $color3;
+  border-radius: 3px;
+  border: 2px solid white;
+
+  .panel-header {
+    //background-color: $color2;
+
+    h2 {
+      //font-family: 'Oswald', sans-serif;
+      font-size: 20px;
+      font-weight: 400;
+      padding: 10px;
+      letter-spacing: .03em;
+    }
+  }
+
+  .panel-body {
+    padding: 15px;
+  }
+}
+
+.transparent {
+  background: rgba(0,0,0,0.4);
+}
+
+.transparent-inverse {
+  background: rgba(255,255,255,0.6);
 }
 
 .page {
