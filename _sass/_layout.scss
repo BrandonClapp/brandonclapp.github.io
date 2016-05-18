@@ -43,7 +43,32 @@
 }
 
 #banner-widgets {
-  margin-top: 80px;
+  margin: 80px auto;
+  $icon-width: 80px;
+  $icon-margin: 15px;
+  $icon-count: 3;
+
+  width: ($icon-width * $icon-count) + (($icon-count - 1) * $icon-margin);
+
+  .icon {
+    width: $icon-width;
+    float: left;
+    margin-right: 15px;
+    opacity: 0.6;
+    transition: opacity .7s;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:last-child:after {
+      clear: both;
+    }
+  }
 }
 
 .container {

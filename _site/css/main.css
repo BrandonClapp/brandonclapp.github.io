@@ -152,7 +152,20 @@ a {
         margin-left: 1em; }
 
 #banner-widgets {
-  margin-top: 80px; }
+  margin: 80px auto;
+  width: 270px; }
+  #banner-widgets .icon {
+    width: 80px;
+    float: left;
+    margin-right: 15px;
+    opacity: 0.6;
+    transition: opacity .7s; }
+    #banner-widgets .icon:hover {
+      opacity: 1; }
+    #banner-widgets .icon:last-child {
+      margin-right: 0; }
+    #banner-widgets .icon:last-child:after {
+      clear: both; }
 
 .container {
   max-width: 1000px;
