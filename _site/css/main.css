@@ -126,6 +126,7 @@ a {
 .site-header {
   background: rgba(255, 255, 255, 0.8);
   height: 80px;
+  max-width: 100%;
   position: fixed;
   left: 0;
   right: 0;
@@ -186,11 +187,10 @@ a {
 .banner {
   margin-bottom: 15px;
   padding-top: 1px;
-  height: 470px; }
+  height: 380px; }
   .banner .banner-film {
     background: rgba(68, 64, 84, 0.6);
-    height: 479px;
-    height: 470px; }
+    height: 380px; }
 
 .banner-home {
   background-image: url("/assets/images/banner1.jpg");
@@ -202,7 +202,7 @@ a {
     text-transform: uppercase;
     color: white;
     text-align: center;
-    padding-top: 120px;
+    padding-top: 80px;
     text-shadow: 3px 3px 2px rgba(150, 150, 150, 0.75); }
   .banner-home #tagline {
     font-family: 'Oswald', sans-serif;
