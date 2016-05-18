@@ -81,7 +81,7 @@ a {
     background-color: lighten($color4, 0%);
     .content {
         background-color: $color3;
-        width: $content-width;
+        max-width: $content-width;
         padding: 1em;
         margin: 0 auto 20px;
         box-sizing: border-box;

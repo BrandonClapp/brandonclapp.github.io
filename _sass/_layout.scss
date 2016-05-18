@@ -4,7 +4,7 @@
   background: rgba(255,255,255, 0.8);
   $header-height: 80px;
   height: $header-height;
-  max-width: 100%;
+  // max-width: 100%;
   position: fixed;
   left: 0;
   right: 0;
@@ -26,7 +26,7 @@
   }
 
   .wrapper {
-    max-width: $content-width;
+    // max-width: $content-width;
     margin: 0 auto;
 
     .site-nav {
@@ -73,7 +73,7 @@
 }
 
 .container {
-    max-width: $content-width;
+    // max-width: $content-width;
     margin: 0 auto;
 }
 

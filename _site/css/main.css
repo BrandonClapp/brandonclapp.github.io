@@ -117,7 +117,7 @@ a {
   background-color: #457b9d; }
   .page .content {
     background-color: #A8DADC;
-    width: 1000px;
+    max-width: 1000px;
     padding: 1em;
     margin: 0 auto 20px;
     box-sizing: border-box; }
@@ -126,7 +126,6 @@ a {
 .site-header {
   background: rgba(255, 255, 255, 0.8);
   height: 80px;
-  max-width: 100%;
   position: fixed;
   left: 0;
   right: 0;
@@ -142,7 +141,6 @@ a {
     .site-header .logo a {
       color: black; }
   .site-header .wrapper {
-    max-width: 1000px;
     margin: 0 auto; }
     .site-header .wrapper .site-nav {
       font-size: 14px;
@@ -169,7 +167,6 @@ a {
       clear: both; }
 
 .container {
-  max-width: 1000px;
   margin: 0 auto; }
 
 .github-list {
@@ -204,6 +201,9 @@ a {
     text-align: center;
     padding-top: 80px;
     text-shadow: 3px 3px 2px rgba(150, 150, 150, 0.75); }
+    @media screen and (max-width: 500px) {
+      .banner-home .greetings {
+        font-size: 32px; } }
   .banner-home #tagline {
     font-family: 'Oswald', sans-serif;
     font-weight: 200;
