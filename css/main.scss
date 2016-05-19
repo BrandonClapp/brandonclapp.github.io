@@ -9,6 +9,9 @@
 $spacing-unit:     30px;
 $content-width:    1000px;
 
+$breakpoint-tablet: $content-width;
+$breakpoint-mobile: 500px;
+
 $color1:          #E63946; // red/orange
 $color2:          #F1FAEE; // off-white
 $color3:          #A8DADC; // light blue

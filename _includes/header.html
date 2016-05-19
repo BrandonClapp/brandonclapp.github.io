@@ -11,5 +11,17 @@
         {% endif %}
       {% endfor %}
     </nav>
+
+    <nav class="mobile-site-nav">
+      <div class="mobile-menu-icon">
+        {% include icon-mobile-menu.svg %}
+      </div>
+      <!-- {% for my_page in site.pages %}
+        {% if my_page.title %}
+        <a class="page-link" href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a>
+        {% endif %}
+      {% endfor %} -->
+    </nav>
+    <div class="clearfix"></div>
   </div>
 </header>

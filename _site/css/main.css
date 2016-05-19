@@ -131,6 +131,9 @@ a {
   right: 0;
   top: 0;
   border-bottom: 3px solid #1D3557; }
+  @media (max-width: 1000px) {
+    .site-header {
+      padding: 0 20px; } }
   .site-header .logo {
     text-transform: uppercase;
     font-size: 20px;
@@ -141,14 +144,27 @@ a {
     .site-header .logo a {
       color: black; }
   .site-header .wrapper {
+    max-width: 1000px;
     margin: 0 auto; }
     .site-header .wrapper .site-nav {
       font-size: 14px;
       float: right;
       margin-top: 33px; }
+      @media (max-width: 500px) {
+        .site-header .wrapper .site-nav {
+          display: none; } }
       .site-header .wrapper .site-nav .page-link {
         text-transform: lowercase;
         margin-left: 1em; }
+    .site-header .wrapper .mobile-site-nav {
+      display: none; }
+      @media (max-width: 500px) {
+        .site-header .wrapper .mobile-site-nav {
+          display: block;
+          float: right;
+          margin-top: 24px; } }
+      .site-header .wrapper .mobile-site-nav .mobile-menu-icon {
+        width: 32px; }
 
 #banner-widgets {
   margin: 80px auto;
