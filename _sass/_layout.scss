@@ -65,50 +65,6 @@
   }
 }
 
-#banner-widgets {
-  margin: 80px auto;
-  $icon-width: 80px;
-  $icon-margin: 15px;
-  $icon-count: 3;
-
-  width: ($icon-width * $icon-count) + (($icon-count - 1) * $icon-margin);
-
-  .icon {
-    width: $icon-width;
-    float: left;
-    margin-right: 15px;
-    opacity: 0.6;
-    transition: opacity .7s;
-
-    &:hover {
-      opacity: 1;
-    }
-
-    &:last-child {
-      margin-right: 0;
-    }
-
-    &:last-child:after {
-      clear: both;
-    }
-  }
-}
-
-.container {
-    // max-width: $content-width;
-    margin: 0 auto;
-}
-
-.github-list {
-    // border: 1px solid $color1;
-    padding-right: 10px;
-}
-
-.twitter-list {
-    // border: 1px solid $color1;
-    padding-left: 10px;
-}
-
 /* Footer */
 .site-footer {
   height: 300px;
