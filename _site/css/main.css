@@ -54,22 +54,28 @@ body {
   margin-top: 80px; }
 
 h1 {
-  font-size: 32px; }
+  font-size: 32px;
+  margin: .5em 0; }
 
 h2 {
-  font-size: 28px; }
+  font-size: 28px;
+  margin: .5em 0; }
 
 h3 {
-  font-size: 24px; }
+  font-size: 24px;
+  margin: .5em 0; }
 
 h4 {
-  font-size: 20px; }
+  font-size: 20px;
+  margin: .5em 0; }
 
 h5 {
-  font-size: 18px; }
+  font-size: 18px;
+  margin: .5em 0; }
 
 h6 {
-  font-size: 16px; }
+  font-size: 16px;
+  margin: .5em 0; }
 
 p {
   line-height: 24px; }
@@ -228,9 +234,24 @@ a {
 .twitter-list {
   padding-left: 10px; }
 
+#latest-posts {
+  max-width: 1000px;
+  margin: 0 auto; }
+  #latest-posts h3 {
+    color: #F1FAEE;
+    margin-bottom: .5em;
+    font-size: 20px;
+    font-weight: 300;
+    margin-left: .5em; }
+
 /* Exerpt styling */
 ul.post-list .post {
-  margin-bottom: 15px; }
+  margin: 1.5em 0; }
+  ul.post-list .post:first-child {
+    margin-top: 0; }
+  ul.post-list .post p {
+    line-height: 20px;
+    font-size: 15px; }
   ul.post-list .post hr {
     margin-top: 15px;
     border-top: 1px solid #71c3c6;

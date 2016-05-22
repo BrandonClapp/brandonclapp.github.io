@@ -35,16 +35,35 @@
     padding-left: 10px;
 }
 
+#latest-posts {
+  max-width: $content-width;
+  margin: 0 auto;
+  h3 {
+    color: $color2;
+    margin-bottom: .5em;
+    font-size: 20px;
+    font-weight: 300;
+    margin-left: .5em;
+  }
+}
+
 /* Exerpt styling */
 ul.post-list {
-  // background-color: white;
-
-
   .post {
-    margin-bottom: $spacing-unit/2;
+    // margin-top: 1.0em;
+    // margin-bottom: $spacing-unit/2;
+    margin: 1.5em 0;
 
-    // make this slightly darker than the bg color.
-    // border-bottom: 1px solid darken($color3, 5%);
+    &:first-child {
+      margin-top: 0;
+    }
+
+    p {
+      line-height: 20px;
+      font-size: 15px;
+    }
+
+    // h2 { margin-bottom: }
 
     hr {
       margin-top: $spacing-unit/2;
@@ -60,7 +79,6 @@ ul.post-list {
 
     .post-title {
       font-size: 24px;
-      // letter-spacing: .02em;
     }
 
     .post-meta {
