@@ -2,10 +2,9 @@ $banner-height: 380px;
 
 .banner {
     margin-bottom: ($spacing-unit/2);
-  // background-color: $color1;
-  // border-top: 3px solid $color4;
   padding-top: 1px; // for collapsing margins
   height: $banner-height;
+  border-bottom: 5px solid $color2;
 
   .banner-film {
       background: rgba(68,64,84, 0.6);

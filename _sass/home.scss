@@ -37,5 +37,35 @@
 
 /* Exerpt styling */
 ul.post-list {
-  background-color: white;
+  // background-color: white;
+
+
+  .post {
+    margin-bottom: $spacing-unit/2;
+
+    // make this slightly darker than the bg color.
+    // border-bottom: 1px solid darken($color3, 5%);
+
+    hr {
+      margin-top: $spacing-unit/2;
+      border-top: 1px solid darken($color3, 15%);
+      border-bottom: 1px solid lighten($color3, 15%);
+    }
+
+    &:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    .post-title {
+      font-size: 24px;
+      // letter-spacing: .02em;
+    }
+
+    .post-meta {
+      margin: 10px 0;
+      letter-spacing: .05em;
+    }
+  }
 }

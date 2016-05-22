@@ -4,7 +4,8 @@ body {
     font-size: 14px;
     color: #000;
     font-weight: 400;
-    background-color: $color4;
+    //background-color: $color4;
+    background-color: lighten($color-borders, 20%);
     margin-top: 80px;
 }
 
@@ -75,17 +76,6 @@ a {
 
 .transparent-inverse {
   background: rgba(255,255,255,0.6);
-}
-
-.page {
-    background-color: lighten($color4, 0%);
-    .content {
-        background-color: $color3;
-        max-width: $content-width;
-        padding: 1em;
-        margin: 0 auto 20px;
-        box-sizing: border-box;
-    }
 }
 
 .container {

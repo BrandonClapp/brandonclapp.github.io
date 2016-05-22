@@ -65,9 +65,22 @@
   }
 }
 
+.page {
+    // background-color: lighten($color4, 0%);
+    // background-color: $color3;
+    .content {
+        background-color: lighten($color3, 15%);
+        border: 2px solid $color-borders;
+        max-width: $content-width;
+        padding: 1em;
+        margin: 0 auto 20px;
+        box-sizing: border-box;
+    }
+}
+
 /* Footer */
 .site-footer {
   height: 300px;
   border-top: 3px solid $color2;
-  background-color: $color3;
+  background-color: lighten($color4, 30%);
 }
