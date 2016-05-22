@@ -7,15 +7,20 @@ $banner-height: 380px;
   border-bottom: 5px solid $color2;
 
   .banner-film {
-      background: rgba(68,64,84, 0.6);
+      background: rgba(68,64,84, 0.7);
       height: $banner-height;
+      transition: background .5s;
+
+      &:hover {
+        background: rgba(68,64,84, 0.6);
+      }
   }
 }
 
 .banner-home {
-    background-image: url('/assets/images/banner1.jpg');
+    background-image: url('/assets/images/bg2.JPG');
     background-size: cover;
-    background-position: left center;
+    background-position: left top;
 
     .greetings {
       font-family: 'Oswald', sans-serif;

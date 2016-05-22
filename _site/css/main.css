@@ -186,13 +186,16 @@ a {
   height: 380px;
   border-bottom: 5px solid #F1FAEE; }
   .banner .banner-film {
-    background: rgba(68, 64, 84, 0.6);
-    height: 380px; }
+    background: rgba(68, 64, 84, 0.7);
+    height: 380px;
+    transition: background .5s; }
+    .banner .banner-film:hover {
+      background: rgba(68, 64, 84, 0.6); }
 
 .banner-home {
-  background-image: url("/assets/images/banner1.jpg");
+  background-image: url("/assets/images/bg2.JPG");
   background-size: cover;
-  background-position: left center; }
+  background-position: left top; }
   .banner-home .greetings {
     font-family: 'Oswald', sans-serif;
     font-size: 48px;
@@ -227,6 +230,11 @@ a {
       margin-right: 0; }
     #banner-widgets .icon:last-child:after {
       clear: both; }
+
+.content {
+  -webkit-box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75); }
 
 .github-list {
   padding-right: 10px; }
