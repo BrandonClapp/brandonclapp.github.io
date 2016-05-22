@@ -5,7 +5,7 @@ banner: home
 
 <div class="content">
     <ul class="post-list">
-        {% for post in site.posts %}
+        {% for post in site.posts | limit: 5 %}
         <li class="post">
             <h2 class="post-title">
                 <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
