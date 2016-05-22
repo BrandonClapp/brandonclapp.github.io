@@ -1,11 +1,12 @@
 body {
     //font-family: 'Oswald', sans-serif;
-    font-family: 'Roboto Condensed', sans-serif;
+    // font-family: 'Roboto Condensed', sans-serif;
+    font-family: $font3;
     font-size: 14px;
     color: #000;
     font-weight: 400;
     //background-color: $color4;
-    background-color: lighten($color-borders, 20%);
+    background-color: lighten($color1, 5%);
     margin-top: 80px;
 }
 

@@ -28,9 +28,9 @@
 }
 
 .content {
-  -webkit-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
-  -moz-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
-  box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
+  // -webkit-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
+  // -moz-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
+  // box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
 }
 
 .github-list {
@@ -45,40 +45,32 @@
   max-width: $content-width;
   margin: 0 auto;
   h3 {
-    color: $color2;
+    color: $color-borders;
     margin-bottom: .5em;
     font-size: 20px;
     font-weight: 300;
     margin-left: .5em;
   }
+
+  hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    margin: 1em 0;
+    padding: 0;
+    border-top: 1px solid $color-light-borders;
+  }
 }
 
 /* Exerpt styling */
 ul.post-list {
-  .post {
-    margin: 1.5em 0;
 
-    &:first-child {
-      margin-top: 0;
-    }
+  .post {
+    padding: 1em;
 
     p {
       line-height: 20px;
       font-size: 15px;
-    }
-
-    // h2 { margin-bottom: }
-
-    hr {
-      margin-top: $spacing-unit/2;
-      border-top: 1px solid darken($color3, 15%);
-      border-bottom: 1px solid lighten($color3, 15%);
-    }
-
-    &:last-child {
-      border-bottom: none;
-      margin-bottom: 0;
-      padding-bottom: 0;
     }
 
     .post-title {
@@ -86,7 +78,7 @@ ul.post-list {
     }
 
     .post-meta {
-      margin: 10px 0;
+      padding: 10px 0;
       letter-spacing: .05em;
     }
   }

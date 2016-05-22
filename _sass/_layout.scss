@@ -69,10 +69,10 @@
     // background-color: lighten($color4, 0%);
     // background-color: $color3;
     .content {
-        background-color: lighten($color3, 15%);
-        border: 2px solid $color-borders;
+        // background-color: lighten($color3, 15%);
+        //border: 2px solid $color-light-borders;
         max-width: $content-width;
-        padding: 1em;
+        // padding: 1em;
         margin: 0 auto 20px;
         box-sizing: border-box;
     }
@@ -81,6 +81,29 @@
 /* Footer */
 .site-footer {
   height: 300px;
-  border-top: 3px solid $color2;
-  background-color: lighten($color4, 30%);
+  border-top: 5px solid $color2;
+  background-color: lighten($color4, 40%);
+  font-family: $font3;
+
+  .contact-block {
+    text-align: center;
+  }
+
+  .footer-content {
+    margin: 0 auto;
+
+    .footer-heading {
+      color: $color-borders;
+      font-size: 3.8em;
+      font-weight: 400;
+      // font-weight: 300;
+      // letter-spacing: 0.1em;
+      margin: $spacing-unit/2;
+    }
+
+    .footer-subheading {
+      font-size:20px;
+      margin: $spacing-unit/2;
+    }
+  }
 }

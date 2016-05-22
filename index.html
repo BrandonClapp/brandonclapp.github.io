@@ -4,9 +4,9 @@ banner: home
 ---
 
 <div id="latest-posts">
-  <h3>Recent Posts</h3>
-
   <div class="content">
+    <h3>Recent Posts</h3>
+    <hr />
       <ul class="post-list">
           {% for post in site.posts | limit: 5 %}
           <li class="post">
@@ -18,7 +18,7 @@ banner: home
                 {{ post.excerpt }}
               </div>
               {% unless forloop.last %}
-                <hr />
+                <!-- <hr /> -->
               {% endunless %}
           </li>
           {% endfor %}
