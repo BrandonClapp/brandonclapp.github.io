@@ -1,7 +1,8 @@
 /* Header */
 
 .site-header {
-  background: rgba(255,255,255, 0.8);
+  // background: rgba(255,255,255, 0.8);
+
   $header-height: 80px;
   height: $header-height;
   position: fixed;
@@ -9,6 +10,7 @@
   right: 0;
   top: 0;
   border-bottom: 3px solid $color5;
+  background: $bg3;
 
   @media (max-width: $breakpoint-tablet) {
     padding: 0 20px;
@@ -75,11 +77,11 @@
 
 /* Footer */
 .site-footer {
-  $footer-height: 300px;
+  $footer-height: 320px;
 
   height: $footer-height;
-  border-top: 5px solid $color4;
-  background-color: $color1;
+  border-top: 1px solid $color4;
+  background: $bg1;
   font-family: $font3;
 
   .contact-block {
@@ -88,23 +90,44 @@
     margin: 0 auto;
   }
 
-  .footer-content {
+  .disclaimer-wrapper {
+      background: $bg5;
+      border-bottom: 1px solid $color4;
+
+  }
+
+  .disclaimer {
+    padding: 1em;
+    font-size: 14px;
+    max-width: $content-width;
+    text-align: center;
     margin: 0 auto;
+    vertical-align: middle;
+  }
+
+  .copyright {
+    text-align: center;
+    font-size: 14px;
+    max-width: $content-width;
+    margin: 3em auto;
+  }
+
+  .footer-content {
 
     .footer-heading {
       color: $color5;
-      font-size: 3.8em;
+      font-size: 2.2em;
       font-weight: 400;
-      margin: ($footer-height * .05) + $spacing-unit/2;
+      margin: 1em;
     }
 
     .footer-subheading {
-      font-size:2em;
+      font-size:1.5em;
       margin: $spacing-unit/2;
     }
 
     p {
-      font-size: 1.5em;
+      font-size: 1.2em;
     }
   }
 }
