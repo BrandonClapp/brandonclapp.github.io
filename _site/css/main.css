@@ -130,7 +130,7 @@ a {
   left: 0;
   right: 0;
   top: 0;
-  border-bottom: 3px solid #4E3524; }
+  border-bottom: 3px solid #17BEBB; }
   @media (max-width: 1000px) {
     .site-header {
       padding: 0 20px; } }
@@ -174,27 +174,31 @@ a {
 /* Footer */
 .site-footer {
   height: 300px;
-  border-top: 5px solid #F1FAEE;
-  background-color: #c7dbe7;
+  border-top: 5px solid #457B9D;
+  background-color: #EAE8FF;
   font-family: brandon-grotesque, HelveticaNeue-Light, "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; }
   .site-footer .contact-block {
-    text-align: center; }
+    text-align: center;
+    max-width: 500px;
+    margin: 0 auto; }
   .site-footer .footer-content {
     margin: 0 auto; }
     .site-footer .footer-content .footer-heading {
-      color: #4E3524;
+      color: #17BEBB;
       font-size: 3.8em;
       font-weight: 400;
-      margin: 15px; }
+      margin: 30px; }
     .site-footer .footer-content .footer-subheading {
-      font-size: 20px;
+      font-size: 2em;
       margin: 15px; }
+    .site-footer .footer-content p {
+      font-size: 1.5em; }
 
 .banner {
   margin-bottom: 15px;
   padding-top: 1px;
   height: 380px;
-  border-bottom: 5px solid #F1FAEE; }
+  border-bottom: 5px solid #457B9D; }
   .banner .banner-film {
     background: rgba(68, 64, 84, 0.7);
     height: 380px;
@@ -251,7 +255,7 @@ a {
   max-width: 1000px;
   margin: 0 auto; }
   #latest-posts h3 {
-    color: #4E3524;
+    color: #17BEBB;
     margin-bottom: .5em;
     font-size: 20px;
     font-weight: 300;

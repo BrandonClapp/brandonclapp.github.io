@@ -45,7 +45,7 @@
   max-width: $content-width;
   margin: 0 auto;
   h3 {
-    color: $color-borders;
+    color: $color5;
     margin-bottom: .5em;
     font-size: 20px;
     font-weight: 300;
@@ -67,6 +67,10 @@ ul.post-list {
 
   .post {
     padding: 1em;
+
+    &:hover {
+      // do whatever to posts
+    }
 
     p {
       line-height: 20px;

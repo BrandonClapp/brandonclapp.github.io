@@ -8,7 +8,7 @@
   left: 0;
   right: 0;
   top: 0;
-  border-bottom: 3px solid $color-borders;
+  border-bottom: 3px solid $color5;
 
   @media (max-width: $breakpoint-tablet) {
     padding: 0 20px;
@@ -66,13 +66,8 @@
 }
 
 .page {
-    // background-color: lighten($color4, 0%);
-    // background-color: $color3;
     .content {
-        // background-color: lighten($color3, 15%);
-        //border: 2px solid $color-light-borders;
         max-width: $content-width;
-        // padding: 1em;
         margin: 0 auto 20px;
         box-sizing: border-box;
     }
@@ -80,30 +75,36 @@
 
 /* Footer */
 .site-footer {
-  height: 300px;
-  border-top: 5px solid $color2;
-  background-color: lighten($color4, 40%);
+  $footer-height: 300px;
+
+  height: $footer-height;
+  border-top: 5px solid $color4;
+  background-color: $color1;
   font-family: $font3;
 
   .contact-block {
     text-align: center;
+    max-width: $content-width/2;
+    margin: 0 auto;
   }
 
   .footer-content {
     margin: 0 auto;
 
     .footer-heading {
-      color: $color-borders;
+      color: $color5;
       font-size: 3.8em;
       font-weight: 400;
-      // font-weight: 300;
-      // letter-spacing: 0.1em;
-      margin: $spacing-unit/2;
+      margin: ($footer-height * .05) + $spacing-unit/2;
     }
 
     .footer-subheading {
-      font-size:20px;
+      font-size:2em;
       margin: $spacing-unit/2;
+    }
+
+    p {
+      font-size: 1.5em;
     }
   }
 }
