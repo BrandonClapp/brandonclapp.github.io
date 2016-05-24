@@ -63,6 +63,26 @@
       .mobile-menu-icon {
         width:  $mobile-menu-icon-width;
       }
+
+      .mobile-menu-links {
+        position: fixed;
+        top: $header-height;
+        left: 0;
+        right: 0;
+        background: url("/assets/images/ps_neutral.png");
+        border-bottom: 2px solid $color1;
+        display: none;
+
+        &.enabled {
+          display: block;
+        }
+
+        a {
+          display: block;
+          padding: 1em;
+          font-size: 18px;
+        }
+      }
     }
   }
 }
