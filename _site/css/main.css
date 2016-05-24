@@ -173,7 +173,6 @@ a {
 
 /* Footer */
 .site-footer {
-  height: 320px;
   border-top: 1px solid #457B9D;
   background: url("/assets/images/weather.png");
   font-family: brandon-grotesque, HelveticaNeue-Light, "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; }
@@ -195,7 +194,8 @@ a {
     text-align: center;
     font-size: 14px;
     max-width: 1000px;
-    margin: 3em auto; }
+    margin: 0 auto;
+    padding: 3em; }
   .site-footer .footer-content .footer-heading {
     color: #17BEBB;
     font-size: 2.2em;
