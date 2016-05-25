@@ -161,7 +161,7 @@ a {
       .site-header .wrapper .mobile-site-nav .mobile-menu-icon {
         width: 32px; }
       .site-header .wrapper .mobile-site-nav .mobile-menu-links {
-        position: fixed;
+        position: absolute;
         top: 80px;
         left: 0;
         right: 0;
