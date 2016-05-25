@@ -1,9 +1,9 @@
 body {
     font-family: $font3;
-    font-size: 14px;
+    font-size: 16px;
     color: #000;
     font-weight: 400;
-    background: $bg2;
+    background: $bg7;
 }
 
 h1 { font-size: 32px; margin: .5em 0; }
@@ -14,7 +14,8 @@ h5 { font-size: 18px; margin: .5em 0; }
 h6 { font-size: 16px; margin: .5em 0; }
 
 p {
-    line-height: 24px;
+    line-height: 1.5em;
+    font-size: 1.1em;
 }
 
 a {

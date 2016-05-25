@@ -6,7 +6,7 @@
   $header-height: 80px;
   height: $header-height;
   border-bottom: 3px solid $color5;
-  background: $bg3;
+  background: $bg7;
 
   @media (max-width: $breakpoint-tablet) {
     padding: 0 20px;
@@ -65,7 +65,7 @@
         top: $header-height;
         left: 0;
         right: 0;
-        background: url("/assets/images/ps_neutral.png");
+        background: $bg7;
         border-bottom: 2px solid $color1;
         display: none;
 
@@ -87,12 +87,16 @@
 .content {
    max-width: 1000px;
    margin: 0 auto;
+   padding: 1em;
+   box-sizing: border-box;
+   background: white;
 }
 
 /* Footer */
 .site-footer {
+  margin-top: ($spacing-unit/2);
   border-top: 1px solid $color4;
-  background: $bg1;
+  background: $bg8;
   font-family: $font3;
 
   .contact-block {
@@ -102,7 +106,7 @@
   }
 
   .disclaimer-wrapper {
-      background: $bg5;
+      background: $bg9;
       border-bottom: 1px solid $color4;
 
   }
