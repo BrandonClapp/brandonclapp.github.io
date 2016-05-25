@@ -50,8 +50,7 @@ body {
   font-size: 14px;
   color: #000;
   font-weight: 400;
-  background: url("/assets/images/confectionary.png");
-  margin-top: 80px; }
+  background: url("/assets/images/confectionary.png"); }
 
 h1 {
   font-size: 32px;
@@ -125,10 +124,6 @@ a {
 /* Header */
 .site-header {
   height: 80px;
-  position: fixed;
-  left: 0;
-  right: 0;
-  top: 0;
   border-bottom: 3px solid #17BEBB;
   background: url("/assets/images/ps_neutral.png"); }
   @media (max-width: 1000px) {
