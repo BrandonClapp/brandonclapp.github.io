@@ -83,12 +83,10 @@
   }
 }
 
-.page {
-    .content {
-        max-width: $content-width;
-        margin: 0 auto 20px;
-        box-sizing: border-box;
-    }
+
+.content {
+   max-width: 1000px;
+   margin: 0 auto;
 }
 
 /* Footer */

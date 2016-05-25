@@ -3,25 +3,18 @@ layout: default
 banner: home
 ---
 
-<div id="latest-posts">
-  <div class="content">
-    <h3>Recent Posts</h3>
-    <hr />
-      <ul class="post-list">
-          {% for post in site.posts | limit: 5 %}
-          <li class="post">
-            <div class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</div>
-              <h2 class="post-title">
-                  <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-              </h2>
-              <div class="post-exerpt">
-                {{ post.excerpt }}
-              </div>
-              {% unless forloop.last %}
-                <!-- <hr /> -->
-              {% endunless %}
-          </li>
-          {% endfor %}
-      </ul>
-  </div>
-</div>
+<h4>Recent Posts</h4>
+<hr />
+<ul class="post-list">
+    {% for post in site.posts | limit: 5 %}
+    <li class="post">
+        <div class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</div>
+        <h2 class="post-title">
+              <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+          </h2>
+        <div class="post-exerpt">
+            {{ post.excerpt }}
+        </div>
+    </li>
+    {% endfor %}
+</ul>

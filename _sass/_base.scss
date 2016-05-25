@@ -23,7 +23,7 @@ a {
     &:hover,
     :focus,
     :visited {
-        color: $color3;
+        color: $color5;
     }
 }
 
@@ -38,40 +38,4 @@ a {
 .clearfix {
     clear: both;
     margin-bottom: $spacing-unit;
-}
-
-.col-6 {
-    width: 50%;
-    box-sizing: border-box;
-}
-
-.panel {
-  border-radius: 3px;
-  border: 2px solid white;
-
-  .panel-header {
-
-    h2 {
-      font-size: 20px;
-      font-weight: 400;
-      padding: 10px;
-      letter-spacing: .03em;
-    }
-  }
-
-  .panel-body {
-    padding: 15px;
-  }
-}
-
-.transparent {
-  background: rgba(0,0,0,0.4);
-}
-
-.transparent-inverse {
-  background: rgba(255,255,255,0.6);
-}
-
-.container {
-    margin: 0 auto;
 }
