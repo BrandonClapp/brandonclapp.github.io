@@ -278,8 +278,14 @@ ul.post-list .post {
   ul.post-list .post .post-title {
     font-size: 24px; }
   ul.post-list .post .post-meta {
-    padding: 10px 0;
-    letter-spacing: .05em; }
+    padding: 10px 0; }
+
+.blog .post {
+  margin-bottom: 1em; }
+.blog h2 {
+  font-size: 24px; }
+.blog hr {
+  margin: 2em 0; }
 
 /**
  * Syntax highlighting styles
