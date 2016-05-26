@@ -287,11 +287,23 @@ ul.post-list .post {
 .blog hr {
   margin: 2em 0; }
 
+.post .header-image {
+  margin-top: 1em;
+  max-height: 400px;
+  overflow: hidden;
+  border-bottom: 1px solid black; }
+  .post .header-image img {
+    width: 100%; }
+.post .post-header .post-meta {
+  padding: 1em 0; }
+.post .post-content p {
+  margin: 1.5em 0; }
+
 /**
  * Syntax highlighting styles
  */
 .highlight {
-  background: #fff;
+  background: #ffe;
   margin-bottom: 15px; }
   .highlighter-rouge .highlight {
     background: #eef; }

@@ -1,0 +1,26 @@
+.post {
+
+  .header-image {
+    margin-top: 1em;
+    max-height: 400px;
+    overflow: hidden;
+    border-bottom: 1px solid black;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .post-header {
+
+    .post-meta {
+      padding: 1em 0;
+    }
+  }
+
+  .post-content {
+    p {
+      margin: 1.5em 0;
+    }
+  }
+}

@@ -3,13 +3,37 @@ layout: default
 ---
 <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
-  <header class="post-header">
+  {% if page.header %}
+    <div class="header-image">
+      <img src="{{ page.header | prepend: "/assets/images/posts/headers/" }}" />
+    </div>
+  {% endif %}
+
+  <div class="post-header">
     <h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>
-    <p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>{% if page.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %}</p>
-  </header>
+    <div class="post-meta">
+      <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>
+      {% if page.author %}
+      • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>
+      {% endif %}
+    </div>
+  </div>
 
   <div class="post-content" itemprop="articleBody">
     {{ content }}
   </div>
 
+  <hr />
+
+  {% if page.previous %}
+  <div class="pull-left">
+    <a href="{{ page.previous.url }}">Previous Post</a>
+  </div>
+  {% endif %}
+  {% if page.next %}
+  <div class="pull-right">
+    <a href="{{ page.next.url }}">Next Post</a>
+  </div>
+  {% endif %}
+  <div class="clearfix"></div>
 </article>
