@@ -31,7 +31,7 @@
     margin: 0 auto;
 
     .site-nav {
-      $top-link-font-size: 14px;
+      $top-link-font-size: 16px;
       font-size: $top-link-font-size;
       float: right;
       margin-top: ($header-height - $top-link-font-size) / 2;
@@ -43,6 +43,7 @@
       .page-link {
         text-transform: lowercase;
         margin-left: 1em;
+        font-weight: 300;
       }
     }
 

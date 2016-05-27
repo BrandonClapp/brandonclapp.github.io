@@ -119,15 +119,16 @@ a {
     max-width: 1000px;
     margin: 0 auto; }
     .site-header .wrapper .site-nav {
-      font-size: 14px;
+      font-size: 16px;
       float: right;
-      margin-top: 33px; }
+      margin-top: 32px; }
       @media (max-width: 500px) {
         .site-header .wrapper .site-nav {
           display: none; } }
       .site-header .wrapper .site-nav .page-link {
         text-transform: lowercase;
-        margin-left: 1em; }
+        margin-left: 1em;
+        font-weight: 300; }
     .site-header .wrapper .mobile-site-nav {
       display: none; }
       @media (max-width: 500px) {
