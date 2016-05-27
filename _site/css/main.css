@@ -154,7 +154,7 @@ a {
 
 .content {
   max-width: 1000px;
-  margin: 0 auto;
+  margin: 1em auto;
   padding: 1em;
   box-sizing: border-box;
   background: white; }
@@ -197,7 +197,6 @@ a {
     font-size: 1.2em; }
 
 .banner {
-  margin-bottom: 15px;
   padding-top: 1px;
   height: 380px;
   border-bottom: 5px solid #457B9D; }
