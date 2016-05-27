@@ -1,0 +1,58 @@
+.contact {
+  #contact-form{
+    width: 100%;
+    box-sizing: border-box;
+
+    label { display: block; }
+
+    .form-item {
+      margin: 1em;
+    }
+
+    input, textarea, button {
+      font-family: $font1;
+      letter-spacing: 0.02em;
+      margin: 0.4em 0;
+      padding: .75em;
+      background: #fff;
+      box-sizing: border-box;
+      border: 1px solid black;
+      outline: none;
+
+      &:focus, :active {
+        box-shadow: 0 0 5px rgba(23,190,187, 1);
+        border: 1px rgba(23,190,187, 1);
+      }
+    }
+
+    input {
+      width: 300px;
+
+      @media (max-width: $breakpoint-mobile) {
+          width: 100%;
+      }
+    }
+
+    button#send {
+      width: 100px;
+      text-align: center;
+      background: lighten($color4, 40%);
+
+      @media (max-width: $breakpoint-mobile) {
+          width: 100%;
+      }
+    }
+
+    textarea {
+      width: 100%;
+    }
+
+    // textarea {
+    //   padding: .75em;
+    //   box-sizing: border-box;
+    //   width: 100%;
+    //   background: $color-light-borders;
+    // }
+  }
+
+}

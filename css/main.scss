@@ -9,6 +9,7 @@
 $spacing-unit:     30px;
 $content-width:    1000px;
 
+$font1: 'Oswald', sans-serif;
 $font3: brandon-grotesque,HelveticaNeue-Light,"Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
 
 $bg1: url('/assets/images/weather.png');
@@ -41,5 +42,6 @@ $color-light-borders: #EAE8FF;
         "home",
         "blog",
         "post",
+        "contact",
         "syntax-highlighting"
 ;

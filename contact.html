@@ -1,0 +1,74 @@
+---
+layout: page
+title: Contact
+permalink: /contact/
+---
+
+<div class="contact">
+  <p>
+    If you have an idea for a project that you would like to get off of the ground,
+    need some help with something, or just want to say hello, then feel free to drop me a line.
+  </p>
+
+  <form id="contact-form">
+      <div class="name form-item">
+        <label>Name</label>
+        <input id="name" type="text" name="name" placeholder="What do they call you?" required="" />
+      </div>
+
+      <div class="email form-item">
+        <label>Email</label>
+        <input id="email" type="email" name="email" placeholder="Where can I reach you?" required="" />
+      </div>
+
+      <div class="message form-item">
+        <label>Message</label>
+        <textarea id="message" name="message" rows="5" placeholder="What do you want to say/ask?" required=""></textarea>
+      </div>
+
+      <div class="send form-item">
+        <button id="send">Send</button>
+      </div>
+  </form>
+</div>
+
+<script>
+  (function() {
+
+    var name = document.getElementById('name');
+    var email = document.getElementById('email');
+    var message = document.getElementById('message');
+
+    function clearForm() {
+      name.value = "";
+      email.value = "";
+      message.value = "";
+    }
+
+    var contactForm = document.getElementById('contact-form');
+
+    contactForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      if(name.value && email.value && message.value) {
+        console.log('Everything was filled out.');
+        $.ajax({
+          url: "https://formspree.io/brandonclapp@outlook.com",
+          method: "POST",
+          data: {
+            name: name.value,
+            email: email.value,
+            message: message.value
+          },
+          dataType: "json",
+          success: function() {
+            alert('Successfully sent!');
+            clearForm();
+          },
+          error: function() {
+            alert('An error occured while sending your message. Pleae contact me directly at brandonclapp@outlook.com, instead.');
+          }
+      });
+      }
+    });
+  })();
+</script>

@@ -23,7 +23,7 @@ $banner-height: 380px;
     background-position: left top;
 
     .greetings {
-      font-family: 'Oswald', sans-serif;
+      font-family: $font1;
         font-size: 48px;
         text-transform: uppercase;
         color: white;
@@ -37,7 +37,7 @@ $banner-height: 380px;
     }
 
     #tagline {
-      font-family: 'Oswald', sans-serif;
+      font-family: $font1;
       font-weight: 200;
       font-size: 24px;
       color: white;

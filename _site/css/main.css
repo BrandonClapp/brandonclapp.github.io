@@ -213,7 +213,7 @@ a {
   background-size: cover;
   background-position: left top; }
   .banner-home .greetings {
-    font-family: 'Oswald', sans-serif;
+    font-family: "Oswald", sans-serif;
     font-size: 48px;
     text-transform: uppercase;
     color: white;
@@ -224,7 +224,7 @@ a {
       .banner-home .greetings {
         font-size: 32px; } }
   .banner-home #tagline {
-    font-family: 'Oswald', sans-serif;
+    font-family: "Oswald", sans-serif;
     font-weight: 200;
     font-size: 24px;
     color: white;
@@ -298,6 +298,40 @@ ul.post-list .post {
   padding: 1em 0; }
 .post .post-content p {
   margin: 1.5em 0; }
+
+.contact #contact-form {
+  width: 100%;
+  box-sizing: border-box; }
+  .contact #contact-form label {
+    display: block; }
+  .contact #contact-form .form-item {
+    margin: 1em; }
+  .contact #contact-form input, .contact #contact-form textarea, .contact #contact-form button {
+    font-family: "Oswald", sans-serif;
+    letter-spacing: 0.02em;
+    margin: 0.4em 0;
+    padding: .75em;
+    background: #fff;
+    box-sizing: border-box;
+    border: 1px solid black;
+    outline: none; }
+    .contact #contact-form input:focus, .contact #contact-form input :active, .contact #contact-form textarea:focus, .contact #contact-form textarea :active, .contact #contact-form button:focus, .contact #contact-form button :active {
+      box-shadow: 0 0 5px #17bebb;
+      border: 1px #17bebb; }
+  .contact #contact-form input {
+    width: 300px; }
+    @media (max-width: 500px) {
+      .contact #contact-form input {
+        width: 100%; } }
+  .contact #contact-form button#send {
+    width: 100px;
+    text-align: center;
+    background: #c7dbe7; }
+    @media (max-width: 500px) {
+      .contact #contact-form button#send {
+        width: 100%; } }
+  .contact #contact-form textarea {
+    width: 100%; }
 
 /**
  * Syntax highlighting styles
