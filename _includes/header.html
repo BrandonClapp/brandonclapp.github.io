@@ -21,7 +21,9 @@
       <div id="mobile-menu-links" class="mobile-menu-links">
         {% for my_page in site.pages %}
           {% if my_page.title %}
-          <a class="page-link" href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a>
+            {% unless my_page.url contains '/blog/page' %}
+                <a class="page-link" href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a>
+            {% endunless %}
           {% endif %}
         {% endfor %}
       </div>
@@ -43,4 +45,4 @@
         mobileMenuLinks.classList.add('enabled');
     });
   }
-</script
+</script>
