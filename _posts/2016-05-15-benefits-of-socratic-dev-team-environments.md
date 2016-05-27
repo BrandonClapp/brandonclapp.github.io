@@ -4,6 +4,7 @@ title:  "Test Blog Post"
 date:   2016-05-15 13:21:41 -0500
 categories: dev team
 permalink: /test-blog-post/
+comments: true
 ---
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras tristique lorem et dui feugiat ultricies. In hac habitasse platea dictumst. Sed ultricies, lacus id scelerisque faucibus, lorem neque molestie ipsum, et hendrerit diam justo ac magna. Sed pulvinar suscipit dui, non bibendum mi commodo ac. Quisque eget erat ipsum. Praesent vitae nibh porta, viverra arcu nec, auctor elit. Ut ut diam laoreet, ullamcorper leo nec, interdum sem. Phasellus turpis est, ultrices quis ultrices eu, sodales vitae risus. Aenean sollicitudin diam sed egestas scelerisque. Sed sed euismod nulla, et sollicitudin metus. Pellentesque et est ut eros dignissim dignissim ut non orci.
 
