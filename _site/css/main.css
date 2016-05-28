@@ -322,6 +322,11 @@ ul.post-list .post {
   ul.post-list .post .post-meta {
     padding: 10px 0; }
 
+.tech-summary p {
+  font-family: arial;
+  font-size: 1em;
+  font-weight: 400; }
+
 .blog .post {
   margin-bottom: 1em; }
 .blog h2 {

@@ -3,6 +3,7 @@ layout: page
 title: About
 permalink: /about/
 banner: about
+navigation: true
 ---
 ------
 
@@ -26,3 +27,7 @@ Secondary to my family, I enjoy developing new ideas into reality by creating ca
 
 I also enjoy the occasional computer game, which usually includes World of Warcraft
 or League of Legends, although don't play them as much as I used to.
+
+### What tools I use
+
+Over the years, I've used many tools. For a sure to be terrible summation of them, check out my [tech summary](/about/tech-summary/).
