@@ -2,9 +2,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
-  <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+  {% seo %}
 
   <script   src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
   <link href='https://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
@@ -12,6 +10,5 @@
   <link rel='stylesheet' id='options_typography_Qwigley-css'  href='http://fonts.googleapis.com/css?family=Qwigley:100,200,300,400,500,600,700,800,900&#038;subset=latin' type='text/css' media='all' />
   <link rel="stylesheet" href="https://use.typekit.net/c/707960/1w;adobe-garamond-pro,2,Xs1:W:i4,Xs0:W:i7,Xs2:W:n4,Xrz:W:n7;brandon-grotesque,2,Y2p:W:i5,Y2j:W:n3,Y2l:W:n4,Y2n:W:n5,Y2q:W:n7/l" media="all">
   <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
-  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
 </head>

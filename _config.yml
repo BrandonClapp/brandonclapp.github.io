@@ -26,4 +26,6 @@ permalink: /:categories/:title
 # Build settings
 markdown: kramdown
 
-gems: [jekyll-paginate]
+gems:
+    - jekyll-paginate
+    - jekyll-seo-tag
