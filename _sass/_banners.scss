@@ -73,6 +73,11 @@
         text-transform: uppercase;
         text-align: center;
         text-shadow: 3px 3px 2px rgba(150, 150, 150, 0.75);
+
+        @media (max-width: $breakpoint-mobile) {
+            width: 100%;
+            font-size:2em;
+        }
       }
 
       #tagline {
@@ -85,6 +90,11 @@
         font-size: 1.4em;
         box-sizing: border-box;
         padding-top: 1em;
+
+        @media (max-width: $breakpoint-mobile) {
+            width: 100%;
+            font-size:1em;
+        }
       }
   }
 }
