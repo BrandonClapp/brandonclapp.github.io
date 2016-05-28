@@ -157,8 +157,9 @@
 }
 
 .site-footer {
+  $border-color: desaturate(lighten($color5, 40%), 40%);
   margin-top: ($spacing-unit/2);
-  border-top: 1px solid $color4;
+  border-top: 1px solid $border-color;
   background: $bg8;
   font-family: $font3;
 
@@ -178,10 +179,5 @@
     max-width: $content-width;
     margin: 0 auto;
     padding: 1em;
-  }
-
-  .footer-content {
-
-
   }
 }

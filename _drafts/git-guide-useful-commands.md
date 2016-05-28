@@ -2,7 +2,7 @@
 layout: post
 title:  "Git guide and useful commands"
 date:   2016-05-28 09:15:00 -0500
-categories: git
+categories: git github
 ---
 
 ### Terminology
