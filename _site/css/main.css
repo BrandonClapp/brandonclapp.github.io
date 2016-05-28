@@ -50,7 +50,7 @@ body {
   font-family: "Calibre", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   color: #000;
   font-weight: 400;
-  background: url("/assets/images/gplaypattern.png"); }
+  background: url("/assets/images/bg-old.png"); }
 
 p {
   font-size: 1em; }
@@ -879,14 +879,16 @@ pre .diff .change {
 .site-header {
   height: 80px;
   border-bottom: 3px solid #17BEBB;
-  background: url("/assets/images/gplaypattern.png"); }
+  background: url("/assets/images/agsquare.png"); }
   @media (max-width: 1000px) {
     .site-header {
       padding: 0 20px; } }
   .site-header .logo {
-    font-size: 26px;
-    margin-top: 27px;
+    font-family: Qwigley;
+    font-size: 38px;
+    margin-top: 21px;
     font-weight: 300;
+    font-style: normal;
     float: left; }
     .site-header .logo a {
       color: black; }
@@ -919,7 +921,7 @@ pre .diff .change {
         top: 80px;
         left: 0;
         right: 0;
-        background: url("/assets/images/gplaypattern.png");
+        background: url("/assets/images/agsquare.png");
         border-bottom: 2px solid #EAE8FF;
         display: none; }
         .site-header .wrapper .mobile-site-nav .mobile-menu-links.enabled {
@@ -934,7 +936,8 @@ pre .diff .change {
   margin: 1em auto;
   padding: 1em;
   box-sizing: border-box;
-  background: white; }
+  background: white;
+  border: 1px solid #eee; }
 
 /* Footer */
 .site-footer {
@@ -950,8 +953,7 @@ pre .diff .change {
     background: url("/assets/images/agsquare.png");
     border-bottom: 1px solid #457B9D; }
   .site-footer .disclaimer {
-    padding: 1em;
-    font-size: 14px;
+    font-size: .8em;
     max-width: 1000px;
     text-align: center;
     margin: 0 auto;
@@ -961,7 +963,7 @@ pre .diff .change {
     font-size: 14px;
     max-width: 1000px;
     margin: 0 auto;
-    padding: 3em; }
+    padding: 1em; }
   .site-footer .footer-content .footer-heading {
     color: #17BEBB;
     font-size: 2.2em;
@@ -1226,7 +1228,7 @@ ul.post-list .post .post-meta {
   .contact #contact-form button#send {
     width: 100px;
     text-align: center;
-    background: #c7dbe7; }
+    background: #DB3A3F; }
     @media (max-width: 500px) {
       .contact #contact-form button#send {
         width: 100%; } }

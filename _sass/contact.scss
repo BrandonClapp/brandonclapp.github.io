@@ -36,7 +36,8 @@
     button#send {
       width: 100px;
       text-align: center;
-      background: lighten($color4, 40%);
+      // background: lighten($color4, 40%);
+      background: $color3;
 
       @media (max-width: $breakpoint-mobile) {
           width: 100%;
