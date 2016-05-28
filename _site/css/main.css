@@ -1049,6 +1049,94 @@ pre .diff .change {
           width: 100%;
           font-size: 1em; } }
 
+.banner-contact {
+  background-image: url("/assets/images/bg1.JPG");
+  background-size: cover;
+  background-position: left top;
+  padding-top: 1px;
+  height: 200px;
+  border-bottom: 5px solid #457B9D; }
+  .banner-contact .banner-film {
+    background: rgba(68, 64, 84, 0.7);
+    height: 200px;
+    transition: background .5s; }
+    .banner-contact .banner-film:hover {
+      background: rgba(68, 64, 84, 0.6); }
+    .banner-contact .banner-film #contact-me {
+      width: 460px;
+      font-size: 3em;
+      font-weight: 300;
+      margin: 0 auto;
+      padding-top: 1.2em;
+      box-sizing: border-box;
+      color: #F1FAEE;
+      font-family: "Oswald", sans-serif;
+      text-transform: uppercase;
+      text-align: center;
+      text-shadow: 3px 3px 2px rgba(150, 150, 150, 0.75); }
+      @media (max-width: 500px) {
+        .banner-contact .banner-film #contact-me {
+          width: 100%;
+          font-size: 2em; } }
+    .banner-contact .banner-film #tagline {
+      margin: 0 auto;
+      width: 460px;
+      text-align: center;
+      color: #7fefed;
+      font-family: "Oswald", sans-serif;
+      text-transform: uppercase;
+      font-size: 1.4em;
+      box-sizing: border-box;
+      padding-top: 1em; }
+      @media (max-width: 500px) {
+        .banner-contact .banner-film #tagline {
+          width: 100%;
+          font-size: 1em; } }
+
+.banner-blog {
+  background-image: url("/assets/images/bg1.JPG");
+  background-size: cover;
+  background-position: left top;
+  padding-top: 1px;
+  height: 200px;
+  border-bottom: 5px solid #457B9D; }
+  .banner-blog .banner-film {
+    background: rgba(68, 64, 84, 0.7);
+    height: 200px;
+    transition: background .5s; }
+    .banner-blog .banner-film:hover {
+      background: rgba(68, 64, 84, 0.6); }
+    .banner-blog .banner-film #blog {
+      width: 460px;
+      font-size: 3em;
+      font-weight: 300;
+      margin: 0 auto;
+      padding-top: 1.2em;
+      box-sizing: border-box;
+      color: #F1FAEE;
+      font-family: "Oswald", sans-serif;
+      text-transform: uppercase;
+      text-align: center;
+      text-shadow: 3px 3px 2px rgba(150, 150, 150, 0.75); }
+      @media (max-width: 500px) {
+        .banner-blog .banner-film #blog {
+          width: 100%;
+          font-size: 2em; } }
+    .banner-blog .banner-film #tagline {
+      margin: 0 auto;
+      width: 580px;
+      text-align: center;
+      color: #7fefed;
+      font-family: "Oswald", sans-serif;
+      text-transform: uppercase;
+      font-size: 1.4em;
+      box-sizing: border-box;
+      padding-top: 1em; }
+      @media (max-width: 500px) {
+        .banner-blog .banner-film #tagline {
+          width: 100%;
+          font-size: 1em; } }
+
 #banner-widgets {
   margin: 80px auto;
   width: 270px; }
@@ -1089,20 +1177,17 @@ pre .diff .change {
     border-top: 1px solid #EAE8FF; }
 
 /* Exerpt styling */
-ul.post-list .post {
-  padding: 1em; }
-  ul.post-list .post .post-title {
-    font-size: 22px;
-    font-weight: 300; }
-  ul.post-list .post .post-meta {
-    padding: 10px 0; }
+ul.post-list .post .post-title {
+  font-size: 22px;
+  font-weight: 300; }
+ul.post-list .post .post-meta {
+  padding: 10px 0; }
 
 .blog .post {
   margin-bottom: 1em; }
 .blog h2 {
-  font-size: 24px; }
-.blog hr {
-  margin: 2em 0; }
+  font-size: 22px;
+  font-weight: 300; }
 
 .post .header-image {
   margin-top: 1em;

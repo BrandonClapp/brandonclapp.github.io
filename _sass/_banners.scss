@@ -98,3 +98,119 @@
       }
   }
 }
+
+
+.banner-contact {
+  $contact-banner-height: 200px;
+
+  background-image: url('/assets/images/bg1.JPG');
+  background-size: cover;
+  background-position: left top;
+  padding-top: 1px;
+  height: $contact-banner-height;
+  border-bottom: 5px solid $color4;
+
+  .banner-film {
+      background: rgba(68,64,84, 0.7);
+      height: $contact-banner-height;
+      transition: background .5s;
+
+      &:hover {
+        background: rgba(68,64,84, 0.6);
+      }
+
+      #contact-me {
+        width: 460px;
+        font-size: 3em;
+        font-weight: 300;
+        margin: 0 auto;
+        padding-top: 1.2em;
+        box-sizing: border-box;
+        color: $color2;
+        font-family: $font1;
+        text-transform: uppercase;
+        text-align: center;
+        text-shadow: 3px 3px 2px rgba(150, 150, 150, 0.75);
+
+        @media (max-width: $breakpoint-mobile) {
+            width: 100%;
+            font-size:2em;
+        }
+      }
+
+      #tagline {
+        margin: 0 auto;
+        width: 460px;
+        text-align: center;
+        color: lighten($color5, 30%);
+        font-family: $font1;
+        text-transform: uppercase;;
+        font-size: 1.4em;
+        box-sizing: border-box;
+        padding-top: 1em;
+
+        @media (max-width: $breakpoint-mobile) {
+            width: 100%;
+            font-size:1em;
+        }
+      }
+  }
+}
+
+
+.banner-blog {
+  $blog-banner-height: 200px;
+
+  background-image: url('/assets/images/bg1.JPG');
+  background-size: cover;
+  background-position: left top;
+  padding-top: 1px;
+  height: $blog-banner-height;
+  border-bottom: 5px solid $color4;
+
+  .banner-film {
+      background: rgba(68,64,84, 0.7);
+      height: $blog-banner-height;
+      transition: background .5s;
+
+      &:hover {
+        background: rgba(68,64,84, 0.6);
+      }
+
+      #blog {
+        width: 460px;
+        font-size: 3em;
+        font-weight: 300;
+        margin: 0 auto;
+        padding-top: 1.2em;
+        box-sizing: border-box;
+        color: $color2;
+        font-family: $font1;
+        text-transform: uppercase;
+        text-align: center;
+        text-shadow: 3px 3px 2px rgba(150, 150, 150, 0.75);
+
+        @media (max-width: $breakpoint-mobile) {
+            width: 100%;
+            font-size:2em;
+        }
+      }
+
+      #tagline {
+        margin: 0 auto;
+        width: 580px;
+        text-align: center;
+        color: lighten($color5, 30%);
+        font-family: $font1;
+        text-transform: uppercase;;
+        font-size: 1.4em;
+        box-sizing: border-box;
+        padding-top: 1em;
+
+        @media (max-width: $breakpoint-mobile) {
+            width: 100%;
+            font-size:1em;
+        }
+      }
+  }
+}
