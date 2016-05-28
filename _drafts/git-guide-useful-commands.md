@@ -34,6 +34,15 @@ categories: git
 
 ------
 
+### Testing!
+
+```javascript
+  function() {
+    let i = 0;
+    console.log(i);
+  }
+```
+
 ### Setup & Basics
 
 ##### **`git init`**

@@ -10,7 +10,7 @@ $spacing-unit:     30px;
 $content-width:    1000px;
 
 $font1: 'Oswald', sans-serif;
-//$font2:
+$font2: "Calibre", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 $font3: brandon-grotesque,HelveticaNeue-Light,"Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
 
 $bg1: url('/assets/images/weather.png');
@@ -27,17 +27,17 @@ $breakpoint-tablet: $content-width;
 $breakpoint-mobile: 500px;
 
 $color1:          #EAE8FF;
-// $color1:       #E2E8CC;
 $color2:          #F1FAEE;
-$color3:          #DCC48E;
+$color3:          #DB3A3F;
 $color4:          #457B9D;
-$color5:   #17BEBB;
+$color5:          #17BEBB;
 $color-light-borders: #EAE8FF;
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
         "reset",
         "base",
+        "base2",
         "layout",
         "banners",
         "home",
@@ -45,6 +45,6 @@ $color-light-borders: #EAE8FF;
         "blog",
         "post",
         "contact",
-        "github-markdown",
+        // "github-markdown",
         "syntax-highlighting"
 ;
