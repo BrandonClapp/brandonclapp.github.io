@@ -197,21 +197,19 @@ a {
   .site-footer .footer-content p {
     font-size: 1.2em; }
 
-.banner {
-  padding-top: 1px;
-  height: 380px;
-  border-bottom: 5px solid #457B9D; }
-  .banner .banner-film {
-    background: rgba(68, 64, 84, 0.7);
-    height: 380px;
-    transition: background .5s; }
-    .banner .banner-film:hover {
-      background: rgba(68, 64, 84, 0.6); }
-
 .banner-home {
   background-image: url("/assets/images/bg2.JPG");
   background-size: cover;
-  background-position: left top; }
+  background-position: left top;
+  padding-top: 1px;
+  height: 380px;
+  border-bottom: 5px solid #457B9D; }
+  .banner-home .banner-film {
+    background: rgba(68, 64, 84, 0.7);
+    height: 380px;
+    transition: background .5s; }
+    .banner-home .banner-film:hover {
+      background: rgba(68, 64, 84, 0.6); }
   .banner-home .greetings {
     font-family: "Oswald", sans-serif;
     font-size: 48px;
@@ -230,6 +228,42 @@ a {
     color: white;
     text-align: center;
     padding-top: 20px; }
+
+.banner-about {
+  background-image: url("/assets/images/bg1.JPG");
+  background-size: cover;
+  background-position: left top;
+  padding-top: 1px;
+  height: 200px;
+  border-bottom: 5px solid #457B9D; }
+  .banner-about .banner-film {
+    background: rgba(68, 64, 84, 0.7);
+    height: 200px;
+    transition: background .5s; }
+    .banner-about .banner-film:hover {
+      background: rgba(68, 64, 84, 0.6); }
+    .banner-about .banner-film #about-me {
+      width: 460px;
+      font-size: 3em;
+      font-weight: 300;
+      margin: 0 auto;
+      padding-top: 1.2em;
+      box-sizing: border-box;
+      color: #F1FAEE;
+      font-family: "Oswald", sans-serif;
+      text-transform: uppercase;
+      text-align: center;
+      text-shadow: 3px 3px 2px rgba(150, 150, 150, 0.75); }
+    .banner-about .banner-film #tagline {
+      margin: 0 auto;
+      width: 460px;
+      text-align: center;
+      color: #7fefed;
+      font-family: "Oswald", sans-serif;
+      text-transform: uppercase;
+      font-size: 1.4em;
+      box-sizing: border-box;
+      padding-top: 1em; }
 
 #banner-widgets {
   margin: 80px auto;
