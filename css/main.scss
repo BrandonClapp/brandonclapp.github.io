@@ -32,6 +32,7 @@ $color2:          #F1FAEE;
 $color3:          #DB3A3F;
 $color4:          #457B9D;
 $color5:          #17BEBB;
+// $color5:          adjust-hue($color5, 80%);
 $color-light-borders: #EAE8FF;
 
 // Import partials from `sass_dir` (defaults to `_sass`)

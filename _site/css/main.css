@@ -664,7 +664,7 @@ a:focus {
   outline-offset: 2px; }
 
 hr {
-  border-bottom: 1px solid #17BEBB;
+  border-bottom: 1px solid #bfe2e2;
   border-left: 0;
   border-right: 0;
   border-top: 0;
@@ -943,8 +943,8 @@ pre .diff .change {
 .contact-block-wrapper {
   font-family: brandon-grotesque, HelveticaNeue-Light, "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   background: url("/assets/images/gplaypattern.png");
-  border-top: 1px solid #fbe6e7;
-  border-bottom: 1px solid #fbe6e7; }
+  border-top: 1px solid #bfe2e2;
+  border-bottom: 1px solid #bfe2e2; }
   .contact-block-wrapper .contact-block {
     text-align: center;
     max-width: 500px;
@@ -960,7 +960,7 @@ pre .diff .change {
       margin: 15px; }
     .contact-block-wrapper .contact-block #contact-block-widgets {
       margin: 0 auto;
-      width: 180px;
+      width: 245px;
       height: 50px; }
       .contact-block-wrapper .contact-block #contact-block-widgets p {
         font-size: 1.2em; }
