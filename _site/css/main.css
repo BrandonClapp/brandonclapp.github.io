@@ -1225,11 +1225,15 @@ pre .diff .change {
     border-top: 1px solid #EAE8FF; }
 
 /* Exerpt styling */
-ul.post-list .post .post-title {
-  font-size: 22px;
-  font-weight: 300; }
-ul.post-list .post .post-meta {
-  padding: 10px 0; }
+ul.post-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0; }
+  ul.post-list .post .post-title {
+    font-size: 22px;
+    font-weight: 300; }
+  ul.post-list .post .post-meta {
+    padding: 10px 0; }
 
 .blog .post {
   margin-bottom: 1em; }
