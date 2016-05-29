@@ -4,6 +4,7 @@ title:  "Git guide and useful commands"
 date:   2016-05-28 09:15:00 -0500
 categories: git github
 ---
+Git can be a very powerful tool for developers if they know what they're doing, However, if they don't, the workflow feels more like an obstacle. Although I agree that it can take a bit to understand the fundamentals of git, I strongly believe that learning it is a great investment. Lets start with some basic terminology. Don't get discouraged if you don't understand them right now.
 
 ### Terminology
 
