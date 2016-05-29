@@ -718,7 +718,7 @@ cite {
   text-align: right; }
 
 cite::before {
-  content: "ΓÇö ";
+  content: "— ";
   margin-left: -1em; }
 
 figure {
