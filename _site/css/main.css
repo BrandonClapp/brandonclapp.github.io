@@ -962,6 +962,10 @@ pre .diff .change {
   background: white;
   border: 1px solid #eee;
   min-height: 420px; }
+  .content ul, .content ol {
+    list-style-type: square;
+    margin: 1em 0 1em 2em;
+    padding: 0; }
 
 /* Footer */
 .contact-block-wrapper {

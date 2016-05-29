@@ -6,8 +6,8 @@
 </description>
     <link>http://brandonclapp.com/</link>
     <atom:link href="http://brandonclapp.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 29 May 2016 16:25:43 -0500</pubDate>
-    <lastBuildDate>Sun, 29 May 2016 16:25:43 -0500</lastBuildDate>
+    <pubDate>Sun, 29 May 2016 16:59:54 -0500</pubDate>
+    <lastBuildDate>Sun, 29 May 2016 16:59:54 -0500</lastBuildDate>
     <generator>Jekyll v3.1.3</generator>
     
       <item>
@@ -289,6 +289,99 @@
         <category>dev</category>
         
         <category>team</category>
+        
+      </item>
+    
+      <item>
+        <title>16 Ways to Become a Better Developer</title>
+        <description>&lt;h4 id=&quot;find-some-mentors1name1&quot;&gt;&lt;a href=&quot;#1&quot; name=&quot;1&quot;&gt;1. Find some Mentors&lt;/a&gt;&lt;/h4&gt;
+
+&lt;p&gt;Make a list of developers that you admire and study them. Learn things from them such as how they debug problems and what tools and technologies they’re using. Follow these developers on Twitter and subscribe to their blog’s RSS feed. Whenever they post something new, take the time to actually read and comprehend what they’re trying to convey.&lt;/p&gt;
+
+&lt;h4 id=&quot;become-a-mentor2name2&quot;&gt;&lt;a href=&quot;#2&quot; name=&quot;2&quot;&gt;2. Become a Mentor&lt;/a&gt;&lt;/h4&gt;
+
+&lt;p&gt;While or after learning something new, share what you’ve learned. Don’t think you have anything to contribute? Wrong. Even if you’re a beginner web developer and only understand HTML, there is someone out there who is interested in learning that particular subject from someone who won’t throw a bunch of hard to understand, technical terms at them. Don’t present yourself as an expert, but rather as someone who is just trying to share your experiences and help other’s where you can.&lt;/p&gt;
+
+&lt;blockquote&gt;If you can&#39;t explain it simply, you don&#39;t understand it well enough. - Albert Einstein&lt;/blockquote&gt;
+
+&lt;h4 id=&quot;learn-about-your-craft-every-day3name3&quot;&gt;&lt;a href=&quot;#3&quot; name=&quot;3&quot;&gt;3. Learn about your craft every day&lt;/a&gt;&lt;/h4&gt;
+
+&lt;p&gt;Spend 15 to 30 minutes per day learning something new about the tools that you use every day, whether it be your programming language of choice, shortcuts for your text editor, how to make your code more performant, or whatever you’re interested in. Keep a running list about topics that you want to research and spend a little bit of time each day conquering this list.&lt;/p&gt;
+
+&lt;h4 id=&quot;learn-some-design-patterns4name4&quot;&gt;&lt;a href=&quot;#4&quot; name=&quot;4&quot;&gt;4. Learn some design patterns&lt;/a&gt;&lt;/h4&gt;
+
+&lt;p&gt;Development is more than just writing functional code. Experienced software developers know how to architect their code so that it’s maintainable, flexible, and easy to understand. Fortunately, you don’t have to reinvent the wheel. Software development design patterns are best practice solutions for architecting systems. As always, there are different tools for different jobs. Knowing when to use the right tool for the right job comes with practice and experience.&lt;/p&gt;
+
+&lt;h4 id=&quot;know-your-tools5name5&quot;&gt;&lt;a href=&quot;#5&quot; name=&quot;5&quot;&gt;5. Know your tools&lt;/a&gt;&lt;/h4&gt;
+
+&lt;p&gt;Imagine a carpenter who didn’t know how to use a hammer, a doctor who didn’t know how to use a stethoscope, or a truck driver who didn’t know how to drive a truck. A software developer who doesn’t know how to use their tools also fits into the same category. Take some time to learn your IDE, text editor, operating system, database, and libraries.&lt;/p&gt;
+
+&lt;h4 id=&quot;come-up-with-your-own-solution6name6&quot;&gt;&lt;a href=&quot;#6&quot; name=&quot;6&quot;&gt;6. Come up with your own solution&lt;/a&gt;&lt;/h4&gt;
+
+&lt;p&gt;Sure, it’s easy to enter a few words into a search engine, click the top stack overflow result, and copy/paste the answer into your project. &lt;strong&gt;Doing this isn’t making you a better developer&lt;/strong&gt;, it’s making you a better Googler. The next time you have an itch to search for something, try solving it by yourself first. Not only will you be practicing your troubleshooting skills, you’ll also be more likely to remember the answer when you figure it out. Of course, don’t waste too much time. The internet is a valuable resource, but remember to &lt;strong&gt;think for yourself&lt;/strong&gt;, too!&lt;/p&gt;
+
+&lt;p&gt;Have you come up with your own solution but someone is telling you it’s wrong? See &lt;a href=&quot;#11&quot;&gt;#11&lt;/a&gt;. Also see &lt;a href=&quot;#7&quot;&gt;#7&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h4 id=&quot;have-strong-opinions-but-hold-on-to-them-loosely7name7&quot;&gt;&lt;a href=&quot;#7&quot; name=&quot;7&quot;&gt;7. Have strong opinions, but hold on to them loosely&lt;/a&gt;&lt;/h4&gt;
+
+&lt;p&gt;Don’t be afraid of expressing your opinions, but also be ready to change your opinions if provided with sufficient evidence. To be a good developer, you have to take a stance on what you think is the right way to develop software. This, fundamentally, not only applies to software development, but in all aspects of life. Taking a stance that you can back with solid evidence and reasoning will gain you the respect and consideration of others. However, be prepared to change your opinion when presented with reasoning. Consider other people’s opinions and reasoning. If convinced, perhaps it’s time to adopt some new opinions.&lt;/p&gt;
+
+&lt;h4 id=&quot;write-code-every-day8name8&quot;&gt;&lt;a href=&quot;#8&quot; name=&quot;8&quot;&gt;8. Write code every day.&lt;/a&gt;&lt;/h4&gt;
+
+&lt;p&gt;As the old saying goes, practice makes perfect. A runner doesn’t get good at running by not running. A basketball player doesn’t get good by not playing. The only way to get good at solving problems is to practice solving problems. Study your craft. Take pride in becoming a better programmer and problem solver. Understand how to use various constructs in your programming language of choice to solve problems in different ways.&lt;/p&gt;
+
+&lt;h4 id=&quot;read9name9&quot;&gt;&lt;a href=&quot;#9&quot; name=&quot;9&quot;&gt;9. Read!&lt;/a&gt;&lt;/h4&gt;
+
+&lt;p&gt;One of the most common characteristics amongst successful people is that they read. Your education doesn’t have to stop when you leave work. Keep a book by your bedside and pick it up a few times a week. I decided to make this a separate step from bullet point &lt;a href=&quot;#3&quot;&gt;#3&lt;/a&gt; because I consider this point to be a bit more in depth and beneficial to your life and career as a whole, where as I see &lt;a href=&quot;#3&quot;&gt;#3&lt;/a&gt; as reading a quick blog post about some cool tip, trick, library, or framework.&lt;/p&gt;
+
+&lt;p&gt;If you’re stuck on not knowing what to read, check out some of &lt;a href=&quot;/about/recommended-reading/&quot;&gt;my personal recommendations&lt;/a&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;just-because-you-can-doesnt-mean-that-you-should10name10&quot;&gt;&lt;a href=&quot;#10&quot; name=&quot;10&quot;&gt;10. Just because you can, doesn’t mean that you should&lt;/a&gt;&lt;/h4&gt;
+
+&lt;p&gt;Lets face it, we’ve all seen THAT application. You know, the one that you’re assigned to maintain and makes you reconsider your career as a software developer. Just because you &lt;em&gt;can&lt;/em&gt; write your entire application in one line, doesn’t mean that you &lt;em&gt;should&lt;/em&gt;. Just because you &lt;em&gt;can&lt;/em&gt; inject 20 parameters to one class’s constructor, doesn’t mean that you &lt;em&gt;should&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Weigh the pro’s and con’s of some of the things that you’re currently doing. In some cases, we do things simply because that’s how we have been doing them for years. Check a list of some of the most common code smells and question some of the things that you’re currently doing. Perhaps there’s a better way of writing something than you currently are, or perhaps you have great reasoning behind why you’re case is unique.&lt;/p&gt;
+
+&lt;h4 id=&quot;always-remember-that-youre-entitled-to-your-own-opinion11name11&quot;&gt;&lt;a href=&quot;#11&quot; name=&quot;11&quot;&gt;11. Always remember that you’re entitled to your own opinion&lt;/a&gt;&lt;/h4&gt;
+
+&lt;p&gt;One trap that developers sometimes fall into is thinking that if someone else, especially if that someone is popular, highly credible, or experienced, says that something is true, then it must be. Take everything that you read with a grain of salt and question what you’re reading. Try understanding why the author has the point of view that they do. This is a skill that grows over time. The more you practice your craft, the more confident you’ll be about your abilities.&lt;/p&gt;
+
+&lt;h4 id=&quot;talk-is-cheap-show-me-the-code12name12&quot;&gt;&lt;a href=&quot;#12&quot; name=&quot;12&quot;&gt;12. Talk is cheap, show me the code&lt;/a&gt;&lt;/h4&gt;
+
+&lt;p&gt;There are a lot of people out there who will tell you that something can’t be done because of X, Y, and Z. There are other people out there who will tell you that something is simple, all you have to do is A, B, and C.&lt;/p&gt;
+
+&lt;p&gt;My point is, don’t gauge the difficult on a set of tasks simply based off of someone else’s quickly contrived assumptions. &lt;strong&gt;Think for yourself&lt;/strong&gt;, lay out the steps necessary, do your research, find ways around your obstacles, and write the code.&lt;/p&gt;
+
+&lt;h4 id=&quot;dont-be-afraid-to-take-on-a-challenge13name13&quot;&gt;&lt;a href=&quot;#13&quot; name=&quot;13&quot;&gt;13. Don’t be afraid to take on a challenge&lt;/a&gt;&lt;/h4&gt;
+
+&lt;p&gt;Learning happens when we’re challenged. Take on new challenges and rise to the occasion. You may be presented with unique problems that you wouldn’t have encountered otherwise. Tackling unique challenges now will give you a new perspective when solving future problems, even if they may not seem similar at first.&lt;/p&gt;
+
+&lt;h4 id=&quot;keep-it-simple-stupid14name14&quot;&gt;&lt;a href=&quot;#14&quot; name=&quot;14&quot;&gt;14. Keep it Simple, Stupid.&lt;/a&gt;&lt;/h4&gt;
+
+&lt;p&gt;Stop over-engineering! Not everything require 10 ajax calls, 5 database tables, 3 stored procedures, and 6 Microsoft acronyms. Lets face it, 9 times out of 10 it’s not going to get documented properly anyway, and even if it did, do you really want each new developer who works on the project to burn multiple hours just reading the documentation before they can even remotely comprehend how the system is supposed to work? Solve the simple case first. If additional features are needed in the future, handle them then. Don’t implement features just because there’s a &lt;em&gt;chance&lt;/em&gt; that they’ll eventually be requested.&lt;/p&gt;
+
+&lt;h4 id=&quot;whiteboard-things-out15name15&quot;&gt;&lt;a href=&quot;#15&quot; name=&quot;15&quot;&gt;15. Whiteboard things out&lt;/a&gt;&lt;/h4&gt;
+
+&lt;p&gt;Putting ideas on a whiteboard and asking for other’s input is a great way to get feedback. From my experience, when whiteboarding, three possible things typically end up happening.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;The other person ends up teaching you something.&lt;/li&gt;
+  &lt;li&gt;You end up teaching the other person something, which requires an explanation on how components work, which in turn will reinforce that you do (or don’t) understand the topic.&lt;/li&gt;
+  &lt;li&gt;A debate (not argument) is started, which leads to possibly important factors that were not considered.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Whiteboards provide a great way to communicate ideas that are otherwise hard to explain with words alone.&lt;/p&gt;
+
+&lt;h4 id=&quot;dont-be-afraid-to-ask-for-help16name16&quot;&gt;&lt;a href=&quot;#16&quot; name=&quot;16&quot;&gt;16. Don’t be afraid to ask for help&lt;/a&gt;&lt;/h4&gt;
+
+&lt;p&gt;Simply put, ask if you need help. Don’t spend too much time on a single topic if someone else can explain it better in a fractions time. There’s nothing wrong with saying “I don’t understand this, can you please help me out?”. No one is an expert at everything.&lt;/p&gt;
+</description>
+        <pubDate>Sat, 07 Mar 2015 00:00:00 -0600</pubDate>
+        <link>http://brandonclapp.com/16-ways-to-become-a-better-developer/</link>
+        <guid isPermaLink="true">http://brandonclapp.com/16-ways-to-become-a-better-developer/</guid>
+        
+        <category>self-improvement</category>
+        
         
       </item>
     
@@ -861,60 +954,6 @@
         <category>ASP.NET</category>
         
         <category>MVC</category>
-        
-        
-      </item>
-    
-      <item>
-        <title>C#: Passing parameters to a thread with ParameterizedThreadStart</title>
-        <description>&lt;p&gt;Much like the name applies, &lt;strong&gt;ParameterizedThreadStart&lt;/strong&gt; provides a way to pass parameters to a thread upon start. In the following example, the variable &lt;em&gt;name&lt;/em&gt; is being passed to the &lt;em&gt;SayHello&lt;/em&gt; method when &lt;code class=&quot;highlighter-rouge&quot;&gt;myThread.Start(name)&lt;/code&gt; is called.&lt;/p&gt;
-
-&lt;div class=&quot;language-csharp highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;System.Threading&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;namespace&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;Sample&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Program&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-            &lt;span class=&quot;kt&quot;&gt;string&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;name&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Bob&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-
-            &lt;span class=&quot;c1&quot;&gt;// Pass a new ParameterizedThreadStart object to the Thread class constructor.
-&lt;/span&gt;            &lt;span class=&quot;c1&quot;&gt;// The ParameterizedThreadStart construcotr takes a delegate
-&lt;/span&gt;            &lt;span class=&quot;c1&quot;&gt;// pointing to an event handler which returns void and takes an object.
-&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;Thread&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;myThread&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Thread&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;ParameterizedThreadStart&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;SayHello&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
-
-            &lt;span class=&quot;c1&quot;&gt;// The parameter that is passed to the event handler is passed through
-&lt;/span&gt;            &lt;span class=&quot;c1&quot;&gt;// the Start(object) method.
-&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;myThread&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;Start&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-        &lt;span class=&quot;c1&quot;&gt;// Worker method must take object as parameter.
-&lt;/span&gt;        &lt;span class=&quot;c1&quot;&gt;// The actual type can be cast in the method body.
-&lt;/span&gt;        &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;SayHello&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;object&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-            &lt;span class=&quot;n&quot;&gt;Console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;WriteLine&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Hello, {0}.&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;The following red and blue lines help to illustrate what is happening in the previous block of code.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/posts/content/ParameterizedThreadStart.png&quot; alt=&quot;ParameterizedThreadStart&quot; /&gt;&lt;/p&gt;
-</description>
-        <pubDate>Mon, 19 May 2014 00:00:00 -0500</pubDate>
-        <link>http://brandonclapp.com/parameterizedthreadstart-example/</link>
-        <guid isPermaLink="true">http://brandonclapp.com/parameterizedthreadstart-example/</guid>
-        
-        <category>C#</category>
-        
-        <category>Threading</category>
         
         
       </item>

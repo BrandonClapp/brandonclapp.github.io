@@ -136,6 +136,12 @@
    background: white;
    border: 1px solid #eee;
    min-height: 420px;
+
+   ul, ol {
+     list-style-type: square;
+     margin: 1em 0 1em 2em;
+     padding: 0;
+   }
 }
 
 /* Footer */
