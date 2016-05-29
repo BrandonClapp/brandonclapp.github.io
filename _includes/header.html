@@ -26,6 +26,14 @@
         {% include icon-mobile-menu.svg %}
       </div>
       <div id="mobile-menu-links" class="mobile-menu-links">
+        <div class="mobile-search-wrapper">
+          <div class="mobile-search">
+            <form action="/search.html" method="get">
+              <input type="text" id="search-box" name="query" placeholder="Search" />
+              <!-- <input type="submit" id="search-button" value="search" /> -->
+            </form>
+          </div>
+        </div>
         {% for my_page in site.pages %}
           {% if my_page.title and my_page.navigation %}
             {% unless my_page.url contains '/blog/page' %}

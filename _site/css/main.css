@@ -913,12 +913,16 @@ pre .diff .change {
     .site-header .wrapper .search {
       float: right;
       height: 25px;
-      margin-top: 27.5px; }
+      margin-top: 27.5px;
+      /* No greater than 600px, no less than 500px */ }
       .site-header .wrapper .search input#search-box {
         font-size: 14px;
         width: 200px; }
       .site-header .wrapper .search input#search-button {
         min-width: 50px !important; }
+      @media (max-width: 600px) {
+        .site-header .wrapper .search {
+          display: none; } }
     .site-header .wrapper .mobile-site-nav {
       display: none; }
       @media (max-width: 500px) {
@@ -926,6 +930,13 @@ pre .diff .change {
           display: block;
           float: right;
           margin-top: 24px; } }
+      .site-header .wrapper .mobile-site-nav .mobile-search-wrapper {
+        margin: 0 1em .5em 1em; }
+      .site-header .wrapper .mobile-site-nav .mobile-search {
+        height: 25px;
+        margin-top: 1em; }
+        .site-header .wrapper .mobile-site-nav .mobile-search input#search-box {
+          box-sizing: border-box; }
       .site-header .wrapper .mobile-site-nav .mobile-menu-icon {
         width: 32px; }
       .site-header .wrapper .mobile-site-nav .mobile-menu-links {

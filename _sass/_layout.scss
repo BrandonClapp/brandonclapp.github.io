@@ -66,6 +66,11 @@
       }
 
       margin-top: ($header-height - $search-box-height) / 2;
+
+      /* No greater than 600px, no less than 500px */
+      @media (max-width:600px) {
+        display: none;
+      }
     }
 
     .mobile-site-nav {
@@ -76,6 +81,23 @@
           display: block;
           float: right;
           margin-top: ($header-height - $mobile-menu-icon-width) / 2;
+      }
+
+      .mobile-search-wrapper {
+        margin: 0 1em .5em 1em;
+      }
+
+      .mobile-search {
+        $search-box-height: 25px;
+        // float: right;
+        height: $search-box-height;
+
+        input#search-box  {
+          // width: 100%;
+          box-sizing: border-box;
+        }
+
+        margin-top: 1em;
       }
 
       .mobile-menu-icon {
