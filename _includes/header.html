@@ -14,6 +14,13 @@
       {% endfor %}
     </nav>
 
+    <div class="search">
+      <form action="/search.html" method="get">
+        <input type="text" id="search-box" name="query" placeholder="Search" />
+        <!-- <input type="submit" id="search-button" value="search" /> -->
+      </form>
+    </div>
+
     <nav class="mobile-site-nav">
       <div id="mobile-menu-icon" class="mobile-menu-icon">
         {% include icon-mobile-menu.svg %}
@@ -46,3 +53,5 @@
     });
   }
 </script>
+
+<script src="/assets/scripts/search.js"></script>

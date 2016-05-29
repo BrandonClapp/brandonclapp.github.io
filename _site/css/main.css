@@ -910,6 +910,15 @@ pre .diff .change {
         text-transform: lowercase;
         margin-left: 1em;
         font-weight: 400; }
+    .site-header .wrapper .search {
+      float: right;
+      height: 25px;
+      margin-top: 27.5px; }
+      .site-header .wrapper .search input#search-box {
+        font-size: 14px;
+        width: 200px; }
+      .site-header .wrapper .search input#search-button {
+        min-width: 50px !important; }
     .site-header .wrapper .mobile-site-nav {
       display: none; }
       @media (max-width: 500px) {
@@ -940,7 +949,8 @@ pre .diff .change {
   padding: 1em;
   box-sizing: border-box;
   background: white;
-  border: 1px solid #eee; }
+  border: 1px solid #eee;
+  min-height: 420px; }
 
 /* Footer */
 .contact-block-wrapper {
