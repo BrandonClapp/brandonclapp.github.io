@@ -3,13 +3,16 @@ layout: post
 title:  "Creating and importing a map for Phaser using Tiled"
 date:   March 8, 2015
 permalink: /creating-and-importing-a-map-for-phaser-using-tiled/
-tags: PhaserJS Game-Dev
-categories: game-dev
+tags:
+  - PhaserJS
+  - Game Dev
+categories:
+  - Game Development
 header: tiled_phaser_featured.png
 comments: true
 ---
 
-Phaser is an HTML5 game engine that comes with a lot of cool features that I've yet to figure out. Here, I'll give you a walk through of designing a map utilizing a tool called <strong>Tiled</strong> and then bringing that map into your phaser project.
+Phaser is an HTML5 game engine that comes with a lot of cool features that I've yet to figure out. Here, I'll give you a walk through of designing a map utilizing a tool called **Tiled** and then bringing that map into your phaser project.
 
 #### Create the Phaser Game object
 

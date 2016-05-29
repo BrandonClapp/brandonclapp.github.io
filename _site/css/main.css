@@ -1244,7 +1244,6 @@ ul.post-list {
   font-weight: 300; }
 
 .post .header-image {
-  margin-top: 1em;
   max-height: 400px;
   overflow: hidden;
   border-bottom: 1px solid black; }

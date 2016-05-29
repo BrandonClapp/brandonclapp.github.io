@@ -6,7 +6,8 @@ permalink: /what-is-a-singleton-how-do-i-implement-it-and-when-do-i-use-it/
 tags:
   - Singleton
   - Design Pattern
-categories: "Design Patterns"
+categories:
+  - Design Patterns
 comments: true
 ---
 
@@ -54,7 +55,7 @@ If you only need static methods from your singleton, then just use a static clas
 
 The single instance of the class will be distributed from logic internal to our singleton implementation. It must ensure that one, and only one, instance is ever created. Now that we know vaguely what a singleton is, lets look at how we might implement one.
 
-<h4>How do I implement a singleton?</h4>
+#### How do I implement a singleton?
 
 ```csharp
 namespace Scratchpad

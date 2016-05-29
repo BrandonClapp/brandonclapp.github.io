@@ -6,8 +6,8 @@
 </description>
     <link>http://brandonclapp.com/</link>
     <atom:link href="http://brandonclapp.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 29 May 2016 17:55:32 -0500</pubDate>
-    <lastBuildDate>Sun, 29 May 2016 17:55:32 -0500</lastBuildDate>
+    <pubDate>Sun, 29 May 2016 18:10:27 -0500</pubDate>
+    <lastBuildDate>Sun, 29 May 2016 18:10:27 -0500</lastBuildDate>
     <generator>Jekyll v3.1.3</generator>
     
       <item>
@@ -293,6 +293,164 @@
       </item>
     
       <item>
+        <title>What is dependency injection and why is it useful?</title>
+        <description>&lt;p&gt;A dependency is an external entity that a class, or function, needs to do it’s job. Just as I am writing this blog post, I also have dependencies on my computer. Remove the computer and I surely would not be able to finish the post.&lt;/p&gt;
+
+&lt;p&gt;Injecting dependencies that a class needs is a good way to decouple our classes. Sure, any class can new up an object and call methods or access properties on that object, but doing so also convolutes that class with logic that doesn’t necessarily belong there. Injecting a classes dependencies is a good way to apply the &lt;strong&gt;single responsibility principal&lt;/strong&gt;, which promotes good object oriented design. If you’re not familiar with it, it simply states that every class should have responsibility over a single part of the functionality provided by the software, and that responsibility should be entirely encapsulated by the class.&lt;/p&gt;
+
+&lt;p&gt;Consider the following example. Below, each class serves it’s own purpose and has it’s own job. Dependencies are injected into classes that need them. This is basically saying “give me the tools that I need, and I can do my job”.&lt;/p&gt;
+
+&lt;div class=&quot;language-csharp highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;namespace&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;Scratchpad&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Program&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;Microwave&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;microwave&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Microwave&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;Refrigerator&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;refrigerator&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Refrigerator&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+
+            &lt;span class=&quot;c1&quot;&gt;// Dad&#39;s purpose is to make lunch.
+&lt;/span&gt;            &lt;span class=&quot;n&quot;&gt;Dad&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dad&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Dad&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;microwave&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;refrigerator&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+            &lt;span class=&quot;c1&quot;&gt;// Kid&#39;s purpose is to play.
+&lt;/span&gt;            &lt;span class=&quot;c1&quot;&gt;// But they must eat first before they play.
+&lt;/span&gt;            &lt;span class=&quot;n&quot;&gt;Kid&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;kid&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Kid&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dad&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+            &lt;span class=&quot;n&quot;&gt;kid&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;Play&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;c1&quot;&gt;// Responsible for altering molecular structure of ingredients
+&lt;/span&gt;    &lt;span class=&quot;c1&quot;&gt;// to produce lunch
+&lt;/span&gt;    &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Microwave&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Lunch&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Zap&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Ingredient&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ingredients&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;seconds&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;c1&quot;&gt;// Do a bunch of scientific stuff
+&lt;/span&gt;            &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Lunch&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;c1&quot;&gt;// Responsible for storing ingredients
+&lt;/span&gt;    &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Refrigerator&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Ingredient&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Ingredients&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;set&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Lunch&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Ingredient&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;c1&quot;&gt;// Resonsible for making lunch.
+&lt;/span&gt;    &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Dad&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Microwave&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Microwave&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;set&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Refrigerator&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Refrigerator&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;set&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+        &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Dad&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Microwave&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;microwave&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Refrigerator&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;refrigerator&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;Microwave&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;microwave&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;Refrigerator&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;refrigerator&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+        &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Lunch&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;FixLunch&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;Ingredient&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ingredients&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;GetIngredients&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Refrigerator&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;Lunch&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;lunch&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Microwave&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;Zap&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ingredients&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;60&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+            &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;lunch&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+        &lt;span class=&quot;k&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Ingredient&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;GetIngredients&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Refrigerator&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;refrigerator&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;c1&quot;&gt;// ... Open connection to refrigerator
+&lt;/span&gt;            &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;refrigerator&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Ingredients&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;c1&quot;&gt;// Responsible for playing.
+&lt;/span&gt;    &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Kid&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Dad&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Dad&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;bool&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;_hungry&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+        &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Kid&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Dad&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dad&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;Dad&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dad&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+        &lt;span class=&quot;k&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Eat&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;Lunch&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;lunch&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Dad&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;FixLunch&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+            &lt;span class=&quot;c1&quot;&gt;// .. Eat the lunch... PickUpFork(), Chew() etc..
+&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;_hungry&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+        &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Play&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;_hungry&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+            &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+                &lt;span class=&quot;nf&quot;&gt;Eat&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+            &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+            &lt;span class=&quot;c1&quot;&gt;// ... Have fun playing.
+&lt;/span&gt;        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Here, I’m trying to adhere to the single responsibility principal. In the previous example, the &lt;strong&gt;Dad&lt;/strong&gt; class has the responsibility of making lunch. The &lt;strong&gt;Kid&lt;/strong&gt; class only has the responsibility of playing, but first she must eat lunch. The Kid class doesn’t know how to make lunch, nor is it the Kid’s responsibility to make lunch (in this example) so the Dad is the dependency. So that the Kid doesn’t need to know the complexities of making lunch, we keep this logic separate in the Dad class.&lt;/p&gt;
+
+&lt;p&gt;Dad knows how to make lunch, but he also has dependencies of his own. He must consult with the &lt;strong&gt;Refrigerator&lt;/strong&gt; and &lt;strong&gt;Microwave&lt;/strong&gt; classes in order to help in the process. Dad doesn’t need to know the complexities of vibrating atoms to cook food or store cold sandwich meat, so these responsibilities are also outsourced to the Microwave and Refrigerator classes.&lt;/p&gt;
+
+&lt;p&gt;Each class is properly injected with the dependencies that it requires to perform it’s job. When we create a new Dad object, we specify the Refrigerator and Microwave classes that will help him fulfill his responsibility of making lunch. When we create a new Kid object, we supply her with the Dad object that will help her eat so that she can fulfill her responsibility.&lt;/p&gt;
+
+&lt;h4 id=&quot;increasing-dependency-injection-flexibility-with-interfaces&quot;&gt;Increasing dependency injection flexibility with interfaces&lt;/h4&gt;
+
+&lt;p&gt;By “demanding” the dependencies in the constructor, you make your classes more flexible - especially if they are interfaces and not concrete implementations. Why is this, you may ask? Suppose that the Dad class constructor in the example above required IMicrowave and IRefrigerator interfaces instead of the concrete implementations to be created. Now suppose that the family got a complete kitchen makeover and replaced their appliances. In the real world, this may be the equivalent to creating a new version of a library that changes how it’s responsibilities are implemented. The Microwave and Refrigerator just got upgraded to new implementations. There are a couple of things to be said here.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;If Dad had been constructing the Microwave and Refrigerator objects internally, a concrete implementation would have had to been created before he could make lunch. This means that when the new kitchen appliance models (concrete implementations) comes along, the creation of the appliances need to be changed in the Dad class. Imagine if the Microwave and Refrigerator were being used by the entire family and/or there were more than two appliances in the kitchen.&lt;/li&gt;
+&lt;li&gt;If Dad&#39;s constructor now takes interfaces instead of concrete implementations, nothing inside of the Dad class needs to change. The new model (concrete implementation) of IMicrowave should still know how to *Zap()* and the new concrete of IRefrigerator should still know how to hold an array of *Ingredient*&#39;s. So long as the new classes still implement the same interface, there shouldn&#39;t be any breaking changes.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h4 id=&quot;why-should-i-use-dependency-injection&quot;&gt;Why should I use dependency injection?&lt;/h4&gt;
+
+&lt;p&gt;Dependency injection is a pattern at your disposal. Like all tools and approaches, use it when it’s appropriate. Ideally, it’s used to promote testability and easy maintenance.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Pro’s&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Flexibility&lt;/li&gt;
+  &lt;li&gt;Testability&lt;/li&gt;
+  &lt;li&gt;Easier maintenance&lt;/li&gt;
+  &lt;li&gt;Decouples classes (which is a reason for the previous 3 points)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Con’s&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Creating instances of your classes can become cumbersome, especially when your classes grow to too many responsibilities and have too many dependencies. If not maintained, it can become a nightmare.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Because of the con listed above, dependency injection frameworks were created to help with the creation of dependency objects. This is also known as &lt;strong&gt;inversion of control&lt;/strong&gt;, which I’ll cover in a follow up post.&lt;/p&gt;
+</description>
+        <pubDate>Fri, 13 Mar 2015 00:00:00 -0500</pubDate>
+        <link>http://brandonclapp.com/what-is-dependency-injection-and-why-is-it-useful/</link>
+        <guid isPermaLink="true">http://brandonclapp.com/what-is-dependency-injection-and-why-is-it-useful/</guid>
+        
+        <category>Dependency Injection</category>
+        
+        <category>Design Pattern</category>
+        
+        
+        <category>Design Patterns</category>
+        
+      </item>
+    
+      <item>
         <title>What is a Singleton? How do I implement it? And when do I use it?</title>
         <description>&lt;p&gt;This explanation will use C# to explain the basic ideas of a singleton and the singleton pattern. Keep in mind that if you’re using a programming language that doesn’t support classes, this explanation may require a bit more analysis.&lt;/p&gt;
 
@@ -338,7 +496,7 @@ A static class allows only static methods.&lt;/p&gt;
 
 &lt;p&gt;The single instance of the class will be distributed from logic internal to our singleton implementation. It must ensure that one, and only one, instance is ever created. Now that we know vaguely what a singleton is, lets look at how we might implement one.&lt;/p&gt;
 
-&lt;h4&gt;How do I implement a singleton?&lt;/h4&gt;
+&lt;h4 id=&quot;how-do-i-implement-a-singleton&quot;&gt;How do I implement a singleton?&lt;/h4&gt;
 
 &lt;div class=&quot;language-csharp highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;namespace&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;Scratchpad&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
@@ -475,9 +633,7 @@ A static class allows only static methods.&lt;/p&gt;
         <category>Design Pattern</category>
         
         
-        <category>Design</category>
-        
-        <category>Patterns</category>
+        <category>Design Patterns</category>
         
       </item>
     
@@ -608,10 +764,10 @@ A static class allows only static methods.&lt;/p&gt;
         
         <category>PhaserJS</category>
         
-        <category>Game-Dev</category>
+        <category>Game Dev</category>
         
         
-        <category>game-dev</category>
+        <category>Game Development</category>
         
       </item>
     
@@ -703,7 +859,7 @@ A static class allows only static methods.&lt;/p&gt;
         <link>http://brandonclapp.com/16-ways-to-become-a-better-developer/</link>
         <guid isPermaLink="true">http://brandonclapp.com/16-ways-to-become-a-better-developer/</guid>
         
-        <category>self-improvement</category>
+        <category>Self Improvement</category>
         
         
       </item>
@@ -1013,102 +1169,6 @@ A static class allows only static methods.&lt;/p&gt;
         <category>AngularJS</category>
         
         <category>AJAX</category>
-        
-        
-        <category>AngularJS</category>
-        
-      </item>
-    
-      <item>
-        <title>Beginner&#39;s guide to setting up an AngularJS project</title>
-        <description>&lt;p&gt;AngularJS is a great framework, which I’ve had the opportunity to use on many projects. Having two way data binding between your UI and your javascript objects is a really great feature that I find myself missing when I’m not using Angular. Here, I’ll attempt to go through the steps required to get up and running with your first Angular application.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; The following article targets angular 1.x. This example is incompatible with Angular 2.&lt;/p&gt;
-
-&lt;p&gt;The first step of using any javascript library is, of course, to first download it, put it in a directory within your project, and reference it from your markup. For simplicity, I will reference the script from a CDN.&lt;/p&gt;
-
-&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;script &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;text/javascript&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/script&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Ok great, we have angular referenced from our project, but now how do we use it? The first step that I typically take is to create a script which will act as the main entry point into my application. I typically name this file App.js, but you’re free to name it whatever you like.&lt;/p&gt;
-
-&lt;h4 id=&quot;creating-the-app-module&quot;&gt;Creating the App Module&lt;/h4&gt;
-
-&lt;p&gt;Inside of App.js, we we first need to create a variable which will give us a reference to angular. Once this file is created, add the following line.&lt;/p&gt;
-
-&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;s1&quot;&gt;&#39;use strict&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-     &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;app&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;angular&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;module&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;MyAngularApp&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[]);&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}());&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Because we included angular, there should be an object named angular on the window object which is accessible. What we’re effectively doing here is creating a variable which houses a reference to an angular module. We won’t dig too much into modules, but just know that your angular application will be linked to this module that we have just created. In fact, if you’re just beginning, it may make more sense if you name this variable “app”, as it will basically just be referring to your application.&lt;/p&gt;
-
-&lt;p&gt;Also, note that the 2nd parameter of the module function takes an empty array. Be sure to include this empty array parameter, as there is also an overload, which takes a single string parameter, that will allow you to “get” a reference of your module rather than create one.&lt;/p&gt;
-
-&lt;h4&gt;Creating our first controller&lt;/h4&gt;
-
-&lt;p&gt;Now that we have a variable for our angular app, we need to create a controller, then attach it to our app variable.&lt;/p&gt;
-
-&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;mainCtrl&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;$scope&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;nx&quot;&gt;app&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;controller&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;MainCtrl&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;mainCtrl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Our controller now has a reference (mainCtrl) and we have added it to our app with the controller method on our app module. The second parameter, “MainCtrl”, is the string to which we can refer to our controller if we need it in the future. You’re also probably wondering what this $scope parameter is on our controller. &lt;strong&gt;$scope&lt;/strong&gt; is a built in angular service, which can be injected into any controller simply by adding it to that controllers constructor. Later, we will use the scope as a means to take advantage of two way data binding between our javascript and UI.&lt;/p&gt;
-
-&lt;h4 id=&quot;referencing-angular-from-the-ui&quot;&gt;Referencing Angular from the UI&lt;/h4&gt;
-
-&lt;p&gt;Now that we have our App.js script set up in our project, we need to add a reference to it inside of our UI markup. Go ahead and add the App.js script to your HTML, ensuring that it loads after angular has loaded.&lt;/p&gt;
-
-&lt;p&gt;In addition to adding the script reference, we’re going to add a couple of angular directives close to where we are currently working, on our opening html tag. Here, we’ll add the &lt;strong&gt;ng-app&lt;/strong&gt; and &lt;strong&gt;ng-controller&lt;/strong&gt; directives, which will notify angular which app and controller to use. Afterwards, we should have something resembling this.&lt;/p&gt;
-
-&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;html&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;ng-app=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;MyAngularApp&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;ng-controller=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;MainCtrl&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;head&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;c&quot;&gt;&amp;lt;!-- Alter the paths so that they reflect where your scripts are. --&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;script &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;~/Scripts/angular.min.js&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/script&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;script &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;~/Scripts/Angular/App.js&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/script&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/head&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;So what exactly have we done here? Let me preface this explanation by first saying that angular directives are simply &lt;a href=&quot;http://www.w3schools.com/html/html_attributes.asp&quot; target=&quot;_blank&quot;&gt;HTML attributes&lt;/a&gt;. The difference between angular directives and standard W3C attributes is that angular directives are processed by the angular framework and the &lt;a href=&quot;http://www.w3.org/TR/html4/index/attributes.html&quot; target=&quot;_blank&quot;&gt;standard html attributes&lt;/a&gt; are processed by the browser. Angular directives native to angular will start with &lt;strong&gt;ng-&lt;/strong&gt;, however it is possible to make your own custom directives that may not adhere to this convention.&lt;/p&gt;
-
-&lt;p&gt;In the code above, we told the angular framework that we have set up an angular app (module) called “MyAngularApp” using the ng-app directive, as well as a controller named “MainCtrl” (which has also been added to our app module) using the ng-controller directive. Now, anything between our opening and closing html elements will have access to the “MainCtrl” controller in the “MyAngularApp” module. If you only wanted angular to be accessible to a smaller range of html elements, you would apply the ng-app directive to top most parent element that you wanted to use angular in, such as the body tag or even a div tag within the body. For our example, we’ll use angular on our entire page.&lt;/p&gt;
-
-&lt;p&gt;Because we’ve specified &amp;lt;pre&amp;gt;ng-controller=”MainCtrl”&amp;lt;/pre&amp;gt; on our html element, we will only be using one controller in this example. This will be suitable for simple scenarios, but ideally for medium to large sized projects, you would want to create multiple controllers to handle different parts of your UI. Using multiple controllers requires introducing the concept of angular routing, which I’m not going to talk about right now.&lt;/p&gt;
-
-&lt;h4&gt;Demonstrating Two Way Data Binding&lt;/h4&gt;
-
-&lt;p&gt;What exactly is two way data binding? As we add properties to the $scope object within our controller, we can access those properties from our UI. Two way binding just means that when properties in the model ($scope) get updated, so does the UI. When UI elements get updated, the changes get propagated back to the model ($scope). Let me give an example. Add the following html to the body of your page.&lt;/p&gt;
-
-&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;input&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;text&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;ng-model=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;message&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;div&amp;gt;&lt;/span&gt;Message: &lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;There are a few things to talk about here. First, we see a new directive, &lt;strong&gt;ng-model&lt;/strong&gt;. The value of this directive, &lt;em&gt;message&lt;/em&gt;, is the property on our $scope that this UI element binds to. But wait, we haven’t initialized a $scope.message property in our controller. While we could have initialized the property, if the property doesn’t currently exist on our controller, it’ll be created automatically for us.&lt;/p&gt;
-
-&lt;p&gt;Second, we see some funky looking brackets with our scope variable in them. Angular uses mustache syntax to evaluate it’s expressions. In this case, the expression evaluates to the value of our $scope.message property. Our $scope.message property gets updated through binding when we update our text box (because of the ng-model directive). In turn, when the property is updated, it is then immediately updated on the UI. Cool, huh?&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/posts/content/angular-two-way-binding.png&quot; alt=&quot;Angular two way data binding&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;That’s the basics of setting up a project and a quick introduction to some of the angular directives. Some common ones that I tend to use a lot are ng-hide, ng-show, ng-if, ng-repeat, ng-click, ng-include, and ng-class to name a few. I encourage starting with these. You would be surprised what you can do with just a few directives.&lt;/p&gt;
-
-&lt;p&gt;If you’re interested in learning how to do some more cool stuff with angular, I recommend learning &lt;a href=&quot;/performing-ajax-http-requests-with-angularjs&quot;&gt;how to perform ajax requests&lt;/a&gt; in order to interact with external applications/api’s.&lt;/p&gt;
-</description>
-        <pubDate>Wed, 04 Mar 2015 00:00:00 -0600</pubDate>
-        <link>http://brandonclapp.com/beginners-guide-to-setting-up-an-angularjs-project/</link>
-        <guid isPermaLink="true">http://brandonclapp.com/beginners-guide-to-setting-up-an-angularjs-project/</guid>
-        
-        <category>AngularJS</category>
-        
-        <category>project-setup</category>
         
         
         <category>AngularJS</category>
