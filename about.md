@@ -15,7 +15,7 @@ Thanks for visiting! I’m Brandon and most of my career has been focused on web
 
 Since moving to Oklahoma City in 2012, I’ve had a lot of amazing opportunities. For starters, I now work on a team of experienced and passionate developers, where trying new technologies and ideas is encouraged. Being exposed to new ideologies and constructs is an eye opener to how other people are solving similar problems.
 
-I’m also able to take advantage of attending local developer user group meetings and conferences such as [OKCJS](http://okcjs.com/){:target="_blank"}, [OKCSharp](http://okcsharp.net/){:target="_blank"}, [OKCRuby](http://okcruby.org/){:target="_blank"}, [Thunder Plains](http://thunderplainsconf.com/){:target="_blank"}, [200OK](http://200ok.us/){:target="_blank"}, and [KCDC](http://www.kcdc.info/). There are some really talented and passionate people that attend these events to learn from.
+I’m also able to take advantage of attending local developer user group meetings and conferences such as [OKCJS](http://okcjs.com/){:target="_blank"}, [OKCSharp](http://okcsharp.net/){:target="_blank"}, [OKCRuby](http://okcruby.org/){:target="_blank"}, [Thunder Plains](http://thunderplainsconf.com/){:target="_blank"}, [200OK](http://200ok.us/){:target="_blank"}, and [KCDC](http://www.kcdc.info/){:target="_blank"}. There are some really talented and passionate people that attend these events to learn from.
 
 ### What I enjoy
 
