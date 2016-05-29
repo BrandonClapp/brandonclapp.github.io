@@ -7,6 +7,14 @@ banner: contact
 ---
 
 <div class="contact">
+  <div id="send-status">
+    <div id="send-success" class="success" style="display: none;">
+      Your message has been delivered sucessfully.
+    </div>
+    <div id="send-error" class="error" style="display: none;">
+      Uh oh, an error occured while sending your message! Please email me directly at brandonclapp@outlook.com.
+    </div>
+  </div>
   <p>
     If you have an idea for a project that you would like to get off of the ground,
     need some help with something, or just want to say hello, then feel free to drop me a line.
@@ -29,7 +37,7 @@ banner: contact
       </div>
 
       <div class="send form-item">
-        <button id="send">Send</button>
+        <button id="send">Send<span id="loading" style="display:none;">ing...</span></button>
       </div>
   </form>
 </div>
@@ -41,6 +49,15 @@ banner: contact
     var email = document.getElementById('email');
     var message = document.getElementById('message');
 
+    var successMessage = $('#send-success');
+    var errorMessage = $('#send-error');
+    var sendButton = $('#send');
+    var loading = $('#loading');
+
+    successMessage.hide();
+    errorMessage.hide();
+    loading.hide();
+
     function clearForm() {
       name.value = "";
       email.value = "";
@@ -51,8 +68,15 @@ banner: contact
 
     contactForm.addEventListener('submit', function(e) {
       e.preventDefault();
+
+      successMessage.hide();
+      errorMessage.hide();
+      loading.hide();
+      sendButton.prop('disabled', true);
+
       if(name.value && email.value && message.value) {
-        console.log('Everything was filled out.');
+        console.log('Everything was submitted.');
+        loading.show();
         $.ajax({
           url: "https://formspree.io/brandonclapp@outlook.com",
           method: "POST",
@@ -63,11 +87,15 @@ banner: contact
           },
           dataType: "json",
           success: function() {
-            alert('Successfully sent!');
+            loading.hide();
+            successMessage.show();
+            sendButton.prop('disabled', false);
             clearForm();
           },
           error: function() {
-            alert('An error occured while sending your message. Pleae contact me directly at brandonclapp@outlook.com, instead.');
+            loading.hide();
+            errorMessage.show();
+            sendButton.prop('disabled', false);
           }
       });
       }

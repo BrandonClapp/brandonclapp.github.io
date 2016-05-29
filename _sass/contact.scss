@@ -1,4 +1,26 @@
 .contact {
+  #send-status {
+    $success-color: #DFF2BF;
+    $error-color: #FFBABA;
+
+    // padding: .5em 1em .5em 1em;
+     .success {
+       padding: .25em;
+       background-color: $success-color;
+       border: 1px solid darken($success-color, 40%);
+       color: darken($success-color, 60%);
+       margin-bottom: 1em;
+     }
+
+     .error {
+       padding: .25em;
+       background-color: $error-color;
+       border: 1px solid darken($error-color, 40%);
+       color: darken($error-color, 60%);
+       margin-bottom: 1em;
+     }
+  }
+
   #contact-form{
     width: 100%;
     box-sizing: border-box;
@@ -38,6 +60,10 @@
       text-align: center;
       // background: lighten($color4, 40%);
       background: $color3;
+
+      &:disabled {
+        background: desaturate($color3, 40%);
+      }
 
       @media (max-width: $breakpoint-mobile) {
           width: 100%;

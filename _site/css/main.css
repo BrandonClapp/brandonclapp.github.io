@@ -73,6 +73,9 @@ a {
   clear: both;
   margin-bottom: 30px; }
 
+.hidden {
+  visibility: hidden; }
+
 html,
 body,
 div,
@@ -1219,6 +1222,18 @@ ul.post-list .post .post-meta {
 .post .post-header .post-meta {
   padding: 0 0 1em 0; }
 
+.contact #send-status .success {
+  padding: .25em;
+  background-color: #DFF2BF;
+  border: 1px solid #86be27;
+  color: #4a6a15;
+  margin-bottom: 1em; }
+.contact #send-status .error {
+  padding: .25em;
+  background-color: #FFBABA;
+  border: 1px solid #ed0000;
+  color: #870000;
+  margin-bottom: 1em; }
 .contact #contact-form {
   width: 100%;
   box-sizing: border-box; }
@@ -1247,6 +1262,8 @@ ul.post-list .post .post-meta {
     width: 100px;
     text-align: center;
     background: #DB3A3F; }
+    .contact #contact-form button#send:disabled {
+      background: #ac696b; }
     @media (max-width: 500px) {
       .contact #contact-form button#send {
         width: 100%; } }
