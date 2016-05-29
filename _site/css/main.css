@@ -966,6 +966,8 @@ pre .diff .change {
     list-style-type: square;
     margin: 1em 0 1em 2em;
     padding: 0; }
+    .content ul ul, .content ol ul {
+      margin: 0 0 0 2em; }
 
 /* Footer */
 .contact-block-wrapper {
