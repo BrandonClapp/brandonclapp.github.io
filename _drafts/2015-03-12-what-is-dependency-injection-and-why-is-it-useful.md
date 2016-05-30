@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "What is dependency injection and why is it useful?"
-date:   March 13, 2015
+date:   March 12, 2015
 permalink: /what-is-dependency-injection-and-why-is-it-useful/
 tags:
   - Dependency Injection

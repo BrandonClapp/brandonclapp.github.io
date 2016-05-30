@@ -9,7 +9,7 @@ comments: true
 
 Creating extension methods for our HtmlHelpers is a great way to minimize a lot of logic in our view. HtmlHelper extensions minimize unnecessary clutter and keep our view focused on how the page is displayed to our user rather than the logic behind it.
 
-<h5>Create a Helper Extension Method</h5>
+**Create a Helper Extension Method**
 
 ```csharp
 using System.Net;

@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Using AngularJS services to broadcast messages between controllers"
-date:   March 15, 2015
+date:   March 16, 2015
 permalink: /using-angularjs-services-to-broadcast-messages-between-controllers/
 tags:
   - AngularJS
