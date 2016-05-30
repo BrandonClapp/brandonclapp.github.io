@@ -14,7 +14,7 @@ comments: true
 
 One of the challenges I had early in learning Rails was setting up many-to-many relationships between models. Many tutorials and articles cover the simpler one-to-many and many-to-one relationships with ActiveRecord's `has_many` and `belongs_to` functions, respectively, but when trying to build anything more than a sample application you quickly realize that you need to set up slightly more complicated relationships.
 
-<h3>Problem</h3>
+### Problem
 
 I want to set up a many to many relationship between my **user** and **team** models where <u>users can belong to many teams</u> and <u>teams can contain many users</u>. Prior to setting up the relationship, my models are just basic ActiveRecord models generated from the rails model generator.
 
@@ -32,7 +32,7 @@ class Team < ActiveRecord::Base
 end
 ```
 
-<h3>Solution</h3>
+### Solution
 
 To enforce the many to many relationship, I chose to implement the one of the ways suggested by the [RailsCast Many-to-Many screencast](http://railscasts.com/episodes/47-two-many-to-many){:target="_blank"}, which involves **`has_many :through`**.
 

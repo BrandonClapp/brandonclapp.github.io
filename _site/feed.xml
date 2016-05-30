@@ -6,31 +6,55 @@
 </description>
     <link>http://brandonclapp.com/</link>
     <atom:link href="http://brandonclapp.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 29 May 2016 20:23:46 -0500</pubDate>
-    <lastBuildDate>Sun, 29 May 2016 20:23:46 -0500</lastBuildDate>
+    <pubDate>Sun, 29 May 2016 21:47:35 -0500</pubDate>
+    <lastBuildDate>Sun, 29 May 2016 21:47:35 -0500</lastBuildDate>
     <generator>Jekyll v3.1.3</generator>
     
       <item>
-        <title>Git guide and useful commands</title>
-        <description>&lt;p&gt;Git can be a very powerful tool for developers if they know what they’re doing, However, if they don’t, the workflow feels more like an obstacle. Although I agree that it can take a bit to understand the fundamentals of git, I strongly believe that learning it is a great investment. Lets start with some basic terminology. Don’t get discouraged if you don’t understand them right now.&lt;/p&gt;
+        <title>Git Reference: Useful Commands &amp; Overview</title>
+        <description>&lt;p&gt;This guide is not intended to be a comprehensive resource, but merely an overview and reference for myself. If you feel that you can contribute helpful commands or improve this reference guide, let me know in the comments.&lt;/p&gt;
 
-&lt;h3 id=&quot;terminology&quot;&gt;Terminology&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;#terminology&quot;&gt;Terminology&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#setup-basics&quot;&gt;Setup &amp;amp; basics&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#adding-files-to-staging&quot;&gt;Adding files to staging&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#removing-files-from-staging&quot;&gt;Removing files from staging&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#undoing-changes&quot;&gt;Undoing changes&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#creating-a-commit&quot;&gt;Creating a commit&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#undoing-a-commit&quot;&gt;Undoing a commit&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#amending-to-a-commit&quot;&gt;Amending to a commit&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#viewing-commit-history&quot;&gt;Viewing commit history&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#check-file-modifications&quot;&gt;Check file modifications (diff)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#managing-remotes&quot;&gt;Managing remotes&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#pushing-to-remote-repositories&quot;&gt;Pushing to remote repositories&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#getting-changes-from-a-remote-repository&quot;&gt;Getting changes from a remote repository&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#cloning-a-remote-repository&quot;&gt;Cloning a remote repository&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#branching-merging&quot;&gt;Branching &amp;amp; merging&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#tagging&quot;&gt;Tagging&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#rebase&quot;&gt;Rebase&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Git can be a very powerful tool for developers if they know what they’re doing, However, if they don’t, the workflow feels more like an obstacle. Although I agree that it can take a bit to understand the fundamentals of git, I strongly believe that learning it is a great investment. Lets start with some basic terminology. Don’t get discouraged if you don’t understand them right now.&lt;/p&gt;
+
+&lt;h3 id=&quot;terminologyterminologynameterminology&quot;&gt;&lt;a href=&quot;#terminology&quot; name=&quot;terminology&quot;&gt;Terminology&lt;/a&gt;&lt;/h3&gt;
 
 &lt;p&gt;&lt;strong&gt;Commit:&lt;/strong&gt; A snapshot of changes to files that have been modified. Before making a commit, the files must be &lt;em&gt;staged&lt;/em&gt;. This means that they must be tracked and added to the staging area by using the &lt;code class=&quot;highlighter-rouge&quot;&gt;git add &amp;lt;filename&amp;gt;&lt;/code&gt; command.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Staging area:&lt;/strong&gt; Before making a commit, tracked files must be &lt;em&gt;staged&lt;/em&gt;. Modified, deleted, added, or moved files that are tracked are eligible to be staged. The &lt;code class=&quot;highlighter-rouge&quot;&gt;git add&lt;/code&gt; command can be used to stage these modifications. Once staged, the staged files are eligible to be committed with the &lt;code class=&quot;highlighter-rouge&quot;&gt;git commit&lt;/code&gt; command.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Staging:&lt;/strong&gt; Before making a commit, tracked files must be &lt;em&gt;staged&lt;/em&gt;. Modified, deleted, added, or moved files that are &lt;em&gt;tracked&lt;/em&gt; are eligible to be staged. The &lt;code class=&quot;highlighter-rouge&quot;&gt;git add&lt;/code&gt; command can be used to stage these modifications. Once staged, the staged files are eligible to be committed with the &lt;code class=&quot;highlighter-rouge&quot;&gt;git commit&lt;/code&gt; command.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Remote:&lt;/strong&gt; Because git is a distributed source control system, this means that the source control resides on both remotely and local. For this reason, any repository that is located remotely (i.e. on github) is considered to be a remote repository.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Tracked file/folder:&lt;/strong&gt; A file or folder that your git repository knows to watch for modifications on/in. Files can be untracked by adding them to a &lt;strong&gt;.gitignore&lt;/strong&gt; file.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Local:&lt;/strong&gt; The opposite of remote. This is the repository as it lives locally. You can &lt;em&gt;clone&lt;/em&gt; a remote repository locally or use &lt;code class=&quot;highlighter-rouge&quot;&gt;git init&lt;/code&gt; to initialize a local repository. Local repositories can be linked to remote repositories.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Remote repository:&lt;/strong&gt; Because git is a distributed source control system, source control for the same project can reside in many different places at once. For this reason, any repository that is located remotely (i.e. on github) is considered to be a remote repository. Remote repository’s can be cloned (copied) locally, creating a local copy of the repository known as a local repository. Once changes are made in the local repository, you can push changes back up to the remote repository, where other collaborators on the project will be able to see your changes.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Local repository:&lt;/strong&gt; The opposite of remote. This is the repository as it lives locally. You can &lt;em&gt;clone&lt;/em&gt; a remote repository locally or use &lt;code class=&quot;highlighter-rouge&quot;&gt;git init&lt;/code&gt; to initialize a local repository. Local repositories can be linked to remote repositories.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;HEAD:&lt;/strong&gt; In git, HEAD refers to the last commit on the current branch.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Clone:&lt;/strong&gt; The process of pulling the source code from a repository hosted remotely to your local machine, creating a local repository, and then associating that local repository with the remote that it was pulled/cloned from.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Branch:&lt;/strong&gt; A branch can be thought of as an alternate timeline for your repository’s code. By default, when initializing or cloning a repository, a master branch will be created. Creating a new branch will house commits/changes that are not present on the master branch until they are eventually merged back in.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Branch:&lt;/strong&gt; A branch can be thought of as an alternate timeline for your repository’s code. When initializing or cloning a repository, a master branch will be created. Creating a new branch will house commits (snapshotted changes) that are not present on the master branch until they are eventually merged back in.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Fast-forward:&lt;/strong&gt; When merging, if the target branch does not contain commits outside of those from the incoming source branch, then the target can simply “fast-forward” it’s HEAD to the latest commit on the source branch once it is merged.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Fast-forward:&lt;/strong&gt; When merging, if the target branch (where you’re merging &lt;strong&gt;to&lt;/strong&gt;) does not contain commits outside of those from the incoming source branch (where you’re merging &lt;strong&gt;from&lt;/strong&gt;), then the target can simply “fast-forward” it’s HEAD to the latest commit on the source branch once it is merged.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Recursive merge:&lt;/strong&gt; When merging, unlike the fast forward, if the target branch contains commits not included by the source branch, a recursive strategy is needed. This will merge all commits into the single target branch and then create a single “merge commit” stating that the branches have merged back together.&lt;/p&gt;
 
@@ -41,98 +65,87 @@
 - Add all of the commits from the specified source branch (from branch) to the current branch.
 - Add all of the commits from the aforementioned temporary area back onto the current branch.&lt;/p&gt;
 
-&lt;hr /&gt;
+&lt;h3 id=&quot;setup--basicssetup-basicsnamesetup-basics&quot;&gt;&lt;a href=&quot;#setup-basics&quot; name=&quot;setup-basics&quot;&gt;Setup &amp;amp; Basics&lt;/a&gt;&lt;/h3&gt;
 
-&lt;h3 id=&quot;testing&quot;&gt;Testing!&lt;/h3&gt;
-
-&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;h3 id=&quot;setup--basics&quot;&gt;Setup &amp;amp; Basics&lt;/h3&gt;
-
-&lt;h5 id=&quot;git-init&quot;&gt;&lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git init&lt;/code&gt;&lt;/strong&gt;&lt;/h5&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git init&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;Initializes a local git repository&lt;/p&gt;
 
-&lt;h5 id=&quot;git-config---global-username-brandon-clapp&quot;&gt;&lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git config --global user.name &quot;Brandon Clapp&quot;&lt;/code&gt;&lt;/strong&gt;&lt;/h5&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git config --global user.name &quot;Brandon Clapp&quot;&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;Sets the global git user name to be used when making commits.&lt;/p&gt;
 
-&lt;h5 id=&quot;git-config---global-useremail-memyemailcom&quot;&gt;&lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git config --global user.email me@myemail.com&lt;/code&gt;&lt;/strong&gt;&lt;/h5&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git config --global user.email me@myemail.com&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;Sets the global git email to be used when making commits.&lt;/p&gt;
 
-&lt;h5 id=&quot;git-config---global-colorui-true&quot;&gt;&lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git config --global color.ui true&lt;/code&gt;&lt;/strong&gt;&lt;/h5&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git config --global color.ui true&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;Sets the global git setting for adding pretty colors on command line&lt;/p&gt;
 
-&lt;h5 id=&quot;git-status&quot;&gt;&lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git status&lt;/code&gt;&lt;/strong&gt;&lt;/h5&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git status&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;Check which tracked files have been modified since the last commit, as well as untracked files..&lt;/p&gt;
 
 &lt;hr /&gt;
 
-&lt;h3 id=&quot;adding-files-to-staging&quot;&gt;Adding files to staging&lt;/h3&gt;
+&lt;h3 id=&quot;adding-files-to-stagingadding-files-to-stagingnameadding-files-to-staging&quot;&gt;&lt;a href=&quot;#adding-files-to-staging&quot; name=&quot;adding-files-to-staging&quot;&gt;Adding files to staging&lt;/a&gt;&lt;/h3&gt;
 
-&lt;h5 id=&quot;git-add--or-git-add---all&quot;&gt;&lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git add .&lt;/code&gt;&lt;/strong&gt; or &lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git add --all&lt;/code&gt;&lt;/strong&gt;&lt;/h5&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git add .&lt;/code&gt;&lt;/strong&gt; or &lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git add --all&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;Add all files and folders that are part of your current working directory to the staging area.&lt;/p&gt;
 
-&lt;h5 id=&quot;git-add-filename&quot;&gt;&lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git add &amp;lt;filename&amp;gt;&lt;/code&gt;&lt;/strong&gt;&lt;/h5&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git add &amp;lt;filename&amp;gt;&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;Add a single file to the staging area.&lt;/p&gt;
 
-&lt;h5 id=&quot;git-add-list-of-files&quot;&gt;&lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git add &amp;lt;list of files&amp;gt;&lt;/code&gt;&lt;/strong&gt;&lt;/h5&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git add &amp;lt;list of files&amp;gt;&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;Adds multiple files. Files are delimited by spaces.&lt;/p&gt;
 
-&lt;h5 id=&quot;git-add-ext&quot;&gt;&lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git add *.&amp;lt;ext&amp;gt;&lt;/code&gt;&lt;/strong&gt;&lt;/h5&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git add *.&amp;lt;ext&amp;gt;&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;Adds all files with the provided extension to the staging area. i.e. &lt;code class=&quot;highlighter-rouge&quot;&gt;git add *.txt&lt;/code&gt;&lt;/p&gt;
 
-&lt;h5 id=&quot;git-add-folderext&quot;&gt;&lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git add &amp;lt;folder&amp;gt;/*.&amp;lt;ext&amp;gt;&lt;/code&gt;&lt;/strong&gt;&lt;/h5&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git add &amp;lt;folder&amp;gt;/*.&amp;lt;ext&amp;gt;&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;Adds all files in the docs folder with a &lt;em&gt;.txt&lt;/em&gt; extension to the staging area. i.e. &lt;code class=&quot;highlighter-rouge&quot;&gt;git add docs/*.txt&lt;/code&gt;&lt;/p&gt;
 
-&lt;h5 id=&quot;git-add-ext-1&quot;&gt;&lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git add &quot;*.&amp;lt;ext&amp;gt;&quot;&lt;/code&gt;&lt;/strong&gt;&lt;/h5&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git add &quot;*.&amp;lt;ext&amp;gt;&quot;&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;Adds all files of a the provided extension in &lt;em&gt;the whole project&lt;/em&gt; to the staging area.&lt;/p&gt;
 
-&lt;h5 id=&quot;git-add-foldername&quot;&gt;&lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git add &amp;lt;foldername&amp;gt;&lt;/code&gt;&lt;/strong&gt;&lt;/h5&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git add &amp;lt;foldername&amp;gt;&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;Add a single folder and all associated modified files/folders in that folder to the staging area.&lt;/p&gt;
 
 &lt;hr /&gt;
 
-&lt;h3 id=&quot;removing-files-from-staging&quot;&gt;Removing files from staging&lt;/h3&gt;
+&lt;h3 id=&quot;removing-files-from-stagingremoving-files-from-stagingnameremoving-files-from-staging&quot;&gt;&lt;a href=&quot;#removing-files-from-staging&quot; name=&quot;removing-files-from-staging&quot;&gt;Removing files from staging&lt;/a&gt;&lt;/h3&gt;
 
-&lt;h5 id=&quot;git-reset-head-file&quot;&gt;&lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git reset HEAD &amp;lt;file&amp;gt;&lt;/code&gt;&lt;/strong&gt;&lt;/h5&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git reset HEAD &amp;lt;file&amp;gt;&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;Removes the file from staging, but keeps any modifications made to that file.&lt;/p&gt;
 
-&lt;h3 id=&quot;undoing-changes&quot;&gt;Undoing changes&lt;/h3&gt;
+&lt;h3 id=&quot;undoing-changesundoing-changesnameundoing-changes&quot;&gt;&lt;a href=&quot;#undoing-changes&quot; name=&quot;undoing-changes&quot;&gt;Undoing changes&lt;/a&gt;&lt;/h3&gt;
 
-&lt;h5 id=&quot;git-checkout----file&quot;&gt;&lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git checkout -- &amp;lt;file&amp;gt;&lt;/code&gt;&lt;/strong&gt;&lt;/h5&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git checkout -- &amp;lt;file&amp;gt;&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;Undo all changes to a specific file. i.e. &lt;code class=&quot;highlighter-rouge&quot;&gt;git checkout -- README.md&lt;/code&gt;&lt;/p&gt;
 
-&lt;h5 id=&quot;git-checkout-&quot;&gt;&lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git checkout .&lt;/code&gt;&lt;/strong&gt;&lt;/h5&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git checkout .&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;Undo all changes for all tracked files and folders in the current working directory&lt;/p&gt;
 
-&lt;h5 id=&quot;git-reset---hard-head&quot;&gt;&lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git reset --hard HEAD&lt;/code&gt;&lt;/strong&gt;&lt;/h5&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git reset --hard HEAD&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;Undo all changes for all files and folders (including untracked) back to the HEAD commit.&lt;/p&gt;
 
 &lt;hr /&gt;
 
-&lt;h3 id=&quot;creating-a-commit&quot;&gt;Creating a commit&lt;/h3&gt;
+&lt;h3 id=&quot;creating-a-commitcreating-a-commitnamecreating-a-commit&quot;&gt;&lt;a href=&quot;#creating-a-commit&quot; name=&quot;creating-a-commit&quot;&gt;Creating a commit&lt;/a&gt;&lt;/h3&gt;
 
-&lt;h5 id=&quot;git-commit--m-create-a-readme&quot;&gt;&lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git commit -m &quot;Create a README.&quot;&lt;/code&gt;&lt;/strong&gt;&lt;/h5&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git commit -m &quot;Create a README.&quot;&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;Creates a commit of all files that are currently in the staging area.&lt;/p&gt;
 
@@ -140,27 +153,27 @@
 
 &lt;p&gt;Once committed, this “snapshot” of changes is added to the top of your timeline tree.&lt;/p&gt;
 
-&lt;h5 id=&quot;git-commit--a--m-my-commit-message-or-git-commit--am-my-commit-message&quot;&gt;&lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git commit -a -m &quot;My commit message.&quot;&lt;/code&gt;&lt;/strong&gt; or &lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git commit -am &quot;My commit message.&quot;&lt;/code&gt;&lt;/strong&gt;&lt;/h5&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git commit -a -m &quot;My commit message.&quot;&lt;/code&gt;&lt;/strong&gt; or &lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git commit -am &quot;My commit message.&quot;&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;Add all tracked files in the current working directory to staging &lt;strong&gt;and&lt;/strong&gt; commit them with the message &lt;em&gt;My commit message&lt;/em&gt; in a single step. This however, does not include untracked files.&lt;/p&gt;
 
 &lt;hr /&gt;
 
-&lt;h3 id=&quot;undoing-a-commit&quot;&gt;Undoing a commit&lt;/h3&gt;
+&lt;h3 id=&quot;undoing-a-commitundoing-a-commitnameundoing-a-commit&quot;&gt;&lt;a href=&quot;#undoing-a-commit&quot; name=&quot;undoing-a-commit&quot;&gt;Undoing a commit&lt;/a&gt;&lt;/h3&gt;
 
-&lt;h5 id=&quot;git-reset---soft-head-potentially-dangerous&quot;&gt;&lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git reset --soft HEAD^&lt;/code&gt;&lt;/strong&gt; (potentially dangerous)&lt;/h5&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git reset --soft HEAD^&lt;/code&gt;&lt;/strong&gt; (potentially dangerous)&lt;/p&gt;
 
 &lt;p&gt;Undo the last commit (HEAD) and move everything from that commit back into staging on the commit before it (HEAD^).&lt;/p&gt;
 
 &lt;p&gt;&lt;em&gt;Caution:&lt;/em&gt; Never do this when the commit has already been pushed to a remote repository. Rewriting history is dangerous.&lt;/p&gt;
 
-&lt;h5 id=&quot;git-reset---hard-head-potentially-dangerous&quot;&gt;&lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git reset --hard HEAD^&lt;/code&gt;&lt;/strong&gt; (potentially dangerous)&lt;/h5&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git reset --hard HEAD^&lt;/code&gt;&lt;/strong&gt; (potentially dangerous)&lt;/p&gt;
 
 &lt;p&gt;Undo last commit and all pending changes to tracked files.&lt;/p&gt;
 
 &lt;p&gt;&lt;em&gt;Caution:&lt;/em&gt; Never do this when the commit has already been pushed to a remote repository. Rewriting history is dangerous.&lt;/p&gt;
 
-&lt;h5 id=&quot;git-reset---hard-head-potentially-dangerous-1&quot;&gt;&lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git reset --hard HEAD^^&lt;/code&gt;&lt;/strong&gt; (potentially dangerous)&lt;/h5&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git reset --hard HEAD^^&lt;/code&gt;&lt;/strong&gt; (potentially dangerous)&lt;/p&gt;
 
 &lt;p&gt;Undo last 2 commits and all pending changes to tracked files.&lt;/p&gt;
 
@@ -168,9 +181,9 @@
 
 &lt;hr /&gt;
 
-&lt;h3 id=&quot;amending-to-a-commit&quot;&gt;Amending to a commit&lt;/h3&gt;
+&lt;h3 id=&quot;amending-to-a-commitamending-to-a-commitnameamending-to-a-commit&quot;&gt;&lt;a href=&quot;#amending-to-a-commit&quot; name=&quot;amending-to-a-commit&quot;&gt;Amending to a commit&lt;/a&gt;&lt;/h3&gt;
 
-&lt;h5 id=&quot;git-commit---amend--m-my-new-commit-message-potentially-dangerous&quot;&gt;&lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git commit --amend -m &quot;My new commit message&quot;&lt;/code&gt;&lt;/strong&gt; (potentially dangerous)&lt;/h5&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git commit --amend -m &quot;My new commit message&quot;&lt;/code&gt;&lt;/strong&gt; (potentially dangerous)&lt;/p&gt;
 
 &lt;p&gt;Add to the last commit. Optionally, a new commit message can be provided with &lt;code class=&quot;highlighter-rouge&quot;&gt;-m&lt;/code&gt;, which will overwrite the previous commit message.&lt;/p&gt;
 
@@ -178,32 +191,199 @@
 
 &lt;hr /&gt;
 
-&lt;h3 id=&quot;viewing-commit-history&quot;&gt;Viewing commit history&lt;/h3&gt;
+&lt;h3 id=&quot;viewing-commit-historyviewing-commit-historynameviewing-commit-history&quot;&gt;&lt;a href=&quot;#viewing-commit-history&quot; name=&quot;viewing-commit-history&quot;&gt;Viewing commit history&lt;/a&gt;&lt;/h3&gt;
 
-&lt;h5 id=&quot;git-log&quot;&gt;&lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git log&lt;/code&gt;&lt;/strong&gt;&lt;/h5&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git log&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;Shows the latest commits and information about them, including their commit message and date.&lt;/p&gt;
 
 &lt;hr /&gt;
 
-&lt;h3 id=&quot;checking-file-modifications&quot;&gt;Checking File Modifications&lt;/h3&gt;
+&lt;h3 id=&quot;check-file-modificationscheck-file-modificationsnamecheck-file-modifications&quot;&gt;&lt;a href=&quot;#check-file-modifications&quot; name=&quot;check-file-modifications&quot;&gt;Check file modifications&lt;/a&gt;&lt;/h3&gt;
 
-&lt;h5 id=&quot;git-diff&quot;&gt;&lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git diff&lt;/code&gt;&lt;/strong&gt;&lt;/h5&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git diff&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;Show unstaged differences since last commit.&lt;/p&gt;
 
-&lt;h5 id=&quot;git-diff---staged&quot;&gt;&lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git diff --staged&lt;/code&gt;&lt;/strong&gt;&lt;/h5&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git diff --staged&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;Show differences on staged files since last commit.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;managing-remotesmanaging-remotesnamemanaging-remotes&quot;&gt;&lt;a href=&quot;#managing-remotes&quot; name=&quot;managing-remotes&quot;&gt;Managing remotes&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git remote add &amp;lt;remote_name&amp;gt; &amp;lt;repo_url&amp;gt;&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Associates a local repository with a remote repository.&lt;/p&gt;
+
+&lt;p&gt;Where &lt;em&gt;remote_name&lt;/em&gt; represents any arbitrary name that you would like to reference the remote repository by (origin is commonly used) and &lt;em&gt;repo_url&lt;/em&gt; represents the URL to your remote repository, which can be found on your remote hosting provider (i.e. github or bitbucket)&lt;/p&gt;
+
+&lt;p&gt;i.e. &lt;code class=&quot;highlighter-rouge&quot;&gt;git remote add origin https://github.com/BrandonClapp/process-editor.git&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git remote rm &amp;lt;remote_name&amp;gt;&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Removes a remote repository reference from our local repository.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git remote -v&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Check which remote repositories are associated/linked with a local repository.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git remote show &amp;lt;remote_name&amp;gt;&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Shows all remote branches and whether they’re being tracked by a corresponding local branch.&lt;/li&gt;
+  &lt;li&gt;Shows which remote branch each local branch merges with for &lt;code class=&quot;highlighter-rouge&quot;&gt;git pull&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Shows which remote branch each local branch pushes to for &lt;code class=&quot;highlighter-rouge&quot;&gt;git push&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Shows if any local branch is out of date with it’s corresponding remote branch.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git push &amp;lt;remote_name&amp;gt; :&amp;lt;remote_branch&amp;gt;&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Deletes a &lt;em&gt;remote&lt;/em&gt; branch. However, the local branch will still exist. Remember to remove it with &lt;code class=&quot;highlighter-rouge&quot;&gt;git branch -d &amp;lt;local_branch&amp;gt;&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git remote prune &amp;lt;remote_name&amp;gt;&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Removes references to stale/deleted remote branches.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;pushing-to-remote-repositoriespushing-to-remote-repositoriesnamepushing-to-remote-repositories&quot;&gt;&lt;a href=&quot;#pushing-to-remote-repositories&quot; name=&quot;pushing-to-remote-repositories&quot;&gt;Pushing to remote repositories&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git push &amp;lt;remote_name&amp;gt; &amp;lt;remote_branch&amp;gt;&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Pushes the currently checked out local branch to the specified remote branch on the remote repository. &lt;em&gt;remote_name&lt;/em&gt; is the same value that is provided when adding the remote, and, in most examples is referred to as &lt;em&gt;origin&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Optionally, the &lt;code class=&quot;highlighter-rouge&quot;&gt;-u&lt;/code&gt; flag can be provided to set the upstream, resulting in not having to provide the remote name and branch on subsequent pushes. i.e. &lt;code class=&quot;highlighter-rouge&quot;&gt;git push -u origin master&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;If the remote branch that you have specified does not exist in the remote repository, it will be created. This will also link the current local branch to the remote branch that is being pushed to and, as a result, will be the default upstream branch that will be used when simply running &lt;code class=&quot;highlighter-rouge&quot;&gt;git push&lt;/code&gt; without specifying a remote repository or branch.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;getting-changes-from-a-remote-repositorygetting-changes-from-a-remote-repositorynamegetting-changes-from-a-remote-repository&quot;&gt;&lt;a href=&quot;#getting-changes-from-a-remote-repository&quot; name=&quot;getting-changes-from-a-remote-repository&quot;&gt;Getting changes from a remote repository&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git pull &amp;lt;remote_name&amp;gt; &amp;lt;remote_branch&amp;gt;&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Gets the latest commits from the remote repository on the specified remote branch &lt;strong&gt;and&lt;/strong&gt; merges those changes into your current local branch.&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git pull&lt;/code&gt; is the equivalent of performing the following actions
+- &lt;code class=&quot;highlighter-rouge&quot;&gt;git fetch&lt;/code&gt;
+- &lt;code class=&quot;highlighter-rouge&quot;&gt;git merge origin master&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git fetch&lt;/code&gt;&lt;/strong&gt; or &lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git fetch &amp;lt;remote_name&amp;gt;&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Fetch the latest information about the remote repository such as commits and remote branches. Unlike &lt;code class=&quot;highlighter-rouge&quot;&gt;git pull&lt;/code&gt;, this will not merge any commits into your current branch.&lt;/p&gt;
+
+&lt;p&gt;Tip: After fetching the remote branch, you can easily create a local branch that is already tracking the remote branch by simply running &lt;code class=&quot;highlighter-rouge&quot;&gt;git checkout &amp;lt;remote_branch&amp;gt;&lt;/code&gt;.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;cloning-a-remote-repositorycloning-a-remote-repositorynamecloning-a-remote-repository&quot;&gt;&lt;a href=&quot;#cloning-a-remote-repository&quot; name=&quot;cloning-a-remote-repository&quot;&gt;Cloning a remote repository&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git clone &amp;lt;remote_url&amp;gt;&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Pulls the source code from a repository hosted remotely to your local machine, creating a local repository, and then associating that local repository with the remote that it was pulled/cloned from.&lt;/p&gt;
+
+&lt;p&gt;This remote reference will be added as &lt;em&gt;origin&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git clone &amp;lt;remote_url&amp;gt; &amp;lt;local_folder_name&amp;gt;&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Clones the remote repository and puts it in the specified local folder rather than the default name of the repository.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;branching--mergingbranching-mergingnamebranching-merging&quot;&gt;&lt;a href=&quot;#branching-merging&quot; name=&quot;branching-merging&quot;&gt;Branching &amp;amp; Merging&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git branch &amp;lt;local_branch&amp;gt;&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Create a branch on the local repository. i.e. &lt;code class=&quot;highlighter-rouge&quot;&gt;git branch styling&lt;/code&gt; might be used for changing styles. This, however, will not change to that new branch.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git branch -d &amp;lt;local_branch&amp;gt;&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Deletes the specified local branch. i.e. &lt;code class=&quot;highlighter-rouge&quot;&gt;git branch -d styling&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git branch -D &amp;lt;local_branch&amp;gt;&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Deletes the specified local branch &lt;em&gt;and&lt;/em&gt; all un-pushed commits to a remote branch.&lt;/p&gt;
+
+&lt;p&gt;This is helpful for when a remote branch has been deleted and you want to remove the local branch but have commits that were never pushed to the remote branch.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git branch&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Lists all of the current local branches. The current branch will be indicated by an asterisk, and optionally color formatted.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git branch -r&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Lists all &lt;em&gt;remote&lt;/em&gt; branches.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git checkout &amp;lt;local_branch&amp;gt;&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Checks out (changes to) the specified branch.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git checkout -b &amp;lt;local_branch&amp;gt;&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Both creates &lt;strong&gt;and&lt;/strong&gt; checks out (changes to) the branch specified. This is essentially a combination of &lt;code class=&quot;highlighter-rouge&quot;&gt;git branch &amp;lt;branch_name&amp;gt;&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;git checkout &amp;lt;branch_name&amp;gt;&lt;/code&gt; in a single command.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git merge &amp;lt;from_branch&amp;gt;&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;This will merge the commits on a different local branch into the branch which we currently have checked out.&lt;/p&gt;
+
+&lt;p&gt;For example, if I have committed 5 commits to a &lt;em&gt;styling&lt;/em&gt; branch and want to merge those back to the master branch, I would first ensure that I have the master branch checked out with &lt;code class=&quot;highlighter-rouge&quot;&gt;git checkout master&lt;/code&gt; and then merge the styling branch into master with &lt;code class=&quot;highlighter-rouge&quot;&gt;git merge styling&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Tip: Upon fixing a merge conflict, using &lt;code class=&quot;highlighter-rouge&quot;&gt;git commit -a&lt;/code&gt; will auto-generate a new commit message displaying the conflicted files that were resolved.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;taggingtaggingnametagging&quot;&gt;&lt;a href=&quot;#tagging&quot; name=&quot;tagging&quot;&gt;Tagging&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git tag&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;List all of the tags for the repository.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git checkout &amp;lt;tag_name&amp;gt;&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Checks out the commit that the tag represents. i.e. &lt;code class=&quot;highlighter-rouge&quot;&gt;git checkout v1.0&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git tag -a &amp;lt;tag_name&amp;gt; -m &quot;My tag description message.&quot;&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Creates a tag and provides it a message. i.e. &lt;code class=&quot;highlighter-rouge&quot;&gt;git tag -a beta3 -m &quot;it&#39;s beta, expect bugs!&quot;&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git push --tags&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Pushes tags to the remote repository.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;rebaserebasenamerebase&quot;&gt;&lt;a href=&quot;#rebase&quot; name=&quot;rebase&quot;&gt;Rebase&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git rebase &amp;lt;from_branch&amp;gt;&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Applies the commits from the &lt;em&gt;from_branch&lt;/em&gt; onto the currently checked out local branch, and then applies any commits not present on the &lt;em&gt;from_branch&lt;/em&gt; on top of those.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git rebase --continue&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;When a merge conflict is detected from a rebasing, after fixing the conflict, this will continue the rebase process.&lt;/p&gt;
+
+&lt;p&gt;Note: When a merge conflict occurs during a rebase, the result will be that you are no longer on a particular branch.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git rebase --skip&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;When a merge conflict is detected from rebasing, &lt;code class=&quot;highlighter-rouge&quot;&gt;--skip&lt;/code&gt; can be used to skip applying the commit that resulted in merge conflict to the rebase operation. (The commit from the target/current branch will not be applied)&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git rebase --abort&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;When a merge conflict is detected from rebasing, use the &lt;code class=&quot;highlighter-rouge&quot;&gt;--abort&lt;/code&gt; to abandon all hope and give up, resulting in the rebase operation being rolled back.&lt;/p&gt;
 </description>
-        <pubDate>Sat, 28 May 2016 09:15:00 -0500</pubDate>
-        <link>http://brandonclapp.com/git/github/git-guide-useful-commands</link>
-        <guid isPermaLink="true">http://brandonclapp.com/git/github/git-guide-useful-commands</guid>
+        <pubDate>Sun, 29 May 2016 00:00:00 -0500</pubDate>
+        <link>http://brandonclapp.com/git/git-reference-useful-commands-overview</link>
+        <guid isPermaLink="true">http://brandonclapp.com/git/git-reference-useful-commands-overview</guid>
+        
+        <category>Git</category>
+        
+        <category>GitHub</category>
         
         
-        <category>git</category>
-        
-        <category>github</category>
+        <category>Git</category>
         
       </item>
     
@@ -234,61 +414,51 @@
       </item>
     
       <item>
-        <title>Welcome to Jekyll!</title>
-        <description>&lt;p&gt;You’ll find this post in your &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
+        <title>Benefits of Socratic Dev Team Environments</title>
+        <description>&lt;p&gt;A few reasons why you should never stop asking questions…&lt;/p&gt;
 
-&lt;p&gt;To add new posts, simply add a file in the &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory that follows the convention &lt;code class=&quot;highlighter-rouge&quot;&gt;YYYY-MM-DD-name-of-post.ext&lt;/code&gt; and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
+&lt;h3 id=&quot;theres-always-room-to-grow&quot;&gt;There’s always room to grow&lt;/h3&gt;
 
-&lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
+&lt;p&gt;As a developer, I’ve always taken the opportunity to absorb information from those who know more about particular subjects than I. Ultimately, no one knows everything and to think that one’s entire knowledge base can come from first hand experiences is absurd. Collaboration and the exchange of ideas is, in my opinion, what makes or breaks a development team.&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;Tom&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints &#39;Hi, Tom&#39; to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;p&gt;In the 1980s, the Sam Walton was arrested after crawling around in stores on his hands and knees. When Walton’s friends came to bail him out, he told them he’d been measuring aisle widths to determine exactly how they displayed their wares. If Sam Walton, the founder of the largest retailer in the world was willing to go to that length to learn from others then what’s your excuse?&lt;/p&gt;
 
-&lt;p&gt;Check out the &lt;a href=&quot;http://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;
+&lt;h3 id=&quot;most-thingsare-highly-opinionated&quot;&gt;Most things are highly opinionated&lt;/h3&gt;
 
+&lt;p&gt;…Especially in software. Most things published to the internet are cat pictures and highly opinionated rants. Unfortunately, most people don’t question the source or reasoning behind such information. When researching a new technology or concept, the first thing read immediately becomes cold hard fact. Once it’s read, it must be true.&lt;/p&gt;
+
+&lt;p&gt;I fell into this trap last week where I read that JavaScript was multi-threaded when used with node.js. This, of course, is not true. After pondering on the idea for a while, I realized that the information that I had read didn’t add up. After having a discussion with co-workers, doing further research, and trying it on my own I had a more in depth understanding of it. Had I not have thought for myself, I would still be carrying incorrect knowledge, spreading misinformation to all who were also as ignorant of the topic as I.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/BrandonClapp/get-off-my-thread&quot; target=&quot;_blank&quot;&gt;https://github.com/BrandonClapp/get-off-my-thread&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;there-are-no-dumb-questions&quot;&gt;There are no dumb questions&lt;/h3&gt;
+
+&lt;p&gt;There seems to be this idea that asking questions is only for the junior developer or “one who needs guidance”. I mean, a “senior” developer would never be caught asking “THAT” question, right!?&lt;/p&gt;
+
+&lt;p&gt;Asking questions helps the development team grow together. Chances are you’re not the only person that has the question (and if you are, so what?). There are too many frameworks, libraries, tools, concepts, design patterns…etc in the software development scene, that a single developer simply can not keep up with every single one of them. That being said, even if they could, they certainly would not be an expert at them.&lt;/p&gt;
+
+&lt;p&gt;Collaboration between developers is healthy. More info why it’s important:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Socratic_method&quot; target=&quot;_blank&quot;&gt;Socratic Method&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;sharpen-thy-bullshit-detector&quot;&gt;Sharpen thy bullshit detector&lt;/h3&gt;
+
+&lt;p&gt;…Unless they have a reputable backing of followers or have a track record of typically being a reliable source. Just as asking questions is a natural function of being human, reading an introductory article online doesn’t make someone an expert. Going through a 5 minute interactive tutorial does not constitute knowing the in’s and out’s of every details. Eliminate people with such claims from your trusted sources. Also, upgrade your BS detector.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;In business and technology, jargon and obfuscation hide huge quantities of BS. Inflated language is a technique of intimidation. The bet is that if you don’t understand what they’re talking about, you’ll feel stupid, or distracted, and give in to the appearance of their superior knowledge. This is, of course, entirely bullshit. To withstand BS you have to have an inner core of self-reliance, holding on to your doubts longer than the BS’er holds onto their charade. - Scott Berkun&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Impostor_syndrome&quot; target=&quot;_blank&quot;&gt;https://en.wikipedia.org/wiki/Impostor_syndrome&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://scottberkun.com/essays/53-how-to-detect-bullshit/&quot; target=&quot;_blank&quot;&gt;http://scottberkun.com/essays/53-how-to-detect-bullshit/&lt;/a&gt;&lt;/p&gt;
 </description>
-        <pubDate>Sun, 15 May 2016 13:21:41 -0500</pubDate>
-        <link>http://brandonclapp.com/jekyll/update/welcome-to-jekyll</link>
-        <guid isPermaLink="true">http://brandonclapp.com/jekyll/update/welcome-to-jekyll</guid>
+        <pubDate>Fri, 16 Oct 2015 00:00:00 -0500</pubDate>
+        <link>http://brandonclapp.com/benefits-of-socratic-dev-team-environments/</link>
+        <guid isPermaLink="true">http://brandonclapp.com/benefits-of-socratic-dev-team-environments/</guid>
         
         
-        <category>jekyll</category>
-        
-        <category>update</category>
-        
-      </item>
-    
-      <item>
-        <title>Test Blog Post</title>
-        <description>&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras tristique lorem et dui feugiat ultricies. In hac habitasse platea dictumst. Sed ultricies, lacus id scelerisque faucibus, lorem neque molestie ipsum, et hendrerit diam justo ac magna. Sed pulvinar suscipit dui, non bibendum mi commodo ac. Quisque eget erat ipsum. Praesent vitae nibh porta, viverra arcu nec, auctor elit. Ut ut diam laoreet, ullamcorper leo nec, interdum sem. Phasellus turpis est, ultrices quis ultrices eu, sodales vitae risus. Aenean sollicitudin diam sed egestas scelerisque. Sed sed euismod nulla, et sollicitudin metus. Pellentesque et est ut eros dignissim dignissim ut non orci.&lt;/p&gt;
-
-&lt;p&gt;Integer ultrices nibh eu dignissim accumsan. Quisque commodo, neque a consequat ullamcorper, ante purus iaculis ex, nec posuere purus felis quis purus. Nullam hendrerit at nisi ut tempus. Sed vitae lorem mi. Interdum et malesuada fames ac ante ipsum primis in faucibus. Maecenas ullamcorper tellus id nisl ultricies, id condimentum elit tristique. Nunc et malesuada odio, sit amet hendrerit risus. Integer sit amet nisi felis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec et nisi ut massa laoreet scelerisque eu id lectus.&lt;/p&gt;
-
-&lt;p&gt;Donec dapibus eros ac viverra cursus. Nulla lacinia lacus in nunc elementum, a consectetur sapien pulvinar. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla facilisi. Duis vehicula condimentum elit. Aenean tincidunt et justo a mattis. In sed urna sit amet nisl accumsan ullamcorper. Mauris semper aliquam congue. Vivamus blandit pellentesque rutrum. Vestibulum vulputate urna eget lobortis cursus. Cras facilisis, mi vel bibendum laoreet, sem libero sollicitudin arcu, quis tincidunt massa urna ut nulla. In aliquet ipsum purus, sed faucibus justo dignissim vitae. Suspendisse faucibus lacus sit amet arcu sodales, ac scelerisque nisi dictum. Aliquam sit amet lorem quis augue consectetur vestibulum et sed lectus. Nam euismod, justo sed gravida faucibus, justo enim tristique magna, vitae condimentum nibh nulla a neque. Aliquam id nunc imperdiet, dapibus quam non, vestibulum dolor.&lt;/p&gt;
-
-&lt;p&gt;Etiam lobortis diam lorem, vitae dictum nunc maximus vel. Nam ullamcorper ante ligula, ac varius quam scelerisque at. Vestibulum ut commodo lacus, non laoreet nulla. Vivamus quis nisi mauris. Nunc sit amet dictum libero, quis consequat orci. Nam nec posuere orci, scelerisque sollicitudin magna. Vestibulum commodo varius lacus, sit amet venenatis ex.&lt;/p&gt;
-
-&lt;p&gt;Nullam nec lacinia dui. Etiam sit amet lacus vulputate, aliquet velit a, mattis nibh. Curabitur non lacus libero. Praesent eget metus nec turpis iaculis aliquet. Nulla finibus pretium sem iaculis porttitor. Maecenas ut purus dui. Donec vestibulum dictum quam ac semper. Vivamus eleifend nisl sed purus eleifend, at rhoncus mi faucibus. Quisque diam nisi, malesuada et turpis quis, posuere tincidunt risus. Mauris non metus risus. Sed tristique dictum nibh, sit amet viverra urna aliquet nec.&lt;/p&gt;
-</description>
-        <pubDate>Sun, 15 May 2016 13:21:41 -0500</pubDate>
-        <link>http://brandonclapp.com/test-blog-post/</link>
-        <guid isPermaLink="true">http://brandonclapp.com/test-blog-post/</guid>
-        
-        <category>this</category>
-        
-        <category>is</category>
-        
-        <category>a</category>
-        
-        <category>test</category>
-        
-        
-        <category>dev</category>
-        
-        <category>team</category>
+        <category>Development</category>
         
       </item>
     
@@ -296,7 +466,7 @@
         <title>Many to many model relationships in Rails</title>
         <description>&lt;p&gt;One of the challenges I had early in learning Rails was setting up many-to-many relationships between models. Many tutorials and articles cover the simpler one-to-many and many-to-one relationships with ActiveRecord’s &lt;code class=&quot;highlighter-rouge&quot;&gt;has_many&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;belongs_to&lt;/code&gt; functions, respectively, but when trying to build anything more than a sample application you quickly realize that you need to set up slightly more complicated relationships.&lt;/p&gt;
 
-&lt;h3&gt;Problem&lt;/h3&gt;
+&lt;h3 id=&quot;problem&quot;&gt;Problem&lt;/h3&gt;
 
 &lt;p&gt;I want to set up a many to many relationship between my &lt;strong&gt;user&lt;/strong&gt; and &lt;strong&gt;team&lt;/strong&gt; models where &lt;u&gt;users can belong to many teams&lt;/u&gt; and &lt;u&gt;teams can contain many users&lt;/u&gt;. Prior to setting up the relationship, my models are just basic ActiveRecord models generated from the rails model generator.&lt;/p&gt;
 
@@ -314,7 +484,7 @@
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;h3&gt;Solution&lt;/h3&gt;
+&lt;h3 id=&quot;solution&quot;&gt;Solution&lt;/h3&gt;
 
 &lt;p&gt;To enforce the many to many relationship, I chose to implement the one of the ways suggested by the &lt;a href=&quot;http://railscasts.com/episodes/47-two-many-to-many&quot; target=&quot;_blank&quot;&gt;RailsCast Many-to-Many screencast&lt;/a&gt;, which involves &lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;has_many :through&lt;/code&gt;&lt;/strong&gt;.&lt;/p&gt;
 
@@ -1106,6 +1276,140 @@ A static class allows only static methods.&lt;/p&gt;
         
         
         <category>Design Patterns</category>
+        
+      </item>
+    
+      <item>
+        <title>Creating and importing a map for Phaser using Tiled</title>
+        <description>&lt;p&gt;Phaser is an HTML5 game engine that comes with a lot of cool features that I’ve yet to figure out. Here, I’ll give you a walk through of designing a map utilizing a tool called &lt;strong&gt;Tiled&lt;/strong&gt; and then bringing that map into your phaser project.&lt;/p&gt;
+
+&lt;h4 id=&quot;create-the-phaser-game-object&quot;&gt;Create the Phaser Game object&lt;/h4&gt;
+
+&lt;p&gt;I first set up some basic project scaffolding within phaser, such as setting up the phaser game object, which will actually represent the game within our browser.&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Game&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;_width&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;window&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;innerWidth&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;_height&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;window&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;innerHeight&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;game&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Phaser&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Game&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;_width&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;_height&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Phaser&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;AUTO&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;preload&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;preload&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;create&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;create&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;update&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;update&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;nx&quot;&gt;Game&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;prototype&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;preload&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+
+    &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;create&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+
+    &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;update&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Game&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;If you’re not familiar with phaser, what the above code will effectively do is set up a phaser game object with a width and height of the user’s viewable screen and wire up the event handlers that will be called when phaser calls it’s preload, create, and update events. We simply using the overload of the phaser &lt;a href=&quot;http://docs.phaser.io/Phaser.Game.html&quot; target=&quot;_blank&quot;&gt;Game class&lt;/a&gt; that takes 5 parameters.&lt;/p&gt;
+
+&lt;h4 id=&quot;create-your-tilemap-using-tiled&quot;&gt;Create your tilemap using Tiled&lt;/h4&gt;
+
+&lt;p&gt;There is a great tool called &lt;a href=&quot;http://www.mapeditor.org/&quot; target=&quot;_blank&quot;&gt;Tiled Map Editor&lt;/a&gt;, which will allow you to create orthogonal, isometric, and staggered maps. I’ll be demonstrating the basics of using this tool using some free graphics from Open Game Art. Save the following sprite sheet and download the map editor specified above.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;/assets/images/posts/content/terrain_atlas.png&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;/assets/images/posts/content/terrain_atlas.png&quot; alt=&quot;Terrain Atlas&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;After downloading and installing Tiled, open it up. At first, the UI can seem a little overwhelming if you don’t know what you’re looking at. We’ll start by first creating a new map by pressing the &lt;em&gt;New&lt;/em&gt; icon in the upper left hand corner. We’ll use the default settings, which specify that our map should have an Orthogonal orientation, should be 100 tiles wide by 100 tiles long, and that our tile size will be 32x32 pixels.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/posts/content/tiled_new_map.png&quot; alt=&quot;Tiled New Map&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;You should now notice on the right hand side of the screen, under the pane titled &lt;strong&gt;Layers&lt;/strong&gt; that there is an entry named &lt;em&gt;Tile Layer 1&lt;/em&gt;. Go ahead and rename this layer to &lt;em&gt;MyTerrain&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/posts/content/tiled_terrain_layer.png&quot; alt=&quot;Tiled New Map&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Now that we have a layer to draw on, lets import the spritesheet that we saved earlier into our map editor. To do this, click the &lt;em&gt;New Tileset&lt;/em&gt; icon in the &lt;strong&gt;Tilesets&lt;/strong&gt; pane. Provide a name for your new tiletset and browse for the image containing our terrain graphics.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/posts/content/tiled_create_new_tileset.png&quot; alt=&quot;Tiled New Map&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Upon creating our new tileset, you should see your image loaded into the tileset pane, where you can select one or more tiles to paint with. Select a grass tile from the tileset pane and use the fill tool to fill the entire map.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/posts/content/tiled_painting_texture.png&quot; alt=&quot;Tiled Painting Texture&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Use the stamp brush at the top, along with the tiles in our tilemap to create your map on the created layer. Feel free to create additional layers to draw on. Each layer has it’s own properties, which are changeable in the bottom pane.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/posts/content/tiled_after_drawn.png&quot; alt=&quot;Tiled after drawn&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Next, we need to export the map. Go to File &amp;gt; Export As &amp;gt; and save the file as type &lt;strong&gt;json&lt;/strong&gt;. For the sake of the tutorial, I’ll be naming this file firstMap. Doing this will produce a firstMap.json file that will provide phaser with the information necessary to take a single image and piece it together by individual 32x32px tiles.&lt;/p&gt;
+
+&lt;h4 id=&quot;importing-the-map-into-phaser&quot;&gt;Importing the map into Phaser&lt;/h4&gt;
+
+&lt;p&gt;Lets review what we’ve done so far. First we created the basic foundation for our phaser project by using phaser’s Game class. We wired up the event handlers that will take care of the preload, create, and update events, however we’ve yet to fill in our logic for these methods. We’ve used the Tiled Map Editor to create a basic map for phaser and we have exported that tilemap as a json file that is ready to be consumed by phaser.&lt;/p&gt;
+
+&lt;p&gt;Lets start by telling phaser to load our image and tilemap resources when it starts. To do so, add the following code (lines 2 and 3) to the preload method that we created earlier. Change the paths that I have provided to the paths where your json and png files reside.&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;preload&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;game&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;load&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;tilemap&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;MyTilemap&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;/images/maps/firstMap.json&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Phaser&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Tilemap&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;TILED_JSON&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;game&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;load&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;image&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;tiles&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;/images/terrain_atlas.png&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;What this will first do is tell the game object to load the tilemap firstMap.json and give it an alias as MyTilemap, which we’ll be able to refer to it later with.&lt;/p&gt;
+
+&lt;p&gt;Secondly, we tell the game object to load the image that we used to create our map, &lt;em&gt;terrain_atlas.png&lt;/em&gt;. If you’ll recall, &lt;em&gt;tiles&lt;/em&gt; is the name that we provided to the map editor when creating our tileset, as it’s important that the first parameter of this call matches the name of the tileset that you created. Loading these objects up front, in our preload function, will cache them for when we need to access them later.&lt;/p&gt;
+
+&lt;p&gt;Next, we’ll set up the create method to create the map.&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;create&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;c1&quot;&gt;// Load the map.&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;map&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;game&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;tilemap&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;MyTilemap&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;addTilesetImage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;tiles&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;tiles&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+        &lt;span class=&quot;nx&quot;&gt;layer&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;createLayer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;MyTerrain&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;layer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;resizeWorld&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;layer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;wrap&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+        &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;cursors&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;game&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;keyboard&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;createCursorKeys&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Finally, we’ll add some logic in our update method to handle the keyboard input that we added above in our create method. This will allow us to use the arrows keys to move within the map from the browser.&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;update&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;cursors&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;left&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;isDown&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;game&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;camera&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;cursors&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;right&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;isDown&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;game&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;camera&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;cursors&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;up&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;isDown&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;game&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;camera&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;y&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;cursors&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;down&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;isDown&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;game&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;camera&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;y&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Load the game in your browser, and if all is correct then you should see your map displayed within your browser, like so.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/posts/content/tiled_map_in_browser.png&quot; alt=&quot;Tiled New Map&quot; /&gt;&lt;/p&gt;
+</description>
+        <pubDate>Sun, 08 Mar 2015 00:00:00 -0600</pubDate>
+        <link>http://brandonclapp.com/creating-and-importing-a-map-for-phaser-using-tiled/</link>
+        <guid isPermaLink="true">http://brandonclapp.com/creating-and-importing-a-map-for-phaser-using-tiled/</guid>
+        
+        <category>PhaserJS</category>
+        
+        <category>Game Dev</category>
+        
+        
+        <category>Game Development</category>
         
       </item>
     
