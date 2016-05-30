@@ -1317,6 +1317,9 @@ ul.post-list {
 .tags .tag-details .tag-post {
   margin-left: 1em; }
 
+.archives .archive-post {
+  margin-left: 1em; }
+
 /**
  * Syntax highlighting styles
  */
