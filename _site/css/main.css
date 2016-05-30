@@ -399,7 +399,7 @@ input[type="submit"] {
   font-weight: 500; }
 @font-face {
   font-family: "Fira Mono";
-  src: url(/assets/firamono-regular-webfont.eot?#iefix) format("embedded-opentype"), url(/assets/firamono-regular-webfont.woff2) format("woff2"), url(/assets/firamono-regular-webfont.woff) format("woff");
+  src: url(/assets/fonts/firamono-regular-webfont.eot?#iefix) format("embedded-opentype"), url(/assets/fonts/firamono-regular-webfont.woff2) format("woff2"), url(/assets/fonts/firamono-regular-webfont.woff) format("woff");
   font-style: normal;
   font-weight: normal; }
 fieldset {
