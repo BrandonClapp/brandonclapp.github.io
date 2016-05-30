@@ -6,8 +6,8 @@
 </description>
     <link>http://brandonclapp.com/</link>
     <atom:link href="http://brandonclapp.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 29 May 2016 19:50:37 -0500</pubDate>
-    <lastBuildDate>Sun, 29 May 2016 19:50:37 -0500</lastBuildDate>
+    <pubDate>Sun, 29 May 2016 20:10:23 -0500</pubDate>
+    <lastBuildDate>Sun, 29 May 2016 20:10:23 -0500</lastBuildDate>
     <generator>Jekyll v3.1.3</generator>
     
       <item>
@@ -289,6 +289,170 @@
         <category>dev</category>
         
         <category>team</category>
+        
+      </item>
+    
+      <item>
+        <title>What is gulp.js and why use it?</title>
+        <description>&lt;p&gt;There’s no point in investing your time into learning a new tool if you don’t even know what problem it solves. Gulp solves the problem of &lt;strong&gt;repetition&lt;/strong&gt;. Many of the tasks that web developers find themselves doing over and over on a daily basis can be simplified by becoming automated. Automating repetitive tasks = more time to do non repetitive tasks = more productivity.&lt;/p&gt;
+
+&lt;p&gt;Gulp is a javascript task runner that lets you automate tasks such as…&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Bundling and minifying libraries and stylesheets.&lt;/li&gt;
+  &lt;li&gt;Refreshing your browser when you save a file.&lt;/li&gt;
+  &lt;li&gt;Quickly running unit tests&lt;/li&gt;
+  &lt;li&gt;Running code analysis&lt;/li&gt;
+  &lt;li&gt;Less/Sass to CSS compilation&lt;/li&gt;
+  &lt;li&gt;Copying modified files to an output directory&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;the-gulp-workflow&quot;&gt;The gulp workflow&lt;/h4&gt;
+
+&lt;p&gt;Below is a common workflow for performing certain build operations.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;We start by defining a task that we would like to accomplish.&lt;/li&gt;
+  &lt;li&gt;Within that task, a desired set of files are loaded into the gulp stream to be processed.
+(Optional) Once files are in the stream, one or more modifications can be made to the files. Because the streams are processed in memory, no file - system writes to temporary directories between modifications are required.&lt;/li&gt;
+  &lt;li&gt;Send the new (possibly modified) files to a specified destination&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;So first, the original files go in, we optionally process modifications to the input files, then we copy the result of our stream to a destination directory.&lt;/p&gt;
+
+&lt;h4 id=&quot;the-simple-gulp-api&quot;&gt;The simple gulp API&lt;/h4&gt;
+
+&lt;p&gt;Using gulp is super simple because you don’t have to figure out how a complex API works in order to be productive with it. There are only 4 api’s in gulp!&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;API&lt;/th&gt;
+      &lt;th&gt;Purpose&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;gulp.task&lt;/td&gt;
+      &lt;td&gt;Define a task&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;gulp.src&lt;/td&gt;
+      &lt;td&gt;Read files in&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;gulp.dest&lt;/td&gt;
+      &lt;td&gt;Write files out&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;gulp.watch&lt;/td&gt;
+      &lt;td&gt;Watch files for changes&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h4 id=&quot;installing-gulp-via-npm&quot;&gt;Installing gulp via npm&lt;/h4&gt;
+
+&lt;p&gt;The npm package manager comes installed with Node.js. While node.js isn’t a requirement to use gulp, it does make demonstrating it a lot easier. I will be installing gulp from npm locally into my project. Make sure that you’re in your project’s root folder before running the command, otherwise your node modules will be downloaded into the wrong folder.&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;myproject
+npm install --save-dev gulp
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;This will install the gulp node module locally to the project (as opposed to globally). The &lt;code class=&quot;highlighter-rouge&quot;&gt;--save-dev&lt;/code&gt; argument lets npm know to update it’s package.json file with a new devDependencies record. devDependencies will need to be resolved at development time, where as dependencies will need to be resolved at run time. Because gulp is a tool to aid us in development, it needs to be resolved at development time.&lt;/p&gt;
+
+&lt;h4 id=&quot;creating-a-gulpfile&quot;&gt;Creating a gulpfile&lt;/h4&gt;
+
+&lt;p&gt;A gulpfile is a file that will act as a manifest to define our tasks. Tasks that we want to execute will be found within this file. Whenever we run the command &lt;code class=&quot;highlighter-rouge&quot;&gt;gulp hello-world&lt;/code&gt; from the command line, we are telling gulp that we want to run the hello-world task within gulpfile.js.&lt;/p&gt;
+
+&lt;p&gt;After creating gulpfile.js within the root of your project, add a basic tasks.&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;gulp&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;gulp&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+&lt;span class=&quot;nx&quot;&gt;gulp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;task&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;hello-world&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(){&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;hello world&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;require&lt;/code&gt; is a function implemented by node (which is an implementation of the &lt;a href=&quot;http://wiki.commonjs.org/wiki/Modules/1.1.1&quot; target=&quot;_blank&quot;&gt;CommonJS spec&lt;/a&gt;) that will add references to node modules that we have installed. Once we make a reference to the gulp module, we can use it to create a task. Here, our task simply writes to the console window, but you could have it do any number of automated tasks.&lt;/p&gt;
+
+&lt;h4 id=&quot;a-practical-example&quot;&gt;A practical example&lt;/h4&gt;
+
+&lt;p&gt;A task to analyze all of your JavaScript files inside of a set of directories with JSHint and JSCS may look something like this. This example assumes that you have the module &lt;strong&gt;gulp-load-plugins&lt;/strong&gt; installed. This plugin will essentially wrap all of your gulp plugins (prefixed with gulp-) into one plugin so that you don’t have to have a require statement for every individual gulp module. You would also need to run &lt;code class=&quot;highlighter-rouge&quot;&gt;npm install&lt;/code&gt; for each of the packages that you wanted to utilizes. This task would be accessible through the use of &lt;code class=&quot;highlighter-rouge&quot;&gt;gulp analyze&lt;/code&gt; from the command line (while in your applications root directory where your gulpfile resides.)&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;gulp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;task&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;analyze&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;Analyzing code with JSHint and JSCS.&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;gulp&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;src&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;./src/scripts&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// glob pattern for all of my JS&lt;/span&gt;
+
+        &lt;span class=&quot;c1&quot;&gt;// utilizes gulp-if and gulp-print to check for cmd args&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pipe&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;plugins&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;verbose&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;plugins&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()))&lt;/span&gt;
+
+        &lt;span class=&quot;c1&quot;&gt;// utilizes gulp-jscs to inspect JS&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pipe&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;plugins&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;jscs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt;
+
+        &lt;span class=&quot;c1&quot;&gt;// utilizes gulp-jshint to inspect JS&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pipe&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;plugins&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;jshint&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt;
+
+        &lt;span class=&quot;c1&quot;&gt;// utilizes jshint-stylish to show the results&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pipe&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;plugins&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;jshint&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;reporter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;jshint-stylish&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;msg&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+   &lt;span class=&quot;c1&quot;&gt;// utilizes gulp-util&#39;s log function&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;plugins&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;util&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;plugins&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;util&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;colors&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;blue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;msg&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Similarly, you may create a gulp task (or set of gulp tasks) for cleaning directories and compiling less to CSS. Such a set of tasks may look like the following. This set of tasks also has it’s own set of dependencies, which would require using &lt;code class=&quot;highlighter-rouge&quot;&gt;npm install&lt;/code&gt; to get installed locally.&lt;/p&gt;
+
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;clean&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;done&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;Cleaning: &#39;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;plugins&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;util&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;colors&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;blue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;// utilizes del node module&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;del&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;cb&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;nx&quot;&gt;gulp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;task&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;clean-styles&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;cb&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;files&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;./styles/*.css&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// glob pattern to any existing css&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;clean&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;files&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;cb&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+    &lt;span class=&quot;c1&quot;&gt;// cb is called because clean uses del,&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;// which does not use gulp streams.&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;// 2nd param signifies task dependencies&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// in this case, clean-styles will run first.&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;gulp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;task&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;styles&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;clean-styles&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;Compiling Less --&amp;gt; CSS&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;gulp&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;src&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;./src/styles/*.less&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pipe&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;plugins&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;less&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// utilizes gulp-less to compile less -&amp;gt; css&lt;/span&gt;
+
+        &lt;span class=&quot;c1&quot;&gt;// utilizes gulp-autoprefixer to add&lt;/span&gt;
+        &lt;span class=&quot;c1&quot;&gt;// browser specific css prefixes&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pipe&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;plugins&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;autoprefixer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt;
+
+        &lt;span class=&quot;c1&quot;&gt;// copies the generated css to a destination folder.&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pipe&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;gulp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;dest&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;./styles/*.css&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Hopefully it’s obvious why taking the time to create gulp tasks for automating repetitive development tasks can increase productivity. Gulp has over 1470 (at the time of this article) (&lt;strong&gt;Edit on 5/29/16:&lt;/strong&gt; &lt;em&gt;Now 2429&lt;/em&gt;) plugins already created that you can take advantage of on the &lt;a href=&quot;http://gulpjs.com/plugins/&quot; target=&quot;_blank&quot;&gt;GulpJS Plugins&lt;/a&gt; page. In most cases, if you need to do something common, the plugin will already exist. If not, taking the time to do some research now may save from wasting time on repetitive tasks in the future.&lt;/p&gt;
+</description>
+        <pubDate>Sun, 15 Mar 2015 00:00:00 -0500</pubDate>
+        <link>http://brandonclapp.com/what-is-gulp-js-and-why-use-it/</link>
+        <guid isPermaLink="true">http://brandonclapp.com/what-is-gulp-js-and-why-use-it/</guid>
+        
+        <category>Build Automation</category>
+        
+        <category>Gulp.js</category>
+        
+        
+        <category>Tools</category>
         
       </item>
     
@@ -940,99 +1104,6 @@ A static class allows only static methods.&lt;/p&gt;
         
         
         <category>Game Development</category>
-        
-      </item>
-    
-      <item>
-        <title>16 Ways to Become a Better Developer</title>
-        <description>&lt;h4 id=&quot;find-some-mentors1name1&quot;&gt;&lt;a href=&quot;#1&quot; name=&quot;1&quot;&gt;1. Find some Mentors&lt;/a&gt;&lt;/h4&gt;
-
-&lt;p&gt;Make a list of developers that you admire and study them. Learn things from them such as how they debug problems and what tools and technologies they’re using. Follow these developers on Twitter and subscribe to their blog’s RSS feed. Whenever they post something new, take the time to actually read and comprehend what they’re trying to convey.&lt;/p&gt;
-
-&lt;h4 id=&quot;become-a-mentor2name2&quot;&gt;&lt;a href=&quot;#2&quot; name=&quot;2&quot;&gt;2. Become a Mentor&lt;/a&gt;&lt;/h4&gt;
-
-&lt;p&gt;While or after learning something new, share what you’ve learned. Don’t think you have anything to contribute? Wrong. Even if you’re a beginner web developer and only understand HTML, there is someone out there who is interested in learning that particular subject from someone who won’t throw a bunch of hard to understand, technical terms at them. Don’t present yourself as an expert, but rather as someone who is just trying to share your experiences and help other’s where you can.&lt;/p&gt;
-
-&lt;blockquote&gt;If you can&#39;t explain it simply, you don&#39;t understand it well enough. - Albert Einstein&lt;/blockquote&gt;
-
-&lt;h4 id=&quot;learn-about-your-craft-every-day3name3&quot;&gt;&lt;a href=&quot;#3&quot; name=&quot;3&quot;&gt;3. Learn about your craft every day&lt;/a&gt;&lt;/h4&gt;
-
-&lt;p&gt;Spend 15 to 30 minutes per day learning something new about the tools that you use every day, whether it be your programming language of choice, shortcuts for your text editor, how to make your code more performant, or whatever you’re interested in. Keep a running list about topics that you want to research and spend a little bit of time each day conquering this list.&lt;/p&gt;
-
-&lt;h4 id=&quot;learn-some-design-patterns4name4&quot;&gt;&lt;a href=&quot;#4&quot; name=&quot;4&quot;&gt;4. Learn some design patterns&lt;/a&gt;&lt;/h4&gt;
-
-&lt;p&gt;Development is more than just writing functional code. Experienced software developers know how to architect their code so that it’s maintainable, flexible, and easy to understand. Fortunately, you don’t have to reinvent the wheel. Software development design patterns are best practice solutions for architecting systems. As always, there are different tools for different jobs. Knowing when to use the right tool for the right job comes with practice and experience.&lt;/p&gt;
-
-&lt;h4 id=&quot;know-your-tools5name5&quot;&gt;&lt;a href=&quot;#5&quot; name=&quot;5&quot;&gt;5. Know your tools&lt;/a&gt;&lt;/h4&gt;
-
-&lt;p&gt;Imagine a carpenter who didn’t know how to use a hammer, a doctor who didn’t know how to use a stethoscope, or a truck driver who didn’t know how to drive a truck. A software developer who doesn’t know how to use their tools also fits into the same category. Take some time to learn your IDE, text editor, operating system, database, and libraries.&lt;/p&gt;
-
-&lt;h4 id=&quot;come-up-with-your-own-solution6name6&quot;&gt;&lt;a href=&quot;#6&quot; name=&quot;6&quot;&gt;6. Come up with your own solution&lt;/a&gt;&lt;/h4&gt;
-
-&lt;p&gt;Sure, it’s easy to enter a few words into a search engine, click the top stack overflow result, and copy/paste the answer into your project. &lt;strong&gt;Doing this isn’t making you a better developer&lt;/strong&gt;, it’s making you a better Googler. The next time you have an itch to search for something, try solving it by yourself first. Not only will you be practicing your troubleshooting skills, you’ll also be more likely to remember the answer when you figure it out. Of course, don’t waste too much time. The internet is a valuable resource, but remember to &lt;strong&gt;think for yourself&lt;/strong&gt;, too!&lt;/p&gt;
-
-&lt;p&gt;Have you come up with your own solution but someone is telling you it’s wrong? See &lt;a href=&quot;#11&quot;&gt;#11&lt;/a&gt;. Also see &lt;a href=&quot;#7&quot;&gt;#7&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h4 id=&quot;have-strong-opinions-but-hold-on-to-them-loosely7name7&quot;&gt;&lt;a href=&quot;#7&quot; name=&quot;7&quot;&gt;7. Have strong opinions, but hold on to them loosely&lt;/a&gt;&lt;/h4&gt;
-
-&lt;p&gt;Don’t be afraid of expressing your opinions, but also be ready to change your opinions if provided with sufficient evidence. To be a good developer, you have to take a stance on what you think is the right way to develop software. This, fundamentally, not only applies to software development, but in all aspects of life. Taking a stance that you can back with solid evidence and reasoning will gain you the respect and consideration of others. However, be prepared to change your opinion when presented with reasoning. Consider other people’s opinions and reasoning. If convinced, perhaps it’s time to adopt some new opinions.&lt;/p&gt;
-
-&lt;h4 id=&quot;write-code-every-day8name8&quot;&gt;&lt;a href=&quot;#8&quot; name=&quot;8&quot;&gt;8. Write code every day.&lt;/a&gt;&lt;/h4&gt;
-
-&lt;p&gt;As the old saying goes, practice makes perfect. A runner doesn’t get good at running by not running. A basketball player doesn’t get good by not playing. The only way to get good at solving problems is to practice solving problems. Study your craft. Take pride in becoming a better programmer and problem solver. Understand how to use various constructs in your programming language of choice to solve problems in different ways.&lt;/p&gt;
-
-&lt;h4 id=&quot;read9name9&quot;&gt;&lt;a href=&quot;#9&quot; name=&quot;9&quot;&gt;9. Read!&lt;/a&gt;&lt;/h4&gt;
-
-&lt;p&gt;One of the most common characteristics amongst successful people is that they read. Your education doesn’t have to stop when you leave work. Keep a book by your bedside and pick it up a few times a week. I decided to make this a separate step from bullet point &lt;a href=&quot;#3&quot;&gt;#3&lt;/a&gt; because I consider this point to be a bit more in depth and beneficial to your life and career as a whole, where as I see &lt;a href=&quot;#3&quot;&gt;#3&lt;/a&gt; as reading a quick blog post about some cool tip, trick, library, or framework.&lt;/p&gt;
-
-&lt;p&gt;If you’re stuck on not knowing what to read, check out some of &lt;a href=&quot;/about/recommended-reading/&quot;&gt;my personal recommendations&lt;/a&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;just-because-you-can-doesnt-mean-that-you-should10name10&quot;&gt;&lt;a href=&quot;#10&quot; name=&quot;10&quot;&gt;10. Just because you can, doesn’t mean that you should&lt;/a&gt;&lt;/h4&gt;
-
-&lt;p&gt;Lets face it, we’ve all seen THAT application. You know, the one that you’re assigned to maintain and makes you reconsider your career as a software developer. Just because you &lt;em&gt;can&lt;/em&gt; write your entire application in one line, doesn’t mean that you &lt;em&gt;should&lt;/em&gt;. Just because you &lt;em&gt;can&lt;/em&gt; inject 20 parameters to one class’s constructor, doesn’t mean that you &lt;em&gt;should&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;Weigh the pro’s and con’s of some of the things that you’re currently doing. In some cases, we do things simply because that’s how we have been doing them for years. Check a list of some of the most common code smells and question some of the things that you’re currently doing. Perhaps there’s a better way of writing something than you currently are, or perhaps you have great reasoning behind why you’re case is unique.&lt;/p&gt;
-
-&lt;h4 id=&quot;always-remember-that-youre-entitled-to-your-own-opinion11name11&quot;&gt;&lt;a href=&quot;#11&quot; name=&quot;11&quot;&gt;11. Always remember that you’re entitled to your own opinion&lt;/a&gt;&lt;/h4&gt;
-
-&lt;p&gt;One trap that developers sometimes fall into is thinking that if someone else, especially if that someone is popular, highly credible, or experienced, says that something is true, then it must be. Take everything that you read with a grain of salt and question what you’re reading. Try understanding why the author has the point of view that they do. This is a skill that grows over time. The more you practice your craft, the more confident you’ll be about your abilities.&lt;/p&gt;
-
-&lt;h4 id=&quot;talk-is-cheap-show-me-the-code12name12&quot;&gt;&lt;a href=&quot;#12&quot; name=&quot;12&quot;&gt;12. Talk is cheap, show me the code&lt;/a&gt;&lt;/h4&gt;
-
-&lt;p&gt;There are a lot of people out there who will tell you that something can’t be done because of X, Y, and Z. There are other people out there who will tell you that something is simple, all you have to do is A, B, and C.&lt;/p&gt;
-
-&lt;p&gt;My point is, don’t gauge the difficult on a set of tasks simply based off of someone else’s quickly contrived assumptions. &lt;strong&gt;Think for yourself&lt;/strong&gt;, lay out the steps necessary, do your research, find ways around your obstacles, and write the code.&lt;/p&gt;
-
-&lt;h4 id=&quot;dont-be-afraid-to-take-on-a-challenge13name13&quot;&gt;&lt;a href=&quot;#13&quot; name=&quot;13&quot;&gt;13. Don’t be afraid to take on a challenge&lt;/a&gt;&lt;/h4&gt;
-
-&lt;p&gt;Learning happens when we’re challenged. Take on new challenges and rise to the occasion. You may be presented with unique problems that you wouldn’t have encountered otherwise. Tackling unique challenges now will give you a new perspective when solving future problems, even if they may not seem similar at first.&lt;/p&gt;
-
-&lt;h4 id=&quot;keep-it-simple-stupid14name14&quot;&gt;&lt;a href=&quot;#14&quot; name=&quot;14&quot;&gt;14. Keep it Simple, Stupid.&lt;/a&gt;&lt;/h4&gt;
-
-&lt;p&gt;Stop over-engineering! Not everything require 10 ajax calls, 5 database tables, 3 stored procedures, and 6 Microsoft acronyms. Lets face it, 9 times out of 10 it’s not going to get documented properly anyway, and even if it did, do you really want each new developer who works on the project to burn multiple hours just reading the documentation before they can even remotely comprehend how the system is supposed to work? Solve the simple case first. If additional features are needed in the future, handle them then. Don’t implement features just because there’s a &lt;em&gt;chance&lt;/em&gt; that they’ll eventually be requested.&lt;/p&gt;
-
-&lt;h4 id=&quot;whiteboard-things-out15name15&quot;&gt;&lt;a href=&quot;#15&quot; name=&quot;15&quot;&gt;15. Whiteboard things out&lt;/a&gt;&lt;/h4&gt;
-
-&lt;p&gt;Putting ideas on a whiteboard and asking for other’s input is a great way to get feedback. From my experience, when whiteboarding, three possible things typically end up happening.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;The other person ends up teaching you something.&lt;/li&gt;
-  &lt;li&gt;You end up teaching the other person something, which requires an explanation on how components work, which in turn will reinforce that you do (or don’t) understand the topic.&lt;/li&gt;
-  &lt;li&gt;A debate (not argument) is started, which leads to possibly important factors that were not considered.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Whiteboards provide a great way to communicate ideas that are otherwise hard to explain with words alone.&lt;/p&gt;
-
-&lt;h4 id=&quot;dont-be-afraid-to-ask-for-help16name16&quot;&gt;&lt;a href=&quot;#16&quot; name=&quot;16&quot;&gt;16. Don’t be afraid to ask for help&lt;/a&gt;&lt;/h4&gt;
-
-&lt;p&gt;Simply put, ask if you need help. Don’t spend too much time on a single topic if someone else can explain it better in a fractions time. There’s nothing wrong with saying “I don’t understand this, can you please help me out?”. No one is an expert at everything.&lt;/p&gt;
-</description>
-        <pubDate>Sat, 07 Mar 2015 00:00:00 -0600</pubDate>
-        <link>http://brandonclapp.com/16-ways-to-become-a-better-developer/</link>
-        <guid isPermaLink="true">http://brandonclapp.com/16-ways-to-become-a-better-developer/</guid>
-        
-        <category>Self Improvement</category>
-        
         
       </item>
     

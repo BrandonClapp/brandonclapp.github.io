@@ -1249,8 +1249,10 @@ ul.post-list {
   border-bottom: 1px solid black; }
   .post .header-image img {
     width: 100%; }
-.post .post-header .post-meta {
-  padding: 0 0 1em 0; }
+.post .post-header {
+  background-position: center; }
+  .post .post-header .post-meta {
+    padding: 0 0 1em 0; }
 
 .contact #send-status .success {
   padding: .25em;
