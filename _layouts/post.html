@@ -16,7 +16,7 @@ comments: true
       {% if page.categories.size > 0 %}
       <span>Posted in
         {% for cat in page.categories %}
-          <strong>{{ cat }} </strong>
+          <strong><a href="/categories/#{{cat}}">{{ cat }}</a></strong>
         {% endfor %}
       on</span>
       {% endif %}

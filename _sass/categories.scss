@@ -1,0 +1,23 @@
+.categories {
+
+  ul {
+    margin: 1em 0 1em 1em;
+  }
+
+  .category-list {
+    a {
+      border-bottom: 1px dotted $color3;
+      padding-bottom: .2em;
+    }
+  }
+
+  .category-details {
+    h4{
+
+    }
+
+    .category-post {
+      margin-left: 1em;
+    }
+  }
+}

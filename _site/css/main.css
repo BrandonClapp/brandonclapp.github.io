@@ -1301,6 +1301,14 @@ ul.post-list {
   .contact #contact-form textarea {
     width: 100%; }
 
+.categories ul {
+  margin: 1em 0 1em 1em; }
+.categories .category-list a {
+  border-bottom: 1px dotted #DB3A3F;
+  padding-bottom: .2em; }
+.categories .category-details .category-post {
+  margin-left: 1em; }
+
 /**
  * Syntax highlighting styles
  */

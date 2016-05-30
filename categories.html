@@ -1,0 +1,32 @@
+---
+layout: page
+title: Categories
+permalink: /categories/
+---
+
+<div class="categories">
+  <ul class="category-list">
+  {% if site.posts != empty %}
+      {% assign sorted_cats = (site.categories | sort:0) %}
+          {% for cat in sorted_cats %}
+              <a href="{{ site.baseurl }}/categories/#{{ cat[0] }}" title="{{ cat[0] }}" rel="{{ cat[1].size }}">{{ cat | first }} ({{ cat[1].size }})</a>&nbsp;
+          {% endfor %}
+  </ul>
+
+  <div class="category-details">
+    {% assign sorted_cats = (site.categories | sort:0) %}
+        {% for cat in sorted_cats %}
+            <h4 id="{{ cat[0] }}">{{ cat | first}}</h4>
+                {% for post in cat[1] %}
+                    <div class="category-post">
+                      <a href="{{ site.baseurl }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+                      (<time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%B %d %Y" }}</time>)
+                    </div>
+                {% endfor %}
+        {% endfor %}
+
+    {% else %}
+    <span>No posts</span>
+    {% endif %}
+  </div>
+</div>

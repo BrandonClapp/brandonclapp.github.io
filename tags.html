@@ -1,0 +1,30 @@
+---
+layout: page
+title: Tags
+permalink: /tags/
+---
+
+<ul class="tags-box">
+{% capture site_tags %}
+    {% assign sorted_tags = (site.tags | sort:0) %}
+        {% for tag in sorted_tags %}
+            {{ tag | first }}
+        {% endfor %}
+{% endcapture %}
+{% assign tag_words = site_tags | split:' ' | sort %}
+
+{% for tag in tag_words %}
+    <a href="{{ site.baseurl }}/tags/#{{ tag }}" title="{{ tag }}">{{ tag }}</a> &nbsp;
+{% endfor %}
+</ul>
+
+<ul class="tags-box">
+    {% assign sorted_tags = (site.tags | sort:0) %}
+        {% for tag in sorted_tags %}
+            <li id="{{ tag[0] }}">{{ tag | first }}</li>
+                {% for post in tag[1] %}
+                    <a href="{{ site.baseurl }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a><br />
+                {% endfor %}
+        {% endfor %}
+{% assign tag_words = site_tags | split:',' | sort %}
+</ul>
