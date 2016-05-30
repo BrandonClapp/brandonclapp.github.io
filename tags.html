@@ -4,27 +4,31 @@ title: Tags
 permalink: /tags/
 ---
 
-<ul class="tags-box">
-{% capture site_tags %}
-    {% assign sorted_tags = (site.tags | sort:0) %}
-        {% for tag in sorted_tags %}
-            {{ tag | first }}
-        {% endfor %}
-{% endcapture %}
-{% assign tag_words = site_tags | split:' ' | sort %}
+<div class="tags">
+  <ul class="tag-list">
+  {% capture site_tags %}
+      {% assign sorted_tags = (site.tags | sort:0) %}
+          {% for tag in sorted_tags %}
+              {{ tag | first }}
+          {% endfor %}
+  {% endcapture %}
+  {% assign tag_words = site_tags | split:' ' | sort %}
 
-{% for tag in tag_words %}
-    <a href="{{ site.baseurl }}/tags/#{{ tag }}" title="{{ tag }}">{{ tag }}</a> &nbsp;
-{% endfor %}
+  {% for tag in tag_words %}
+      <a href="{{ site.baseurl }}/tags/#{{ tag }}" title="{{ tag }}">{{ tag }}</a> &nbsp;
+  {% endfor %}
 </ul>
 
-<ul class="tags-box">
-    {% assign sorted_tags = (site.tags | sort:0) %}
-        {% for tag in sorted_tags %}
-            <li id="{{ tag[0] }}">{{ tag | first }}</li>
-                {% for post in tag[1] %}
-                    <a href="{{ site.baseurl }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a><br />
-                {% endfor %}
-        {% endfor %}
-{% assign tag_words = site_tags | split:',' | sort %}
-</ul>
+  <div class="tag-details">
+      {% assign sorted_tags = (site.tags | sort:0) %}
+          {% for tag in sorted_tags %}
+              <h4 id="{{ tag[0] }}">{{ tag | first }}</h4>
+                  {% for post in tag[1] %}
+                      <div class="tag-post">
+                        <a href="{{ site.baseurl }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a><br />
+                      </div>
+                  {% endfor %}
+          {% endfor %}
+  {% assign tag_words = site_tags | split:',' | sort %}
+</div>
+</div>

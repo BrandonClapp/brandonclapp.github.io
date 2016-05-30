@@ -1,0 +1,23 @@
+.tags {
+
+  ul {
+    margin: 1em 0 1em 1em;
+  }
+
+  .tag-list {
+    a {
+      border-bottom: 1px dotted $color3;
+      padding-bottom: .2em;
+    }
+  }
+
+  .tag-details {
+    h4{
+
+    }
+
+    .tag-post {
+      margin-left: 1em;
+    }
+  }
+}

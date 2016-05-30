@@ -1309,6 +1309,14 @@ ul.post-list {
 .categories .category-details .category-post {
   margin-left: 1em; }
 
+.tags ul {
+  margin: 1em 0 1em 1em; }
+.tags .tag-list a {
+  border-bottom: 1px dotted #DB3A3F;
+  padding-bottom: .2em; }
+.tags .tag-details .tag-post {
+  margin-left: 1em; }
+
 /**
  * Syntax highlighting styles
  */
