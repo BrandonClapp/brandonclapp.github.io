@@ -4,7 +4,7 @@ title:  "What is gulp.js and why use it?"
 date:   April 10, 2015
 permalink: /what-is-gulp-js-and-why-use-it/
 tags:
-  - Build Automation
+  - Build-Automation
   - Gulp.js
 categories:
   - Tools

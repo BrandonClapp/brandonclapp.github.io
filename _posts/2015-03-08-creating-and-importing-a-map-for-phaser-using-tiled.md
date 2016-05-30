@@ -5,7 +5,7 @@ date:   March 8, 2015
 permalink: /creating-and-importing-a-map-for-phaser-using-tiled/
 tags:
   - PhaserJS
-  - Game Dev
+  - Game-Dev
 categories:
   - Game Development
 header: tiled_phaser_featured.png

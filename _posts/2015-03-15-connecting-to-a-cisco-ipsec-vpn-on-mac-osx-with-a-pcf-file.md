@@ -4,7 +4,7 @@ title:  "Connecting to a Cisco IPSec VPN on Mac OSX with a PCF File"
 date:   March 15, 2015
 permalink: /connecting-to-a-cisco-ipsec-vpn-on-mac-osx-with-a-pcf-file/
 tags:
-  - Cisco IPSec
+  - Cisco-IPSec
   - VPN
   - Mac
 categories:

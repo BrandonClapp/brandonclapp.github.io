@@ -5,7 +5,7 @@ date:   March 4, 2015
 permalink: /beginners-guide-to-setting-up-an-angularjs-project/
 tags:
   - AngularJS
-  - Project Setup
+  - Project-Setup
 categories: AngularJS
 header: AngularJS_logo.png
 comments: true

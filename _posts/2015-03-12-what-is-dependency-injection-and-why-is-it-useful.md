@@ -4,8 +4,8 @@ title:  "What is dependency injection and why is it useful?"
 date:   March 12, 2015
 permalink: /what-is-dependency-injection-and-why-is-it-useful/
 tags:
-  - Dependency Injection
-  - Design Pattern
+  - Dependency-Injection
+  - Design-Pattern
 categories:
   - Design Patterns
 comments: true

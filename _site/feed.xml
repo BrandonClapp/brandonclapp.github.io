@@ -6,8 +6,8 @@
 </description>
     <link>http://brandonclapp.com/</link>
     <atom:link href="http://brandonclapp.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 30 May 2016 11:31:40 -0500</pubDate>
-    <lastBuildDate>Mon, 30 May 2016 11:31:40 -0500</lastBuildDate>
+    <pubDate>Mon, 30 May 2016 11:37:41 -0500</pubDate>
+    <lastBuildDate>Mon, 30 May 2016 11:37:41 -0500</lastBuildDate>
     <generator>Jekyll v3.1.3</generator>
     
       <item>
@@ -753,7 +753,7 @@ npm install --save-dev gulp
         <link>http://brandonclapp.com/what-is-gulp-js-and-why-use-it/</link>
         <guid isPermaLink="true">http://brandonclapp.com/what-is-gulp-js-and-why-use-it/</guid>
         
-        <category>Build Automation</category>
+        <category>Build-Automation</category>
         
         <category>Gulp.js</category>
         
@@ -865,7 +865,7 @@ npm install --save-dev gulp
         
         <category>AngularJS</category>
         
-        <category>Front End</category>
+        <category>Front-End</category>
         
         <category>Broadcast</category>
         
@@ -923,7 +923,7 @@ enc_GroupPwd=595533KJL3KJ4L2K3J4LKJ2L...etc
         <link>http://brandonclapp.com/connecting-to-a-cisco-ipsec-vpn-on-mac-osx-with-a-pcf-file/</link>
         <guid isPermaLink="true">http://brandonclapp.com/connecting-to-a-cisco-ipsec-vpn-on-mac-osx-with-a-pcf-file/</guid>
         
-        <category>Cisco IPSec</category>
+        <category>Cisco-IPSec</category>
         
         <category>VPN</category>
         
@@ -1083,9 +1083,9 @@ enc_GroupPwd=595533KJL3KJ4L2K3J4LKJ2L...etc
         <link>http://brandonclapp.com/what-is-dependency-injection-and-why-is-it-useful/</link>
         <guid isPermaLink="true">http://brandonclapp.com/what-is-dependency-injection-and-why-is-it-useful/</guid>
         
-        <category>Dependency Injection</category>
+        <category>Dependency-Injection</category>
         
-        <category>Design Pattern</category>
+        <category>Design-Pattern</category>
         
         
         <category>Design Patterns</category>
@@ -1272,7 +1272,7 @@ A static class allows only static methods.&lt;/p&gt;
         
         <category>Singleton</category>
         
-        <category>Design Pattern</category>
+        <category>Design-Pattern</category>
         
         
         <category>Design Patterns</category>
@@ -1406,7 +1406,7 @@ A static class allows only static methods.&lt;/p&gt;
         
         <category>PhaserJS</category>
         
-        <category>Game Dev</category>
+        <category>Game-Dev</category>
         
         
         <category>Game Development</category>

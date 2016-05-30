@@ -36,7 +36,7 @@ comments: true
   <div style="margin-bottom: 1.5em">
     <span><strong>Tags: </strong></span>
     {% for tag in page.tags %}
-      <span>{{tag}}</span>{% unless forloop.last %}<span>, </span>{% endunless %}
+      <span><a href="/tags/#{{tag}}">{{tag}}</a></span>{% unless forloop.last %}<span>, </span>{% endunless %}
     {% endfor %}
   </div>
   {% endif %}

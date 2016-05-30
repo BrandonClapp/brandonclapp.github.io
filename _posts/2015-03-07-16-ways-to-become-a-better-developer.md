@@ -3,8 +3,8 @@ layout: post
 title:  "16 Ways to Become a Better Developer"
 date:   March 7, 2015
 permalink: /16-ways-to-become-a-better-developer/
-tags:
-  - Self Improvement
+categories:
+  - Development
 comments: true
 ---
 

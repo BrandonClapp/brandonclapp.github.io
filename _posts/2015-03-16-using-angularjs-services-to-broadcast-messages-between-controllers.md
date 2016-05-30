@@ -5,7 +5,7 @@ date:   March 16, 2015
 permalink: /using-angularjs-services-to-broadcast-messages-between-controllers/
 tags:
   - AngularJS
-  - Front End
+  - Front-End
   - Broadcast
   - Emit
 categories:

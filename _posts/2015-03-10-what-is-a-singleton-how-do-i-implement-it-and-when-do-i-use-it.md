@@ -5,7 +5,7 @@ date:   March 10, 2015
 permalink: /what-is-a-singleton-how-do-i-implement-it-and-when-do-i-use-it/
 tags:
   - Singleton
-  - Design Pattern
+  - Design-Pattern
 categories:
   - Design Patterns
 comments: true
