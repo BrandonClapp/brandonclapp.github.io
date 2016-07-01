@@ -6,9 +6,144 @@
 </description>
     <link>http://brandonclapp.com/</link>
     <atom:link href="http://brandonclapp.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 30 May 2016 12:25:54 -0500</pubDate>
-    <lastBuildDate>Mon, 30 May 2016 12:25:54 -0500</lastBuildDate>
-    <generator>Jekyll v3.1.3</generator>
+    <pubDate>Fri, 01 Jul 2016 12:45:05 -0500</pubDate>
+    <lastBuildDate>Fri, 01 Jul 2016 12:45:05 -0500</lastBuildDate>
+    <generator>Jekyll v3.1.6</generator>
+    
+      <item>
+        <title>Using Nuget.exe and Octo.exe in a TFS 2015 build definition to deploy to an Octopus feed</title>
+        <description>&lt;p&gt;Rather than using Octopack 2/3 to package the application by tying into the MSBuild process with additional MSBuild arguments, Nuget.exe can be utilized to package the project in a separate build step (outside of MSBuild). Additionally, once packaged, octo.exe can be used to push the package to the Octopus server in order to streamline the build and deployment process.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Why nuget/octo executables instead of OctoPack?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Building &amp;amp; packaging separation of concerns.&lt;/li&gt;
+  &lt;li&gt;Language/Framework agnostic.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Build Server Prerequisites&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Nuget.exe installed &amp;amp; accessible in the PATH.&lt;/li&gt;
+  &lt;li&gt;Octo.exe installed &amp;amp; accessible in the PATH.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Project Prerequisites&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Nuget manifest (.nuspec file) containing packaging details about the project.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;packaging-your-project-with-nugetexe&quot;&gt;Packaging your project with nuget.exe&lt;/h2&gt;
+
+&lt;p&gt;To package your application with Nuget.exe, the &lt;code class=&quot;highlighter-rouge&quot;&gt;nuget pack&lt;/code&gt; utility can be used.&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;nuget pack \Path\To\My\Project.nuspec&lt;/code&gt; or &lt;code class=&quot;highlighter-rouge&quot;&gt;nuget pack \Path\To\My\Project.csproj&lt;/code&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;Additional advantages of targeting .csproj file:&lt;/strong&gt;
+The nuget package will be populated with the assembly version specified in AssemblyInfo.cs. Otherwise, if we only point to the &lt;em&gt;.nuspec&lt;/em&gt; file, we would have to come up with a solution for parsing the verison from AssemblyInfo.cs at build time.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;By pointing to the &lt;em&gt;.csproj&lt;/em&gt; file, we inherently get the versioning information from the assembly at the cost of sacrificing our soul to Microsoft. This is probably okay for ASP.NET applications, but it is nice to have the option to point to the &lt;em&gt;.nuspec&lt;/em&gt; file for other platforms.&lt;/p&gt;
+
+&lt;h3 id=&quot;packaging-aspnet-applications&quot;&gt;Packaging ASP.NET Applications&lt;/h3&gt;
+
+&lt;p&gt;We found that pointing the &lt;code class=&quot;highlighter-rouge&quot;&gt;nuget pack&lt;/code&gt; command to the &lt;em&gt;.csproj&lt;/em&gt; file made it easier to package files marked as &lt;em&gt;Content&lt;/em&gt;. Pointing nuget to the &lt;em&gt;.csproj&lt;/em&gt; file will honor the assembly version of the project that it is packaging while honoring the other settings from the &lt;em&gt;.nuspec&lt;/em&gt; file.&lt;/p&gt;
+
+&lt;h4 id=&quot;sample-aspnet-project-nuspec&quot;&gt;Sample ASP.NET Project .nuspec&lt;/h4&gt;
+
+&lt;div class=&quot;language-xml highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;?xml version=&quot;1.0&quot;?&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;package&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;metadata&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;id&amp;gt;&lt;/span&gt;MyApplication&lt;span class=&quot;nt&quot;&gt;&amp;lt;/id&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;version&amp;gt;&lt;/span&gt;$version$&lt;span class=&quot;nt&quot;&gt;&amp;lt;/version&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;title&amp;gt;&lt;/span&gt;Compliance&lt;span class=&quot;nt&quot;&gt;&amp;lt;/title&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;authors&amp;gt;&lt;/span&gt;Team Superstar&lt;span class=&quot;nt&quot;&gt;&amp;lt;/authors&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;owners&amp;gt;&lt;/span&gt;Team Superstar&lt;span class=&quot;nt&quot;&gt;&amp;lt;/owners&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;requireLicenseAcceptance&amp;gt;&lt;/span&gt;false&lt;span class=&quot;nt&quot;&gt;&amp;lt;/requireLicenseAcceptance&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;description&amp;gt;&lt;/span&gt;My application description&lt;span class=&quot;nt&quot;&gt;&amp;lt;/description&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;releaseNotes&amp;gt;&lt;/span&gt;Summary of changes made in this release of the package.&lt;span class=&quot;nt&quot;&gt;&amp;lt;/releaseNotes&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;copyright&amp;gt;&lt;/span&gt;Copyright 2016&lt;span class=&quot;nt&quot;&gt;&amp;lt;/copyright&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;tags&amp;gt;&lt;/span&gt;Tag1 Tag2&lt;span class=&quot;nt&quot;&gt;&amp;lt;/tags&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/metadata&amp;gt;&lt;/span&gt;
+
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;files&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;file&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;bin\**\*&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;target=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;content\bin&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;file&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Web.Release.config&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;target=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;content&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;&amp;lt;!-- stupid nuget not copying this file as content, don&#39;t know why!!! --&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/files&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/package&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Note the inclusion of the bin folder and Web.Release.config into the content folder. The &lt;em&gt;.nuspec&lt;/em&gt; file can be used for other platforms besides ASP.NET, however, your &lt;em&gt;files&lt;/em&gt; property will likely be different for that particular platform.&lt;/p&gt;
+
+&lt;h2 id=&quot;adding-your-project-to-the-built-in-octopus-feed-with-octoexe&quot;&gt;Adding your project to the built-in Octopus feed with octo.exe&lt;/h2&gt;
+
+&lt;p&gt;Octo.exe is a CLI tool provided by Octopus that provides a &lt;code class=&quot;highlighter-rouge&quot;&gt;octo push&lt;/code&gt; command. This command can be used to push a nuget/zip package to an Octopus Deploy feed.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Side note:
+This tool can also do the packaging for you as well with &lt;code class=&quot;highlighter-rouge&quot;&gt;octo pack&lt;/code&gt;, however, we found that this tool did not provide us enough flexibility as it does not use a &lt;em&gt;.nuspec&lt;/em&gt; file.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;The complete &lt;code class=&quot;highlighter-rouge&quot;&gt;octo push&lt;/code&gt; API documentation &lt;a href=&quot;http://docs.octopusdeploy.com/display/OD/Pushing+packages&quot; target=&quot;_blank&quot;&gt;can be found here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;octo push --package MyApplication.nupkg --server http://octopus.example.com --apiKey API-123456789ABCDEFGHIJKLMNOP&lt;/code&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;sample-script-for-packing--deploying-your-application&quot;&gt;Sample script for packing + deploying your application&lt;/h2&gt;
+
+&lt;p&gt;In the TFS 2015 build definition, there is an option to run a PowerShell script. The following script is an example of how you can utilize nuget.exe and octo.exe to package and deploy your application to the internal Octopus feed. Although this script can be greatly improved, this is the gist. We added our script to TFS source control so that the TFS build definition could access it. As far as I’m aware, this is the only way to access it (I would love to know if there is an alternative).&lt;/p&gt;
+
+&lt;div class=&quot;language-powershell highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;# todo store octo info in central config&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# replace with your values.&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$octoServer&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;http://octopus.example.com&quot;&lt;/span&gt;    
+&lt;span class=&quot;nv&quot;&gt;$apiKey&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;API-123456789ABCDEFGHIJKLMNOP&quot;&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# there is a known issue with our version of TFS that prevents TFS from seeing environment variables.&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$tools&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;C:&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\P&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;rogramData&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\c&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;hocolatey&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\b&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;in&quot;&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$nuget&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$tools&lt;/span&gt; + &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;uget.exe&quot;&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$octo&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$tools&lt;/span&gt; + &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\o&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;cto.exe&quot;&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$projectLocation&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$env&lt;/span&gt;:ProjectLocation
+
+&amp;amp; &lt;span class=&quot;nv&quot;&gt;$nuget&lt;/span&gt; pack &lt;span class=&quot;nv&quot;&gt;$projectLocation&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# todo make this support multiple packages&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$deployPackageName&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;dir&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;.nupkg | &lt;span class=&quot;nb&quot;&gt;Select &lt;/span&gt;Name -first 1
+
+&amp;amp; &lt;span class=&quot;nv&quot;&gt;$octo&lt;/span&gt; push --package &lt;span class=&quot;nv&quot;&gt;$deployPackageName&lt;/span&gt;.Name --replace-existing --server &lt;span class=&quot;nv&quot;&gt;$octoServer&lt;/span&gt; --apiKey &lt;span class=&quot;nv&quot;&gt;$apiKey&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;setting-up-the-build-definition-in-tfs-2015&quot;&gt;Setting up the build definition in TFS 2015&lt;/h3&gt;
+
+&lt;p&gt;In the TFS web interface, once you step up a new build definition you should be able to add build steps to it.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/posts/content/TFS-AddBuildStep.png&quot; alt=&quot;Extension Method&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Add a new PowerShell script:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/posts/content/TFS-AddPowerShell.png&quot; alt=&quot;Extension Method&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Point the PowerShell build step &lt;strong&gt;Script filename&lt;/strong&gt; to the previously mentioned script in TFS.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/posts/content/TFS-PowerShell.png&quot; alt=&quot;Extension Method&quot; /&gt;&lt;/p&gt;
+</description>
+        <pubDate>Fri, 01 Jul 2016 00:00:00 -0500</pubDate>
+        <link>http://brandonclapp.com/octopus/using-nuget-and-octo-in-a-tfs2015-build-definition-to-deploy-to-octopus</link>
+        <guid isPermaLink="true">http://brandonclapp.com/octopus/using-nuget-and-octo-in-a-tfs2015-build-definition-to-deploy-to-octopus</guid>
+        
+        <category>Octopus</category>
+        
+        <category>Deploy</category>
+        
+        <category>TFS2015</category>
+        
+        
+        <category>Octopus</category>
+        
+      </item>
     
       <item>
         <title>Git Reference: Useful Commands &amp; Overview</title>
@@ -384,32 +519,6 @@
         
         
         <category>Git</category>
-        
-      </item>
-    
-      <item>
-        <title>This is just a test post 8</title>
-        <description>&lt;p&gt;You’ll find this post in your &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
-
-&lt;p&gt;To add new posts, simply add a file in the &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory that follows the convention &lt;code class=&quot;highlighter-rouge&quot;&gt;YYYY-MM-DD-name-of-post.ext&lt;/code&gt; and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
-
-&lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;Tom&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints &#39;Hi, Tom&#39; to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Check out the &lt;a href=&quot;http://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;
-
-</description>
-        <pubDate>Sun, 22 May 2016 13:21:41 -0500</pubDate>
-        <link>http://brandonclapp.com/testing/this-is-just-a-test-post-8</link>
-        <guid isPermaLink="true">http://brandonclapp.com/testing/this-is-just-a-test-post-8</guid>
-        
-        
-        <category>testing</category>
         
       </item>
     
