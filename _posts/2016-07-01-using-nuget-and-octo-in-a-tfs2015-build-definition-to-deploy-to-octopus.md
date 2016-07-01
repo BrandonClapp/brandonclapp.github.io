@@ -108,12 +108,12 @@ $deployPackageName = dir *.nupkg | Select Name -first 1
 
 In the TFS web interface, once you step up a new build definition you should be able to add build steps to it.
 
-![Extension Method](/assets/images/posts/content/TFS-AddBuildStep.png)
+![Add Build Step](/assets/images/posts/content/TFS-AddBuildStep.png)
 
 Add a new PowerShell script:
 
-![Extension Method](/assets/images/posts/content/TFS-AddPowerShell.png)
+![Add PowerShell](/assets/images/posts/content/TFS-AddPowerShell.PNG)
 
 Point the PowerShell build step **Script filename** to the previously mentioned script in TFS.
 
-![Extension Method](/assets/images/posts/content/TFS-PowerShell.png)
+![PowerShell build step](/assets/images/posts/content/TFS-PowerShell.PNG)
