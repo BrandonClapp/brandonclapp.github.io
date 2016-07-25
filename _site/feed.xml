@@ -6,9 +6,131 @@
 </description>
     <link>http://brandonclapp.com/</link>
     <atom:link href="http://brandonclapp.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 01 Jul 2016 12:45:05 -0500</pubDate>
-    <lastBuildDate>Fri, 01 Jul 2016 12:45:05 -0500</lastBuildDate>
+    <pubDate>Mon, 25 Jul 2016 17:48:56 -0500</pubDate>
+    <lastBuildDate>Mon, 25 Jul 2016 17:48:56 -0500</lastBuildDate>
     <generator>Jekyll v3.1.6</generator>
+    
+      <item>
+        <title>Embracing Modular Design on the Front End</title>
+        <description>&lt;p&gt;In recent years, there has been a large shift in systems architecture due to the containerization and virtualization through technologies such as Docker as a means to run more efficiently in cloud based environments. Arguably, some of the same architecture principles and design patterns have spilled over into application development through componentization of front end web controls and back end services. As a result, package managers have become increasingly popular due to their ability to encapsulate specific library functionality and contribute to the reuse of said libraries.&lt;/p&gt;
+
+&lt;h3 id=&quot;what-is-a-package&quot;&gt;What is a Package?&lt;/h3&gt;
+
+&lt;p&gt;Front end frameworks such as Angular 2, React, Polymer, and the Web Components standard all share the opinion that the &lt;strong&gt;components&lt;/strong&gt; on a web page should be directly tied to an encapsulated piece of code that controls that particular component. Doing so allows for a more modular front end development process, which in turns, makes code more reusable and decoupled from the rest of the page. Components and other libraries that are self contained are great examples of what can be considered a package. Sharing these packages can be achieved by the use of a package manager, which will provide functionality for obtaining, versioning, and updating any given package.&lt;/p&gt;
+
+&lt;h3 id=&quot;why-a-package-manager&quot;&gt;Why a package manager?&lt;/h3&gt;
+
+&lt;p&gt;Modern web development has embraced the utilization JavaScript modules as a means to achieve &lt;strong&gt;modular&lt;/strong&gt; design, which promotes &lt;strong&gt;separation of concerns&lt;/strong&gt;, &lt;strong&gt;reusability&lt;/strong&gt;, and the &lt;strong&gt;single responsibility principle&lt;/strong&gt; to a degree. Packages (modules) are very easy to use and are resolved and included into the project at build time, rather than run time. They’re also not a new concept, and most languages, frameworks, and platforms have utilized them for years. I.e.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;C# -&amp;gt; NuGet&lt;/li&gt;
+  &lt;li&gt;Ruby -&amp;gt; gems&lt;/li&gt;
+  &lt;li&gt;Python -&amp;gt; pip&lt;/li&gt;
+  &lt;li&gt;PHP -&amp;gt; Composer&lt;/li&gt;
+  &lt;li&gt;JavaScript -&amp;gt; npm, bower, jspm&lt;/li&gt;
+  &lt;li&gt;Windows -&amp;gt; Chocolatey&lt;/li&gt;
+  &lt;li&gt;Linux -&amp;gt; apt-get&lt;/li&gt;
+  &lt;li&gt;Mac -&amp;gt; Homebrew&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/List_of_software_package_management_systems&quot;&gt;etc…&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;how-is-this-different-than-a-cdn&quot;&gt;How is this different than a CDN?&lt;/h3&gt;
+
+&lt;p&gt;A CDN, or Content Distribution Network, is a remote content delivery source that will serve application dependencies. Unlike a package manager, these dependencies are resolved at run time rather than build time. This generally requires additional precautions to account for CDN servers being down such as hosting a local copy of the script as a backup.&lt;/p&gt;
+
+&lt;h3 id=&quot;what-problems-do-packages-solve&quot;&gt;What problems do packages solve?&lt;/h3&gt;
+
+&lt;p&gt;Package managers provide an easier and more reliable alternative for front-end (and non) libraries to CDN’s. In the context of NPM, and most other package manager systems…&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;The use of semantic versioning
+    &lt;ul&gt;
+      &lt;li&gt;Allows each application to upgrade to the latest version when it is ready.&lt;/li&gt;
+      &lt;li&gt;Easier to regression test, due to an opt-in package model.&lt;/li&gt;
+      &lt;li&gt;This is only a benefit if your CDN does not support semantic versioning (or any versioning).&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Build time dependency resolution
+    &lt;ul&gt;
+      &lt;li&gt;Dependency resolution is no longer a point of failure in a production environment.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Easily see and resolve library dependencies at development time.
+    &lt;ul&gt;
+      &lt;li&gt;Dependency management is built in to NPM.&lt;/li&gt;
+      &lt;li&gt;Spend less time finding dependencies and understanding how a disconnected system works.&lt;/li&gt;
+      &lt;li&gt;Spend more time adding features and fixing bugs.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Provide a better foundation for developing libraries as individual, self contained, interoperable pieces.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;where-should-the-packages-be-hosted&quot;&gt;Where should the packages be hosted?&lt;/h3&gt;
+
+&lt;p&gt;NPM (node package manager) is the de facto standard for hosting JavaScript packages. It was created in 2009 to help JavaScript developers easily share packaged modules of code. NPM, to date, houses over 250,000 reusable packages and is the largest code registry in the world and is an extremely easy way to utilize and develop reusable code.&lt;/p&gt;
+
+&lt;p&gt;More Information can be found at &lt;a href=&quot;https://www.npmjs.com/&quot;&gt;NPM&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Other notable package managers for JavaScript include bower and jspm, however, NPM is by far the most popular. Additionally, bower and jspm package managers are obtained through npm. (&lt;code class=&quot;highlighter-rouge&quot;&gt;npm install -g bower&lt;/code&gt;)&lt;/p&gt;
+
+&lt;h3 id=&quot;can-we-host-npm-locally&quot;&gt;Can we host NPM locally?&lt;/h3&gt;
+
+&lt;p&gt;Yes, but for a much much higher price. The question becomes not can we, but should we. NPM has grown as an open source ecosystem that promotes code reuse on a multitude of different projects. Most, if not all, of the projects that are hosted publicly do not have any proprietary logic to any particular company’s system (unless, perhaps, it is an integration library to allow a customer to integrate with their system)&lt;/p&gt;
+
+&lt;p&gt;For packages that need to be private due to them containing specific business logic, NPM offers private repository hosting through their Solo and Organization plans.&lt;/p&gt;
+
+&lt;p&gt;Perhaps if you have the personnel, system, and monetary resources required to maintain a private npm registry, then it may not be a problem. However, most small to medium sized business should be fine with the Solo and Organization plans provided by npm.&lt;/p&gt;
+
+&lt;p&gt;More pricing information can be located at &lt;a href=&quot;https://www.npmjs.com/pricing&quot;&gt;NPM Pricing&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;to-open-source-or-not-open-source&quot;&gt;To open source or not open source&lt;/h3&gt;
+
+&lt;p&gt;While open source is a separate topic from JavaScript modules and packages, the question will eventually come up since they are closely related. If your company does not currently contribute to open source, perhaps you should consider it. If you’re making the move to use packages and host them on NPM, then this is a low hanging fruit that can easily be captured to benefit your company in a big way. At some point, you will need to decide whether your packages will be public or private.&lt;/p&gt;
+
+&lt;p&gt;So, should we open source our company’s packages? &lt;strong&gt;Some packages are fit for open source and some that are not&lt;/strong&gt;. Common utilities that are used on a daily basis that do not contain a company’s proprietary “secret sauce” are great candidates for open source. To elaborate further, packages that a company receives no benefit by maintaining their own private version of it should probably be company sponsored public repositories.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Benefits to open sourcing&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Making utilities open source can offset some of the maintenance of these utilities&lt;/li&gt;
+  &lt;li&gt;Other people will help you for free. There are literally thousands of developers out there who are passionate about open source. Leverage this fact.&lt;/li&gt;
+  &lt;li&gt;Open sourcing libraries will force you to use a modular approach.&lt;/li&gt;
+  &lt;li&gt;Modules are kept lightweight because complex and unnecessary logic should be omitted. Public projects should not have business logic specific to your business.&lt;/li&gt;
+  &lt;li&gt;Open source projects sponsored by company’s make a company more appealing.
+    &lt;ul&gt;
+      &lt;li&gt;StackExchange sponsors &lt;a href=&quot;https://github.com/StackExchange/dapper-dot-net&quot;&gt;Dapper&lt;/a&gt; and &lt;a href=&quot;https://github.com/opserver/Opserver&quot;&gt;Opserver&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;Google sponsors &lt;a href=&quot;https://angularjs.org/&quot;&gt;Angular&lt;/a&gt; and &lt;a href=&quot;https://angular.io/&quot;&gt;Angular2&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;Facebook sponsors &lt;a href=&quot;https://facebook.github.io/react/&quot;&gt;React&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;Netflix sponsors &lt;a href=&quot;https://github.com/Netflix&quot;&gt;many tools that they use internally&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Your company earns a reputation as an innovative leader in the community&lt;/li&gt;
+  &lt;li&gt;You will be able to hire the best engineers. In modern years, open source has become a great resource for hiring talent.&lt;/li&gt;
+  &lt;li&gt;You will get more out of your best engineers&lt;/li&gt;
+  &lt;li&gt;You open the door to forging partnerships with other open source companies.&lt;/li&gt;
+  &lt;li&gt;You will learn how to use open source more efficiently.&lt;/li&gt;
+  &lt;li&gt;Project documentation is easier to find when it’s kept with the source code.&lt;/li&gt;
+  &lt;li&gt;You give back to the community.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Packages such as Angular or React utilities (i.e. error handling, CSRF, persisting state, accessing browser &lt;code class=&quot;highlighter-rouge&quot;&gt;localStorage&lt;/code&gt; or session, attaching http headers) or anything else where no direct benefit is gained by maintaining a private version of are probably good candidates for open source.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;tl;dr:&lt;/strong&gt; If a library is general purpose, contains no business specific logic, and yields no direct benefits to maintaining a private version, then it is a good candidate to consider open sourcing.&lt;/p&gt;
+</description>
+        <pubDate>Mon, 25 Jul 2016 00:00:00 -0500</pubDate>
+        <link>http://brandonclapp.com/design/patterns/its-time-to-migrate-to-javascript-modules</link>
+        <guid isPermaLink="true">http://brandonclapp.com/design/patterns/its-time-to-migrate-to-javascript-modules</guid>
+        
+        <category>Front-End</category>
+        
+        <category>NPM</category>
+        
+        
+        <category>Design</category>
+        
+        <category>Patterns</category>
+        
+      </item>
     
       <item>
         <title>Using Nuget.exe and Octo.exe in a TFS 2015 build definition to deploy to an Octopus feed</title>
@@ -120,15 +242,15 @@ This tool can also do the packaging for you as well with &lt;code class=&quot;hi
 
 &lt;p&gt;In the TFS web interface, once you step up a new build definition you should be able to add build steps to it.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/images/posts/content/TFS-AddBuildStep.png&quot; alt=&quot;Extension Method&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/posts/content/TFS-AddBuildStep.png&quot; alt=&quot;Add Build Step&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Add a new PowerShell script:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/images/posts/content/TFS-AddPowerShell.png&quot; alt=&quot;Extension Method&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/posts/content/TFS-AddPowerShell.PNG&quot; alt=&quot;Add PowerShell&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Point the PowerShell build step &lt;strong&gt;Script filename&lt;/strong&gt; to the previously mentioned script in TFS.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/images/posts/content/TFS-PowerShell.png&quot; alt=&quot;Extension Method&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/posts/content/TFS-PowerShell.PNG&quot; alt=&quot;PowerShell build step&quot; /&gt;&lt;/p&gt;
 </description>
         <pubDate>Fri, 01 Jul 2016 00:00:00 -0500</pubDate>
         <link>http://brandonclapp.com/octopus/using-nuget-and-octo-in-a-tfs2015-build-definition-to-deploy-to-octopus</link>
@@ -1385,140 +1507,6 @@ A static class allows only static methods.&lt;/p&gt;
         
         
         <category>Design Patterns</category>
-        
-      </item>
-    
-      <item>
-        <title>Creating and importing a map for Phaser using Tiled</title>
-        <description>&lt;p&gt;Phaser is an HTML5 game engine that comes with a lot of cool features that I’ve yet to figure out. Here, I’ll give you a walk through of designing a map utilizing a tool called &lt;strong&gt;Tiled&lt;/strong&gt; and then bringing that map into your phaser project.&lt;/p&gt;
-
-&lt;h4 id=&quot;create-the-phaser-game-object&quot;&gt;Create the Phaser Game object&lt;/h4&gt;
-
-&lt;p&gt;I first set up some basic project scaffolding within phaser, such as setting up the phaser game object, which will actually represent the game within our browser.&lt;/p&gt;
-
-&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Game&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-
-    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;_width&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;window&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;innerWidth&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;_height&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;window&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;innerHeight&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-
-    &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;game&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Phaser&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Game&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;_width&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;_height&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Phaser&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;AUTO&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;na&quot;&gt;preload&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;preload&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-        &lt;span class=&quot;na&quot;&gt;create&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;create&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-        &lt;span class=&quot;na&quot;&gt;update&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;update&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;nx&quot;&gt;Game&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;prototype&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;na&quot;&gt;preload&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-
-    &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
-    &lt;span class=&quot;na&quot;&gt;create&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-
-    &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
-    &lt;span class=&quot;na&quot;&gt;update&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Game&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;If you’re not familiar with phaser, what the above code will effectively do is set up a phaser game object with a width and height of the user’s viewable screen and wire up the event handlers that will be called when phaser calls it’s preload, create, and update events. We simply using the overload of the phaser &lt;a href=&quot;http://docs.phaser.io/Phaser.Game.html&quot; target=&quot;_blank&quot;&gt;Game class&lt;/a&gt; that takes 5 parameters.&lt;/p&gt;
-
-&lt;h4 id=&quot;create-your-tilemap-using-tiled&quot;&gt;Create your tilemap using Tiled&lt;/h4&gt;
-
-&lt;p&gt;There is a great tool called &lt;a href=&quot;http://www.mapeditor.org/&quot; target=&quot;_blank&quot;&gt;Tiled Map Editor&lt;/a&gt;, which will allow you to create orthogonal, isometric, and staggered maps. I’ll be demonstrating the basics of using this tool using some free graphics from Open Game Art. Save the following sprite sheet and download the map editor specified above.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;/assets/images/posts/content/terrain_atlas.png&quot; target=&quot;_blank&quot;&gt;&lt;img src=&quot;/assets/images/posts/content/terrain_atlas.png&quot; alt=&quot;Terrain Atlas&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;After downloading and installing Tiled, open it up. At first, the UI can seem a little overwhelming if you don’t know what you’re looking at. We’ll start by first creating a new map by pressing the &lt;em&gt;New&lt;/em&gt; icon in the upper left hand corner. We’ll use the default settings, which specify that our map should have an Orthogonal orientation, should be 100 tiles wide by 100 tiles long, and that our tile size will be 32x32 pixels.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/posts/content/tiled_new_map.png&quot; alt=&quot;Tiled New Map&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;You should now notice on the right hand side of the screen, under the pane titled &lt;strong&gt;Layers&lt;/strong&gt; that there is an entry named &lt;em&gt;Tile Layer 1&lt;/em&gt;. Go ahead and rename this layer to &lt;em&gt;MyTerrain&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/posts/content/tiled_terrain_layer.png&quot; alt=&quot;Tiled New Map&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Now that we have a layer to draw on, lets import the spritesheet that we saved earlier into our map editor. To do this, click the &lt;em&gt;New Tileset&lt;/em&gt; icon in the &lt;strong&gt;Tilesets&lt;/strong&gt; pane. Provide a name for your new tiletset and browse for the image containing our terrain graphics.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/posts/content/tiled_create_new_tileset.png&quot; alt=&quot;Tiled New Map&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Upon creating our new tileset, you should see your image loaded into the tileset pane, where you can select one or more tiles to paint with. Select a grass tile from the tileset pane and use the fill tool to fill the entire map.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/posts/content/tiled_painting_texture.png&quot; alt=&quot;Tiled Painting Texture&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Use the stamp brush at the top, along with the tiles in our tilemap to create your map on the created layer. Feel free to create additional layers to draw on. Each layer has it’s own properties, which are changeable in the bottom pane.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/posts/content/tiled_after_drawn.png&quot; alt=&quot;Tiled after drawn&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Next, we need to export the map. Go to File &amp;gt; Export As &amp;gt; and save the file as type &lt;strong&gt;json&lt;/strong&gt;. For the sake of the tutorial, I’ll be naming this file firstMap. Doing this will produce a firstMap.json file that will provide phaser with the information necessary to take a single image and piece it together by individual 32x32px tiles.&lt;/p&gt;
-
-&lt;h4 id=&quot;importing-the-map-into-phaser&quot;&gt;Importing the map into Phaser&lt;/h4&gt;
-
-&lt;p&gt;Lets review what we’ve done so far. First we created the basic foundation for our phaser project by using phaser’s Game class. We wired up the event handlers that will take care of the preload, create, and update events, however we’ve yet to fill in our logic for these methods. We’ve used the Tiled Map Editor to create a basic map for phaser and we have exported that tilemap as a json file that is ready to be consumed by phaser.&lt;/p&gt;
-
-&lt;p&gt;Lets start by telling phaser to load our image and tilemap resources when it starts. To do so, add the following code (lines 2 and 3) to the preload method that we created earlier. Change the paths that I have provided to the paths where your json and png files reside.&lt;/p&gt;
-
-&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;preload&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;game&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;load&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;tilemap&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;MyTilemap&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;/images/maps/firstMap.json&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Phaser&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Tilemap&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;TILED_JSON&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;game&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;load&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;image&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;tiles&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;/images/terrain_atlas.png&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;What this will first do is tell the game object to load the tilemap firstMap.json and give it an alias as MyTilemap, which we’ll be able to refer to it later with.&lt;/p&gt;
-
-&lt;p&gt;Secondly, we tell the game object to load the image that we used to create our map, &lt;em&gt;terrain_atlas.png&lt;/em&gt;. If you’ll recall, &lt;em&gt;tiles&lt;/em&gt; is the name that we provided to the map editor when creating our tileset, as it’s important that the first parameter of this call matches the name of the tileset that you created. Loading these objects up front, in our preload function, will cache them for when we need to access them later.&lt;/p&gt;
-
-&lt;p&gt;Next, we’ll set up the create method to create the map.&lt;/p&gt;
-
-&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;create&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;c1&quot;&gt;// Load the map.&lt;/span&gt;
-        &lt;span class=&quot;nx&quot;&gt;map&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;game&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;tilemap&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;MyTilemap&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-        &lt;span class=&quot;nx&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;addTilesetImage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;tiles&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;tiles&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-
-        &lt;span class=&quot;nx&quot;&gt;layer&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;createLayer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;MyTerrain&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-        &lt;span class=&quot;nx&quot;&gt;layer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;resizeWorld&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
-        &lt;span class=&quot;nx&quot;&gt;layer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;wrap&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-
-        &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;cursors&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;game&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;keyboard&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;createCursorKeys&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Finally, we’ll add some logic in our update method to handle the keyboard input that we added above in our create method. This will allow us to use the arrows keys to move within the map from the browser.&lt;/p&gt;
-
-&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;update&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;cursors&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;left&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;isDown&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-            &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;game&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;camera&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;cursors&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;right&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;isDown&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-            &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;game&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;camera&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-
-        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;cursors&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;up&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;isDown&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-            &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;game&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;camera&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;y&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;cursors&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;down&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;isDown&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-            &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;game&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;camera&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;y&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-
-&lt;p&gt;Load the game in your browser, and if all is correct then you should see your map displayed within your browser, like so.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/assets/images/posts/content/tiled_map_in_browser.png&quot; alt=&quot;Tiled New Map&quot; /&gt;&lt;/p&gt;
-</description>
-        <pubDate>Sun, 08 Mar 2015 00:00:00 -0600</pubDate>
-        <link>http://brandonclapp.com/creating-and-importing-a-map-for-phaser-using-tiled/</link>
-        <guid isPermaLink="true">http://brandonclapp.com/creating-and-importing-a-map-for-phaser-using-tiled/</guid>
-        
-        <category>PhaserJS</category>
-        
-        <category>Game-Dev</category>
-        
-        
-        <category>Game Development</category>
         
       </item>
     
