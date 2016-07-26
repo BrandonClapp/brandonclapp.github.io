@@ -7,7 +7,7 @@ tags:
   - Dependency-Injection
   - Design-Pattern
 categories:
-  - Design Patterns
+  - Design-Patterns
 comments: true
 header: what-is-dependency-injection.jpg
 ---

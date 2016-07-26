@@ -7,7 +7,7 @@ tags:
   - Singleton
   - Design-Pattern
 categories:
-  - Design Patterns
+  - Design-Patterns
 comments: true
 ---
 
