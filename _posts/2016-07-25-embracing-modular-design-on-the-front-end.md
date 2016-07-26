@@ -17,7 +17,7 @@ Front end frameworks such as Angular 2, React, Polymer, and the Web Components s
 
 ### Why a package manager?
 
-Modern web development has embraced the utilization JavaScript modules as a means to achieve **modular** design, which promotes **separation of concerns**, **reusability**, and the **single responsibility principle** to a degree. Packages (modules) are very easy to use and are resolved and included into the project at build time, rather than run time. They’re also not a new concept, and most languages, frameworks, and platforms have utilized them for years. I.e.
+Modern web development has embraced the utilization of JavaScript modules as a means to achieve **modular** design, which promotes **separation of concerns**, **reusability**, and the **single responsibility principle** to a degree. Packages (modules) are very easy to use and are resolved and included into the project at build time, rather than run time. They’re also not a new concept, and most languages, frameworks, and platforms have utilized them for years. I.e.
 
 - C# -> NuGet
 - Ruby -> gems
