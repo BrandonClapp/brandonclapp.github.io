@@ -26,7 +26,7 @@ Modern web development has embraced the utilization JavaScript modules as a mean
 - Windows -> Chocolatey
 - Linux -> apt-get
 - Mac -> Homebrew
-- [etc...](https://en.wikipedia.org/wiki/List_of_software_package_management_systems){target="_blank"}
+- [etc...](https://en.wikipedia.org/wiki/List_of_software_package_management_systems){:target="_blank"}
 
 ### How is this different than a CDN?
 
@@ -52,7 +52,7 @@ Package managers provide an easier and more reliable alternative for front-end (
 
 NPM (node package manager) is the de facto standard for hosting JavaScript packages. It was created in 2009 to help JavaScript developers easily share packaged modules of code. NPM, to date, houses over 250,000 reusable packages and is the largest code registry in the world and is an extremely easy way to utilize and develop reusable code.
 
-More Information can be found at [NPM](https://www.npmjs.com/){target="_blank"}
+More Information can be found at [NPM](https://www.npmjs.com/){:target="_blank"}
 
 Other notable package managers for JavaScript include *bower* and *jspm*, however, NPM is by far the most popular. Additionally, bower and jspm package managers are obtained through npm. (`npm install -g bower`)
 
@@ -64,7 +64,7 @@ For packages that need to be private due to them containing specific business lo
 
 Perhaps if you have the personnel, system, and monetary resources required to maintain a private npm registry, then a self-hosted version of npm enterprise may not be a problem. However, this is costly and most small to medium sized business should be fine with the Solo and Organization plans provided by npm.
 
-More pricing information can be located at [NPM Pricing](https://www.npmjs.com/pricing){target="_blank"}
+More pricing information can be located at [NPM Pricing](https://www.npmjs.com/pricing){:target="_blank"}
 
 ### To open source or not open source
 
@@ -79,10 +79,10 @@ So, should we open source our company's packages? **Some packages are fit for op
 - Open sourcing libraries will force you to use a modular approach.
 - Modules are kept lightweight because complex and unnecessary logic should be omitted. Public projects should not have business logic specific to your business.
 - Open source projects sponsored by company's make a company more appealing.
-  - StackExchange sponsors [Dapper](https://github.com/StackExchange/dapper-dot-net){target="_blank"} and [Opserver](https://github.com/opserver/Opserver){target="_blank"}
-  - Google sponsors [Angular](https://angularjs.org/){target="_blank"} and [Angular2](https://angular.io/){target="_blank"}
-  - Facebook sponsors [React](https://facebook.github.io/react/){target="_blank"}
-  - Netflix sponsors [many tools that they use internally](https://github.com/Netflix){target="_blank"}
+  - StackExchange sponsors [Dapper](https://github.com/StackExchange/dapper-dot-net){:target="_blank"} and [Opserver](https://github.com/opserver/Opserver){:target="_blank"}
+  - Google sponsors [Angular](https://angularjs.org/){:target="_blank"} and [Angular2](https://angular.io/){:target="_blank"}
+  - Facebook sponsors [React](https://facebook.github.io/react/){:target="_blank"}
+  - Netflix sponsors [many tools that they use internally](https://github.com/Netflix){:target="_blank"}
 - Your company earns a reputation as an innovative leader in the community
 - You will be able to hire the best engineers. In modern years, open source has become a great resource for hiring talent.
 - You will get more out of your best engineers
