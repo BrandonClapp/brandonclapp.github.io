@@ -2,7 +2,8 @@
 layout: post
 title:  "Embracing Modular Design on the Front End"
 date:   July 25, 2016
-categories: Design Patterns
+categories:
+  - Design Patterns
 tags:
   - Front-End
   - NPM
