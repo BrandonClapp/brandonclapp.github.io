@@ -6,9 +6,9 @@
 </description>
     <link>http://brandonclapp.com/</link>
     <atom:link href="http://brandonclapp.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 25 Jul 2016 17:48:56 -0500</pubDate>
-    <lastBuildDate>Mon, 25 Jul 2016 17:48:56 -0500</lastBuildDate>
-    <generator>Jekyll v3.1.6</generator>
+    <pubDate>Mon, 25 Jul 2016 19:44:59 -0500</pubDate>
+    <lastBuildDate>Mon, 25 Jul 2016 19:44:59 -0500</lastBuildDate>
+    <generator>Jekyll v3.1.3</generator>
     
       <item>
         <title>Embracing Modular Design on the Front End</title>
@@ -79,7 +79,7 @@
 
 &lt;p&gt;For packages that need to be private due to them containing specific business logic, NPM offers private repository hosting through their Solo and Organization plans.&lt;/p&gt;
 
-&lt;p&gt;Perhaps if you have the personnel, system, and monetary resources required to maintain a private npm registry, then it may not be a problem. However, most small to medium sized business should be fine with the Solo and Organization plans provided by npm.&lt;/p&gt;
+&lt;p&gt;Perhaps if you have the personnel, system, and monetary resources required to maintain a private npm registry, then a self-hosted version of npm enterprise may not be a problem. However, this is costly and most small to medium sized business should be fine with the Solo and Organization plans provided by npm.&lt;/p&gt;
 
 &lt;p&gt;More pricing information can be located at &lt;a href=&quot;https://www.npmjs.com/pricing&quot;&gt;NPM Pricing&lt;/a&gt;&lt;/p&gt;
 
@@ -118,8 +118,8 @@
 &lt;p&gt;&lt;strong&gt;tl;dr:&lt;/strong&gt; If a library is general purpose, contains no business specific logic, and yields no direct benefits to maintaining a private version, then it is a good candidate to consider open sourcing.&lt;/p&gt;
 </description>
         <pubDate>Mon, 25 Jul 2016 00:00:00 -0500</pubDate>
-        <link>http://brandonclapp.com/design/patterns/its-time-to-migrate-to-javascript-modules</link>
-        <guid isPermaLink="true">http://brandonclapp.com/design/patterns/its-time-to-migrate-to-javascript-modules</guid>
+        <link>http://brandonclapp.com/design/patterns/embracing-modular-design-on-the-front-end</link>
+        <guid isPermaLink="true">http://brandonclapp.com/design/patterns/embracing-modular-design-on-the-front-end</guid>
         
         <category>Front-End</category>
         

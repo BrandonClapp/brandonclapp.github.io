@@ -62,7 +62,7 @@ Yes, but for a much much higher price. The question becomes not can we, but shou
 
 For packages that need to be private due to them containing specific business logic, NPM offers private repository hosting through their Solo and Organization plans.
 
-Perhaps if you have the personnel, system, and monetary resources required to maintain a private npm registry, then it may not be a problem. However, most small to medium sized business should be fine with the Solo and Organization plans provided by npm.
+Perhaps if you have the personnel, system, and monetary resources required to maintain a private npm registry, then a self-hosted version of npm enterprise may not be a problem. However, this is costly and most small to medium sized business should be fine with the Solo and Organization plans provided by npm.
 
 More pricing information can be located at [NPM Pricing](https://www.npmjs.com/pricing)
 
