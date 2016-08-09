@@ -1461,3 +1461,22 @@ ul.post-list {
     color: #008080; }
   .highlight .il {
     color: #099; }
+
+#resume .employment-history .job {
+  padding: 1em; }
+  #resume .employment-history .job .employer {
+    font-size: 24px;
+    font-weight: 300;
+    margin-bottom: 0.7em; }
+    #resume .employment-history .job .employer .job-title {
+      color: #DB3A3F; }
+  #resume .employment-history .job:nth-child(even) {
+    background-color: #efedff; }
+  #resume .employment-history .job .tech-summary .tech-used {
+    font-weight: 300;
+    font-size: 20px;
+    margin-bottom: 0.5em; }
+  #resume .employment-history .job .tech-summary .client, #resume .employment-history .job .tech-summary .server, #resume .employment-history .job .tech-summary .data-stores, #resume .employment-history .job .tech-summary .source-control, #resume .employment-history .job .tech-summary .misc {
+    transition: all ease-in 0.2s; }
+    #resume .employment-history .job .tech-summary .client:hover, #resume .employment-history .job .tech-summary .server:hover, #resume .employment-history .job .tech-summary .data-stores:hover, #resume .employment-history .job .tech-summary .source-control:hover, #resume .employment-history .job .tech-summary .misc:hover {
+      background: #c7dbe7; }

@@ -1,0 +1,47 @@
+#resume {
+  .employment-history {
+
+      .job {
+        padding: 1em;
+
+        .employer {
+          font-size: 24px;
+          font-weight: 300;
+          margin-bottom: 0.7em;
+
+          .job-title {
+            color: $color3;
+          }
+        }
+
+        &:nth-child(even) {
+          background-color: lighten($color1, 1%);
+        }
+
+        .job-info {
+          .location {
+
+          }
+
+          .date {
+
+          }
+        }
+
+        .tech-summary {
+          .tech-used {
+            font-weight: 300;
+            font-size: 20px;
+            margin-bottom: 0.5em;
+          }
+
+          .client, .server, .data-stores, .source-control, .misc {
+            transition: all ease-in 0.2s;
+            &:hover {
+              background: lighten($color4, 40%);
+            }
+          }
+        }
+    }
+  }
+}

@@ -6,8 +6,8 @@
 </description>
     <link>http://brandonclapp.com/</link>
     <atom:link href="http://brandonclapp.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 25 Jul 2016 19:44:59 -0500</pubDate>
-    <lastBuildDate>Mon, 25 Jul 2016 19:44:59 -0500</lastBuildDate>
+    <pubDate>Mon, 08 Aug 2016 22:10:32 -0500</pubDate>
+    <lastBuildDate>Mon, 08 Aug 2016 22:10:32 -0500</lastBuildDate>
     <generator>Jekyll v3.1.3</generator>
     
       <item>
@@ -20,7 +20,7 @@
 
 &lt;h3 id=&quot;why-a-package-manager&quot;&gt;Why a package manager?&lt;/h3&gt;
 
-&lt;p&gt;Modern web development has embraced the utilization JavaScript modules as a means to achieve &lt;strong&gt;modular&lt;/strong&gt; design, which promotes &lt;strong&gt;separation of concerns&lt;/strong&gt;, &lt;strong&gt;reusability&lt;/strong&gt;, and the &lt;strong&gt;single responsibility principle&lt;/strong&gt; to a degree. Packages (modules) are very easy to use and are resolved and included into the project at build time, rather than run time. They’re also not a new concept, and most languages, frameworks, and platforms have utilized them for years. I.e.&lt;/p&gt;
+&lt;p&gt;Modern web development has embraced the utilization of JavaScript modules as a means to achieve &lt;strong&gt;modular&lt;/strong&gt; design, which promotes &lt;strong&gt;separation of concerns&lt;/strong&gt;, &lt;strong&gt;reusability&lt;/strong&gt;, and the &lt;strong&gt;single responsibility principle&lt;/strong&gt; to a degree. Packages (modules) are very easy to use and are resolved and included into the project at build time, rather than run time. They’re also not a new concept, and most languages, frameworks, and platforms have utilized them for years. I.e.&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;C# -&amp;gt; NuGet&lt;/li&gt;
@@ -31,7 +31,7 @@
   &lt;li&gt;Windows -&amp;gt; Chocolatey&lt;/li&gt;
   &lt;li&gt;Linux -&amp;gt; apt-get&lt;/li&gt;
   &lt;li&gt;Mac -&amp;gt; Homebrew&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/List_of_software_package_management_systems&quot;&gt;etc…&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/List_of_software_package_management_systems&quot; target=&quot;_blank&quot;&gt;etc…&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h3 id=&quot;how-is-this-different-than-a-cdn&quot;&gt;How is this different than a CDN?&lt;/h3&gt;
@@ -69,9 +69,9 @@
 
 &lt;p&gt;NPM (node package manager) is the de facto standard for hosting JavaScript packages. It was created in 2009 to help JavaScript developers easily share packaged modules of code. NPM, to date, houses over 250,000 reusable packages and is the largest code registry in the world and is an extremely easy way to utilize and develop reusable code.&lt;/p&gt;
 
-&lt;p&gt;More Information can be found at &lt;a href=&quot;https://www.npmjs.com/&quot;&gt;NPM&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;More Information can be found at &lt;a href=&quot;https://www.npmjs.com/&quot; target=&quot;_blank&quot;&gt;NPM&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;Other notable package managers for JavaScript include bower and jspm, however, NPM is by far the most popular. Additionally, bower and jspm package managers are obtained through npm. (&lt;code class=&quot;highlighter-rouge&quot;&gt;npm install -g bower&lt;/code&gt;)&lt;/p&gt;
+&lt;p&gt;Other notable package managers for JavaScript include &lt;em&gt;bower&lt;/em&gt; and &lt;em&gt;jspm&lt;/em&gt;, however, NPM is by far the most popular. Additionally, bower and jspm package managers are obtained through npm. (&lt;code class=&quot;highlighter-rouge&quot;&gt;npm install -g bower&lt;/code&gt;)&lt;/p&gt;
 
 &lt;h3 id=&quot;can-we-host-npm-locally&quot;&gt;Can we host NPM locally?&lt;/h3&gt;
 
@@ -81,7 +81,7 @@
 
 &lt;p&gt;Perhaps if you have the personnel, system, and monetary resources required to maintain a private npm registry, then a self-hosted version of npm enterprise may not be a problem. However, this is costly and most small to medium sized business should be fine with the Solo and Organization plans provided by npm.&lt;/p&gt;
 
-&lt;p&gt;More pricing information can be located at &lt;a href=&quot;https://www.npmjs.com/pricing&quot;&gt;NPM Pricing&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;More pricing information can be located at &lt;a href=&quot;https://www.npmjs.com/pricing&quot; target=&quot;_blank&quot;&gt;NPM Pricing&lt;/a&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;to-open-source-or-not-open-source&quot;&gt;To open source or not open source&lt;/h3&gt;
 
@@ -98,10 +98,10 @@
   &lt;li&gt;Modules are kept lightweight because complex and unnecessary logic should be omitted. Public projects should not have business logic specific to your business.&lt;/li&gt;
   &lt;li&gt;Open source projects sponsored by company’s make a company more appealing.
     &lt;ul&gt;
-      &lt;li&gt;StackExchange sponsors &lt;a href=&quot;https://github.com/StackExchange/dapper-dot-net&quot;&gt;Dapper&lt;/a&gt; and &lt;a href=&quot;https://github.com/opserver/Opserver&quot;&gt;Opserver&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;Google sponsors &lt;a href=&quot;https://angularjs.org/&quot;&gt;Angular&lt;/a&gt; and &lt;a href=&quot;https://angular.io/&quot;&gt;Angular2&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;Facebook sponsors &lt;a href=&quot;https://facebook.github.io/react/&quot;&gt;React&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;Netflix sponsors &lt;a href=&quot;https://github.com/Netflix&quot;&gt;many tools that they use internally&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;StackExchange sponsors &lt;a href=&quot;https://github.com/StackExchange/dapper-dot-net&quot; target=&quot;_blank&quot;&gt;Dapper&lt;/a&gt; and &lt;a href=&quot;https://github.com/opserver/Opserver&quot; target=&quot;_blank&quot;&gt;Opserver&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;Google sponsors &lt;a href=&quot;https://angularjs.org/&quot; target=&quot;_blank&quot;&gt;Angular&lt;/a&gt; and &lt;a href=&quot;https://angular.io/&quot; target=&quot;_blank&quot;&gt;Angular2&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;Facebook sponsors &lt;a href=&quot;https://facebook.github.io/react/&quot; target=&quot;_blank&quot;&gt;React&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;Netflix sponsors &lt;a href=&quot;https://github.com/Netflix&quot; target=&quot;_blank&quot;&gt;many tools that they use internally&lt;/a&gt;&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
   &lt;li&gt;Your company earns a reputation as an innovative leader in the community&lt;/li&gt;
@@ -118,17 +118,15 @@
 &lt;p&gt;&lt;strong&gt;tl;dr:&lt;/strong&gt; If a library is general purpose, contains no business specific logic, and yields no direct benefits to maintaining a private version, then it is a good candidate to consider open sourcing.&lt;/p&gt;
 </description>
         <pubDate>Mon, 25 Jul 2016 00:00:00 -0500</pubDate>
-        <link>http://brandonclapp.com/design/patterns/embracing-modular-design-on-the-front-end</link>
-        <guid isPermaLink="true">http://brandonclapp.com/design/patterns/embracing-modular-design-on-the-front-end</guid>
+        <link>http://brandonclapp.com/design-patterns/embracing-modular-design-on-the-front-end</link>
+        <guid isPermaLink="true">http://brandonclapp.com/design-patterns/embracing-modular-design-on-the-front-end</guid>
         
         <category>Front-End</category>
         
         <category>NPM</category>
         
         
-        <category>Design</category>
-        
-        <category>Patterns</category>
+        <category>Design-Patterns</category>
         
       </item>
     
@@ -1319,7 +1317,7 @@ enc_GroupPwd=595533KJL3KJ4L2K3J4LKJ2L...etc
         <category>Design-Pattern</category>
         
         
-        <category>Design Patterns</category>
+        <category>Design-Patterns</category>
         
       </item>
     
@@ -1506,7 +1504,7 @@ A static class allows only static methods.&lt;/p&gt;
         <category>Design-Pattern</category>
         
         
-        <category>Design Patterns</category>
+        <category>Design-Patterns</category>
         
       </item>
     
