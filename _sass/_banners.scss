@@ -58,75 +58,15 @@ $home-banner-height: 380px;
   }
 }
 
-
-// .banner-about {
-//   $about-banner-height: 200px;
-
-//   background-image: url('/assets/images/bg1.JPG');
-//   background-size: cover;
-//   background-position: left top;
-//   padding-top: 1px;
-//   height: $about-banner-height;
-//   border-bottom: 5px solid $color4;
-
-//   .banner-film {
-//       background: rgba(68,64,84, 0.7);
-//       height: $about-banner-height;
-//       transition: background .5s;
-
-//       &:hover {
-//         background: rgba(68,64,84, 0.6);
-//       }
-
-//       #about-me {
-//         width: 460px;
-//         font-size: 3em;
-//         font-weight: 300;
-//         margin: 0 auto;
-//         padding-top: 1.2em;
-//         box-sizing: border-box;
-//         color: $color2;
-//         font-family: $font1;
-//         text-transform: uppercase;
-//         text-align: center;
-//         text-shadow: 3px 3px 2px rgba(150, 150, 150, 0.75);
-
-//         @media (max-width: $breakpoint-mobile) {
-//             width: 100%;
-//             font-size:2em;
-//         }
-//       }
-
-//       #tagline {
-//         margin: 0 auto;
-//         width: 460px;
-//         text-align: center;
-//         color: lighten($color5, 30%);
-//         font-family: $font1;
-//         text-transform: uppercase;;
-//         font-size: 1.4em;
-//         box-sizing: border-box;
-//         padding-top: 1em;
-
-//         @media (max-width: $breakpoint-mobile) {
-//             width: 100%;
-//             font-size:1em;
-//         }
-//       }
-//   }
-// }
-
-.banner-about {
-  $about-banner-height: 250px;
+.page-banner {
+  $banner-height: 200px;
   position: relative;
-  background-image: url('/assets/images/bg3.jpg');
-  background-size: cover;
-  background-position: left center;
+  
   transition: background-position 3s;
 
   background-color: #1b0e20;
-  padding-top: 1px;
-  height: $about-banner-height;
+  // padding-top: 1px;
+  height: $banner-height;
   border-bottom: 5px solid $color4;
 
   &:hover {
@@ -137,12 +77,12 @@ $home-banner-height: 380px;
     position: absolute;
     left: 0;
     right: 0;
-    height: $about-banner-height;
+    height: $banner-height;
   }
 
   .banner-film {
       background: rgba(27,14,32, 0.7);
-      height: $about-banner-height;
+      height: $banner-height;
       transition: background .5s;
 
       &:hover {
@@ -150,7 +90,7 @@ $home-banner-height: 380px;
       }
   }
 
-       #about-me {
+       #headline {
         width: 460px;
         font-size: 3em;
         font-weight: 300;
@@ -184,121 +124,27 @@ $home-banner-height: 380px;
             width: 100%;
             font-size:1em;
         }
-      }
+      } 
 }
 
+.banner-about {
+  background-image: url('/assets/images/bg3.jpg');
+  background-size: cover;
+  background-position: left center;
+}
 
 .banner-contact {
-  $contact-banner-height: 200px;
-
-  background-image: url('/assets/images/bg1.JPG');
+  background-image: url('/assets/images/contactbg.jpg');
   background-size: cover;
-  background-position: left top;
-  padding-top: 1px;
-  height: $contact-banner-height;
-  border-bottom: 5px solid $color4;
-
-  .banner-film {
-      background: rgba(68,64,84, 0.7);
-      height: $contact-banner-height;
-      transition: background .5s;
-
-      &:hover {
-        background: rgba(68,64,84, 0.6);
-      }
-
-      #contact-me {
-        width: 460px;
-        font-size: 3em;
-        font-weight: 300;
-        margin: 0 auto;
-        padding-top: 1.2em;
-        box-sizing: border-box;
-        color: $color2;
-        font-family: $font1;
-        text-transform: uppercase;
-        text-align: center;
-        text-shadow: 3px 3px 2px rgba(150, 150, 150, 0.75);
-
-        @media (max-width: $breakpoint-mobile) {
-            width: 100%;
-            font-size:2em;
-        }
-      }
-
-      #tagline {
-        margin: 0 auto;
-        width: 460px;
-        text-align: center;
-        color: lighten($color5, 30%);
-        font-family: $font1;
-        text-transform: uppercase;;
-        font-size: 1.4em;
-        box-sizing: border-box;
-        padding-top: 1em;
-
-        @media (max-width: $breakpoint-mobile) {
-            width: 100%;
-            font-size:1em;
-        }
-      }
-  }
+  background-position: left center;
 }
 
-
 .banner-blog {
-  $blog-banner-height: 200px;
-
-  background-image: url('/assets/images/bg1.JPG');
+  background-image: url('/assets/images/space.jpg');
   background-size: cover;
-  background-position: left top;
-  padding-top: 1px;
-  height: $blog-banner-height;
-  border-bottom: 5px solid $color4;
+  background-position: left bottom;
 
-  .banner-film {
-      background: rgba(68,64,84, 0.7);
-      height: $blog-banner-height;
-      transition: background .5s;
-
-      &:hover {
-        background: rgba(68,64,84, 0.6);
-      }
-
-      #blog {
-        width: 460px;
-        font-size: 3em;
-        font-weight: 300;
-        margin: 0 auto;
-        padding-top: 1.2em;
-        box-sizing: border-box;
-        color: $color2;
-        font-family: $font1;
-        text-transform: uppercase;
-        text-align: center;
-        text-shadow: 3px 3px 2px rgba(150, 150, 150, 0.75);
-
-        @media (max-width: $breakpoint-mobile) {
-            width: 100%;
-            font-size:2em;
-        }
-      }
-
-      #tagline {
-        margin: 0 auto;
-        width: 580px;
-        text-align: center;
-        color: lighten($color5, 30%);
-        font-family: $font1;
-        text-transform: uppercase;;
-        font-size: 1.4em;
-        box-sizing: border-box;
-        padding-top: 1em;
-
-        @media (max-width: $breakpoint-mobile) {
-            width: 100%;
-            font-size:1em;
-        }
-      }
+  &:hover {
+    background-position: left top;
   }
 }
