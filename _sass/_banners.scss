@@ -1,46 +1,108 @@
+// .banner-home {
+//     $home-banner-height: 380px;
+
+//     background-image: url('/assets/images/bg2.JPG');
+//     background-size: cover;
+//     background-position: left top;
+//     padding-top: 1px;
+//     height: $home-banner-height;
+//     border-bottom: 5px solid $color4;
+
+//     .banner-film {
+//         background: rgba(68,64,84, 0.7);
+//         height: $home-banner-height;
+//         transition: background .5s;
+
+//         &:hover {
+//           background: rgba(68,64,84, 0.6);
+//         }
+//     }
+
+//     .greetings {
+//       font-family: $font1;
+//         font-size: 48px;
+//         text-transform: uppercase;
+//         color: white;
+//         text-align: center;
+//         padding-top: 80px;
+//         text-shadow: 3px 3px 2px rgba(150, 150, 150, 0.75);
+
+//         @media screen and (max-width: 500px) {
+//             font-size: 32px;
+//         }
+//     }
+
+//     #tagline {
+//       font-family: $font1;
+//       font-weight: 200;
+//       font-size: 24px;
+//       color: white;
+//       text-align: center;
+//       padding-top: 20px;
+//     }
+// }
+$home-banner-height: 380px;
+
+
+
 .banner-home {
-    $home-banner-height: 380px;
+  
+  position: relative;
+  background-image: url('/assets/images/bg4.jpg');
+  background-size: cover;
+  background-position: left bottom;
+  transition: background-position 5s;
 
-    background-image: url('/assets/images/bg2.JPG');
-    background-size: cover;
+  background-color: #1b0e20;
+  padding-top: 1px;
+  height: $home-banner-height;
+  border-bottom: 5px solid $color4;
+
+  &:hover {
     background-position: left top;
-    padding-top: 1px;
+  }
+
+  #particles {
+    position: absolute;
+    left: 0;
+    right: 0;
     height: $home-banner-height;
-    border-bottom: 5px solid $color4;
+  }
 
-    .banner-film {
-        background: rgba(68,64,84, 0.7);
-        height: $home-banner-height;
-        transition: background .5s;
+  .banner-film {
+      background: rgba(68,64,84, 0.5);
+      height: $home-banner-height;
+      transition: background .5s;
 
-        &:hover {
-          background: rgba(68,64,84, 0.6);
-        }
-    }
+      &:hover {
+        background: rgba(68,64,84, 0.3);
+      }
+  }
 
-    .greetings {
-      font-family: $font1;
-        font-size: 48px;
-        text-transform: uppercase;
-        color: white;
-        text-align: center;
-        padding-top: 80px;
-        text-shadow: 3px 3px 2px rgba(150, 150, 150, 0.75);
-
-        @media screen and (max-width: 500px) {
-            font-size: 32px;
-        }
-    }
-
-    #tagline {
-      font-family: $font1;
-      font-weight: 200;
-      font-size: 24px;
+  .greetings {
+    font-family: $font1;
+      font-size: 48px;
+      text-transform: uppercase;
       color: white;
       text-align: center;
-      padding-top: 20px;
-    }
+      padding-top: 80px;
+      text-shadow: 3px 3px 2px rgba(150, 150, 150, 0.75);
+
+      @media screen and (max-width: 500px) {
+          font-size: 32px;
+      }
+  }
+
+  #tagline {
+    font-family: $font1;
+    font-weight: 200;
+    font-size: 24px;
+    color: white;
+    text-align: center;
+    padding-top: 20px;
+  }
 }
+
 
 .banner-about {
   $about-banner-height: 200px;

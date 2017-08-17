@@ -4,11 +4,11 @@
     <title>Brandon Clapp</title>
     <description>Web Developer &amp; Designer
 </description>
-    <link>http://brandonclapp.com/</link>
-    <atom:link href="http://brandonclapp.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 08 Aug 2016 22:10:32 -0500</pubDate>
-    <lastBuildDate>Mon, 08 Aug 2016 22:10:32 -0500</lastBuildDate>
-    <generator>Jekyll v3.1.3</generator>
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Thu, 17 Aug 2017 14:56:29 -0500</pubDate>
+    <lastBuildDate>Thu, 17 Aug 2017 14:56:29 -0500</lastBuildDate>
+    <generator>Jekyll v3.5.2</generator>
     
       <item>
         <title>Embracing Modular Design on the Front End</title>
@@ -118,8 +118,8 @@
 &lt;p&gt;&lt;strong&gt;tl;dr:&lt;/strong&gt; If a library is general purpose, contains no business specific logic, and yields no direct benefits to maintaining a private version, then it is a good candidate to consider open sourcing.&lt;/p&gt;
 </description>
         <pubDate>Mon, 25 Jul 2016 00:00:00 -0500</pubDate>
-        <link>http://brandonclapp.com/design-patterns/embracing-modular-design-on-the-front-end</link>
-        <guid isPermaLink="true">http://brandonclapp.com/design-patterns/embracing-modular-design-on-the-front-end</guid>
+        <link>http://localhost:4000/design-patterns/embracing-modular-design-on-the-front-end</link>
+        <guid isPermaLink="true">http://localhost:4000/design-patterns/embracing-modular-design-on-the-front-end</guid>
         
         <category>Front-End</category>
         
@@ -190,7 +190,7 @@ The nuget package will be populated with the assembly version specified in Assem
 
   &lt;span class=&quot;nt&quot;&gt;&amp;lt;files&amp;gt;&lt;/span&gt;
     &lt;span class=&quot;nt&quot;&gt;&amp;lt;file&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;bin\**\*&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;target=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;content\bin&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;file&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Web.Release.config&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;target=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;content&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;&amp;lt;!-- stupid nuget not copying this file as content, don&#39;t know why!!! --&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;file&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Web.Release.config&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;target=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;content&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;/&amp;gt;&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;&amp;lt;!-- stupid nuget not copying this file as content, don't know why!!! --&amp;gt;&lt;/span&gt;
   &lt;span class=&quot;nt&quot;&gt;&amp;lt;/files&amp;gt;&lt;/span&gt;
 &lt;span class=&quot;nt&quot;&gt;&amp;lt;/package&amp;gt;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
@@ -251,8 +251,8 @@ This tool can also do the packaging for you as well with &lt;code class=&quot;hi
 &lt;p&gt;&lt;img src=&quot;/assets/images/posts/content/TFS-PowerShell.PNG&quot; alt=&quot;PowerShell build step&quot; /&gt;&lt;/p&gt;
 </description>
         <pubDate>Fri, 01 Jul 2016 00:00:00 -0500</pubDate>
-        <link>http://brandonclapp.com/octopus/using-nuget-and-octo-in-a-tfs2015-build-definition-to-deploy-to-octopus</link>
-        <guid isPermaLink="true">http://brandonclapp.com/octopus/using-nuget-and-octo-in-a-tfs2015-build-definition-to-deploy-to-octopus</guid>
+        <link>http://localhost:4000/octopus/using-nuget-and-octo-in-a-tfs2015-build-definition-to-deploy-to-octopus</link>
+        <guid isPermaLink="true">http://localhost:4000/octopus/using-nuget-and-octo-in-a-tfs2015-build-definition-to-deploy-to-octopus</guid>
         
         <category>Octopus</category>
         
@@ -291,7 +291,7 @@ This tool can also do the packaging for you as well with &lt;code class=&quot;hi
 
 &lt;p&gt;Git can be a very powerful tool for developers if they know what they’re doing, However, if they don’t, the workflow feels more like an obstacle. Although I agree that it can take a bit to understand the fundamentals of git, I strongly believe that learning it is a great investment. Lets start with some basic terminology. Don’t get discouraged if you don’t understand them right now.&lt;/p&gt;
 
-&lt;h3 id=&quot;terminologyterminologynameterminology&quot;&gt;&lt;a href=&quot;#terminology&quot; name=&quot;terminology&quot;&gt;Terminology&lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id=&quot;terminology&quot;&gt;&lt;a href=&quot;#terminology&quot; name=&quot;terminology&quot;&gt;Terminology&lt;/a&gt;&lt;/h3&gt;
 
 &lt;p&gt;&lt;strong&gt;Commit:&lt;/strong&gt; A snapshot of changes to files that have been modified. Before making a commit, the files must be &lt;em&gt;staged&lt;/em&gt;. This means that they must be tracked and added to the staging area by using the &lt;code class=&quot;highlighter-rouge&quot;&gt;git add &amp;lt;filename&amp;gt;&lt;/code&gt; command.&lt;/p&gt;
 
@@ -315,12 +315,14 @@ This tool can also do the packaging for you as well with &lt;code class=&quot;hi
 
 &lt;p&gt;&lt;strong&gt;Tags:&lt;/strong&gt; Tags are references to specific commits and can be useful for specifying the state of your project at any given point. For example, a tag called v1.0 could be created to represent a specific version of the project and make it easier to reference this commit rather than remembering a commit identifier.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Rebase:&lt;/strong&gt; Can be used to integrate changes from one branch to another, much like merge. Rebase will do 3 things.
-- Move all commits that are on the current local branch to a temporary area.
-- Add all of the commits from the specified source branch (from branch) to the current branch.
-- Add all of the commits from the aforementioned temporary area back onto the current branch.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Rebase:&lt;/strong&gt; Can be used to integrate changes from one branch to another, much like merge. Rebase will do 3 things.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Move all commits that are on the current local branch to a temporary area.&lt;/li&gt;
+  &lt;li&gt;Add all of the commits from the specified source branch (from branch) to the current branch.&lt;/li&gt;
+  &lt;li&gt;Add all of the commits from the aforementioned temporary area back onto the current branch.&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;h3 id=&quot;setup--basicssetup-basicsnamesetup-basics&quot;&gt;&lt;a href=&quot;#setup-basics&quot; name=&quot;setup-basics&quot;&gt;Setup &amp;amp; Basics&lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id=&quot;setup--basics&quot;&gt;&lt;a href=&quot;#setup-basics&quot; name=&quot;setup-basics&quot;&gt;Setup &amp;amp; Basics&lt;/a&gt;&lt;/h3&gt;
 
 &lt;p&gt;&lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git init&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
 
@@ -344,7 +346,7 @@ This tool can also do the packaging for you as well with &lt;code class=&quot;hi
 
 &lt;hr /&gt;
 
-&lt;h3 id=&quot;adding-files-to-stagingadding-files-to-stagingnameadding-files-to-staging&quot;&gt;&lt;a href=&quot;#adding-files-to-staging&quot; name=&quot;adding-files-to-staging&quot;&gt;Adding files to staging&lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id=&quot;adding-files-to-staging&quot;&gt;&lt;a href=&quot;#adding-files-to-staging&quot; name=&quot;adding-files-to-staging&quot;&gt;Adding files to staging&lt;/a&gt;&lt;/h3&gt;
 
 &lt;p&gt;&lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git add .&lt;/code&gt;&lt;/strong&gt; or &lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git add --all&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
 
@@ -376,13 +378,13 @@ This tool can also do the packaging for you as well with &lt;code class=&quot;hi
 
 &lt;hr /&gt;
 
-&lt;h3 id=&quot;removing-files-from-stagingremoving-files-from-stagingnameremoving-files-from-staging&quot;&gt;&lt;a href=&quot;#removing-files-from-staging&quot; name=&quot;removing-files-from-staging&quot;&gt;Removing files from staging&lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id=&quot;removing-files-from-staging&quot;&gt;&lt;a href=&quot;#removing-files-from-staging&quot; name=&quot;removing-files-from-staging&quot;&gt;Removing files from staging&lt;/a&gt;&lt;/h3&gt;
 
 &lt;p&gt;&lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git reset HEAD &amp;lt;file&amp;gt;&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;Removes the file from staging, but keeps any modifications made to that file.&lt;/p&gt;
 
-&lt;h3 id=&quot;undoing-changesundoing-changesnameundoing-changes&quot;&gt;&lt;a href=&quot;#undoing-changes&quot; name=&quot;undoing-changes&quot;&gt;Undoing changes&lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id=&quot;undoing-changes&quot;&gt;&lt;a href=&quot;#undoing-changes&quot; name=&quot;undoing-changes&quot;&gt;Undoing changes&lt;/a&gt;&lt;/h3&gt;
 
 &lt;p&gt;&lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git checkout -- &amp;lt;file&amp;gt;&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
 
@@ -398,7 +400,7 @@ This tool can also do the packaging for you as well with &lt;code class=&quot;hi
 
 &lt;hr /&gt;
 
-&lt;h3 id=&quot;creating-a-commitcreating-a-commitnamecreating-a-commit&quot;&gt;&lt;a href=&quot;#creating-a-commit&quot; name=&quot;creating-a-commit&quot;&gt;Creating a commit&lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id=&quot;creating-a-commit&quot;&gt;&lt;a href=&quot;#creating-a-commit&quot; name=&quot;creating-a-commit&quot;&gt;Creating a commit&lt;/a&gt;&lt;/h3&gt;
 
 &lt;p&gt;&lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git commit -m &quot;Create a README.&quot;&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
 
@@ -414,7 +416,7 @@ This tool can also do the packaging for you as well with &lt;code class=&quot;hi
 
 &lt;hr /&gt;
 
-&lt;h3 id=&quot;undoing-a-commitundoing-a-commitnameundoing-a-commit&quot;&gt;&lt;a href=&quot;#undoing-a-commit&quot; name=&quot;undoing-a-commit&quot;&gt;Undoing a commit&lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id=&quot;undoing-a-commit&quot;&gt;&lt;a href=&quot;#undoing-a-commit&quot; name=&quot;undoing-a-commit&quot;&gt;Undoing a commit&lt;/a&gt;&lt;/h3&gt;
 
 &lt;p&gt;&lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git reset --soft HEAD^&lt;/code&gt;&lt;/strong&gt; (potentially dangerous)&lt;/p&gt;
 
@@ -436,7 +438,7 @@ This tool can also do the packaging for you as well with &lt;code class=&quot;hi
 
 &lt;hr /&gt;
 
-&lt;h3 id=&quot;amending-to-a-commitamending-to-a-commitnameamending-to-a-commit&quot;&gt;&lt;a href=&quot;#amending-to-a-commit&quot; name=&quot;amending-to-a-commit&quot;&gt;Amending to a commit&lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id=&quot;amending-to-a-commit&quot;&gt;&lt;a href=&quot;#amending-to-a-commit&quot; name=&quot;amending-to-a-commit&quot;&gt;Amending to a commit&lt;/a&gt;&lt;/h3&gt;
 
 &lt;p&gt;&lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git commit --amend -m &quot;My new commit message&quot;&lt;/code&gt;&lt;/strong&gt; (potentially dangerous)&lt;/p&gt;
 
@@ -446,7 +448,7 @@ This tool can also do the packaging for you as well with &lt;code class=&quot;hi
 
 &lt;hr /&gt;
 
-&lt;h3 id=&quot;viewing-commit-historyviewing-commit-historynameviewing-commit-history&quot;&gt;&lt;a href=&quot;#viewing-commit-history&quot; name=&quot;viewing-commit-history&quot;&gt;Viewing commit history&lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id=&quot;viewing-commit-history&quot;&gt;&lt;a href=&quot;#viewing-commit-history&quot; name=&quot;viewing-commit-history&quot;&gt;Viewing commit history&lt;/a&gt;&lt;/h3&gt;
 
 &lt;p&gt;&lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git log&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
 
@@ -454,7 +456,7 @@ This tool can also do the packaging for you as well with &lt;code class=&quot;hi
 
 &lt;hr /&gt;
 
-&lt;h3 id=&quot;check-file-modificationscheck-file-modificationsnamecheck-file-modifications&quot;&gt;&lt;a href=&quot;#check-file-modifications&quot; name=&quot;check-file-modifications&quot;&gt;Check file modifications&lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id=&quot;check-file-modifications&quot;&gt;&lt;a href=&quot;#check-file-modifications&quot; name=&quot;check-file-modifications&quot;&gt;Check file modifications&lt;/a&gt;&lt;/h3&gt;
 
 &lt;p&gt;&lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git diff&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
 
@@ -466,7 +468,7 @@ This tool can also do the packaging for you as well with &lt;code class=&quot;hi
 
 &lt;hr /&gt;
 
-&lt;h3 id=&quot;managing-remotesmanaging-remotesnamemanaging-remotes&quot;&gt;&lt;a href=&quot;#managing-remotes&quot; name=&quot;managing-remotes&quot;&gt;Managing remotes&lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id=&quot;managing-remotes&quot;&gt;&lt;a href=&quot;#managing-remotes&quot; name=&quot;managing-remotes&quot;&gt;Managing remotes&lt;/a&gt;&lt;/h3&gt;
 
 &lt;p&gt;&lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git remote add &amp;lt;remote_name&amp;gt; &amp;lt;repo_url&amp;gt;&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
 
@@ -503,7 +505,7 @@ This tool can also do the packaging for you as well with &lt;code class=&quot;hi
 
 &lt;hr /&gt;
 
-&lt;h3 id=&quot;pushing-to-remote-repositoriespushing-to-remote-repositoriesnamepushing-to-remote-repositories&quot;&gt;&lt;a href=&quot;#pushing-to-remote-repositories&quot; name=&quot;pushing-to-remote-repositories&quot;&gt;Pushing to remote repositories&lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id=&quot;pushing-to-remote-repositories&quot;&gt;&lt;a href=&quot;#pushing-to-remote-repositories&quot; name=&quot;pushing-to-remote-repositories&quot;&gt;Pushing to remote repositories&lt;/a&gt;&lt;/h3&gt;
 
 &lt;p&gt;&lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git push &amp;lt;remote_name&amp;gt; &amp;lt;remote_branch&amp;gt;&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
 
@@ -515,15 +517,17 @@ This tool can also do the packaging for you as well with &lt;code class=&quot;hi
 
 &lt;hr /&gt;
 
-&lt;h3 id=&quot;getting-changes-from-a-remote-repositorygetting-changes-from-a-remote-repositorynamegetting-changes-from-a-remote-repository&quot;&gt;&lt;a href=&quot;#getting-changes-from-a-remote-repository&quot; name=&quot;getting-changes-from-a-remote-repository&quot;&gt;Getting changes from a remote repository&lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id=&quot;getting-changes-from-a-remote-repository&quot;&gt;&lt;a href=&quot;#getting-changes-from-a-remote-repository&quot; name=&quot;getting-changes-from-a-remote-repository&quot;&gt;Getting changes from a remote repository&lt;/a&gt;&lt;/h3&gt;
 
 &lt;p&gt;&lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git pull &amp;lt;remote_name&amp;gt; &amp;lt;remote_branch&amp;gt;&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;Gets the latest commits from the remote repository on the specified remote branch &lt;strong&gt;and&lt;/strong&gt; merges those changes into your current local branch.&lt;/p&gt;
 
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git pull&lt;/code&gt; is the equivalent of performing the following actions
-- &lt;code class=&quot;highlighter-rouge&quot;&gt;git fetch&lt;/code&gt;
-- &lt;code class=&quot;highlighter-rouge&quot;&gt;git merge origin master&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git pull&lt;/code&gt; is the equivalent of performing the following actions&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git fetch&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git merge origin master&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;p&gt;&lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git fetch&lt;/code&gt;&lt;/strong&gt; or &lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git fetch &amp;lt;remote_name&amp;gt;&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
 
@@ -533,7 +537,7 @@ This tool can also do the packaging for you as well with &lt;code class=&quot;hi
 
 &lt;hr /&gt;
 
-&lt;h3 id=&quot;cloning-a-remote-repositorycloning-a-remote-repositorynamecloning-a-remote-repository&quot;&gt;&lt;a href=&quot;#cloning-a-remote-repository&quot; name=&quot;cloning-a-remote-repository&quot;&gt;Cloning a remote repository&lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id=&quot;cloning-a-remote-repository&quot;&gt;&lt;a href=&quot;#cloning-a-remote-repository&quot; name=&quot;cloning-a-remote-repository&quot;&gt;Cloning a remote repository&lt;/a&gt;&lt;/h3&gt;
 
 &lt;p&gt;&lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git clone &amp;lt;remote_url&amp;gt;&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
 
@@ -547,7 +551,7 @@ This tool can also do the packaging for you as well with &lt;code class=&quot;hi
 
 &lt;hr /&gt;
 
-&lt;h3 id=&quot;branching--mergingbranching-mergingnamebranching-merging&quot;&gt;&lt;a href=&quot;#branching-merging&quot; name=&quot;branching-merging&quot;&gt;Branching &amp;amp; Merging&lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id=&quot;branching--merging&quot;&gt;&lt;a href=&quot;#branching-merging&quot; name=&quot;branching-merging&quot;&gt;Branching &amp;amp; Merging&lt;/a&gt;&lt;/h3&gt;
 
 &lt;p&gt;&lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git branch &amp;lt;local_branch&amp;gt;&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
 
@@ -589,7 +593,7 @@ This tool can also do the packaging for you as well with &lt;code class=&quot;hi
 
 &lt;hr /&gt;
 
-&lt;h3 id=&quot;taggingtaggingnametagging&quot;&gt;&lt;a href=&quot;#tagging&quot; name=&quot;tagging&quot;&gt;Tagging&lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id=&quot;tagging&quot;&gt;&lt;a href=&quot;#tagging&quot; name=&quot;tagging&quot;&gt;Tagging&lt;/a&gt;&lt;/h3&gt;
 
 &lt;p&gt;&lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git tag&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
 
@@ -601,7 +605,7 @@ This tool can also do the packaging for you as well with &lt;code class=&quot;hi
 
 &lt;p&gt;&lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git tag -a &amp;lt;tag_name&amp;gt; -m &quot;My tag description message.&quot;&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;Creates a tag and provides it a message. i.e. &lt;code class=&quot;highlighter-rouge&quot;&gt;git tag -a beta3 -m &quot;it&#39;s beta, expect bugs!&quot;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Creates a tag and provides it a message. i.e. &lt;code class=&quot;highlighter-rouge&quot;&gt;git tag -a beta3 -m &quot;it's beta, expect bugs!&quot;&lt;/code&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git push --tags&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
 
@@ -609,7 +613,7 @@ This tool can also do the packaging for you as well with &lt;code class=&quot;hi
 
 &lt;hr /&gt;
 
-&lt;h3 id=&quot;rebaserebasenamerebase&quot;&gt;&lt;a href=&quot;#rebase&quot; name=&quot;rebase&quot;&gt;Rebase&lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id=&quot;rebase&quot;&gt;&lt;a href=&quot;#rebase&quot; name=&quot;rebase&quot;&gt;Rebase&lt;/a&gt;&lt;/h3&gt;
 
 &lt;p&gt;&lt;strong&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git rebase &amp;lt;from_branch&amp;gt;&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
 
@@ -630,8 +634,8 @@ This tool can also do the packaging for you as well with &lt;code class=&quot;hi
 &lt;p&gt;When a merge conflict is detected from rebasing, use the &lt;code class=&quot;highlighter-rouge&quot;&gt;--abort&lt;/code&gt; to abandon all hope and give up, resulting in the rebase operation being rolled back.&lt;/p&gt;
 </description>
         <pubDate>Sun, 29 May 2016 00:00:00 -0500</pubDate>
-        <link>http://brandonclapp.com/git/git-reference-useful-commands-overview</link>
-        <guid isPermaLink="true">http://brandonclapp.com/git/git-reference-useful-commands-overview</guid>
+        <link>http://localhost:4000/git/git-reference-useful-commands-overview</link>
+        <guid isPermaLink="true">http://localhost:4000/git/git-reference-useful-commands-overview</guid>
         
         <category>Git</category>
         
@@ -683,8 +687,8 @@ This tool can also do the packaging for you as well with &lt;code class=&quot;hi
 &lt;p&gt;&lt;a href=&quot;http://scottberkun.com/essays/53-how-to-detect-bullshit/&quot; target=&quot;_blank&quot;&gt;http://scottberkun.com/essays/53-how-to-detect-bullshit/&lt;/a&gt;&lt;/p&gt;
 </description>
         <pubDate>Fri, 16 Oct 2015 00:00:00 -0500</pubDate>
-        <link>http://brandonclapp.com/benefits-of-socratic-dev-team-environments/</link>
-        <guid isPermaLink="true">http://brandonclapp.com/benefits-of-socratic-dev-team-environments/</guid>
+        <link>http://localhost:4000/benefits-of-socratic-dev-team-environments/</link>
+        <guid isPermaLink="true">http://localhost:4000/benefits-of-socratic-dev-team-environments/</guid>
         
         
         <category>Development</category>
@@ -813,8 +817,8 @@ This tool can also do the packaging for you as well with &lt;code class=&quot;hi
 &lt;/div&gt;
 </description>
         <pubDate>Mon, 15 Jun 2015 00:00:00 -0500</pubDate>
-        <link>http://brandonclapp.com/many-to-many-model-relationships-in-rails/</link>
-        <guid isPermaLink="true">http://brandonclapp.com/many-to-many-model-relationships-in-rails/</guid>
+        <link>http://localhost:4000/many-to-many-model-relationships-in-rails/</link>
+        <guid isPermaLink="true">http://localhost:4000/many-to-many-model-relationships-in-rails/</guid>
         
         <category>Ruby</category>
         
@@ -903,10 +907,10 @@ npm install --save-dev gulp
 
 &lt;p&gt;After creating gulpfile.js within the root of your project, add a basic tasks.&lt;/p&gt;
 
-&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;gulp&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;gulp&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;gulp&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'gulp'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
 
-&lt;span class=&quot;nx&quot;&gt;gulp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;task&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;hello-world&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(){&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;hello world&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;gulp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;task&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'hello-world'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(){&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'hello world'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
@@ -917,10 +921,10 @@ npm install --save-dev gulp
 
 &lt;p&gt;A task to analyze all of your JavaScript files inside of a set of directories with JSHint and JSCS may look something like this. This example assumes that you have the module &lt;strong&gt;gulp-load-plugins&lt;/strong&gt; installed. This plugin will essentially wrap all of your gulp plugins (prefixed with gulp-) into one plugin so that you don’t have to have a require statement for every individual gulp module. You would also need to run &lt;code class=&quot;highlighter-rouge&quot;&gt;npm install&lt;/code&gt; for each of the packages that you wanted to utilizes. This task would be accessible through the use of &lt;code class=&quot;highlighter-rouge&quot;&gt;gulp analyze&lt;/code&gt; from the command line (while in your applications root directory where your gulpfile resides.)&lt;/p&gt;
 
-&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;gulp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;task&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;analyze&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;Analyzing code with JSHint and JSCS.&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nx&quot;&gt;gulp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;task&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'analyze'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'Analyzing code with JSHint and JSCS.'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
     &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;gulp&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;src&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;./src/scripts&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// glob pattern for all of my JS&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;src&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'./src/scripts'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// glob pattern for all of my JS&lt;/span&gt;
 
         &lt;span class=&quot;c1&quot;&gt;// utilizes gulp-if and gulp-print to check for cmd args&lt;/span&gt;
         &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pipe&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;plugins&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;verbose&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;plugins&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()))&lt;/span&gt;
@@ -932,11 +936,11 @@ npm install --save-dev gulp
         &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pipe&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;plugins&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;jshint&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt;
 
         &lt;span class=&quot;c1&quot;&gt;// utilizes jshint-stylish to show the results&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pipe&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;plugins&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;jshint&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;reporter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;jshint-stylish&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pipe&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;plugins&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;jshint&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;reporter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'jshint-stylish'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
 
 &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;msg&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-   &lt;span class=&quot;c1&quot;&gt;// utilizes gulp-util&#39;s log function&lt;/span&gt;
+   &lt;span class=&quot;c1&quot;&gt;// utilizes gulp-util's log function&lt;/span&gt;
     &lt;span class=&quot;nx&quot;&gt;plugins&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;util&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;plugins&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;util&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;colors&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;blue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;msg&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
@@ -945,13 +949,13 @@ npm install --save-dev gulp
 &lt;p&gt;Similarly, you may create a gulp task (or set of gulp tasks) for cleaning directories and compiling less to CSS. Such a set of tasks may look like the following. This set of tasks also has it’s own set of dependencies, which would require using &lt;code class=&quot;highlighter-rouge&quot;&gt;npm install&lt;/code&gt; to get installed locally.&lt;/p&gt;
 
 &lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;clean&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;done&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;Cleaning: &#39;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;plugins&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;util&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;colors&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;blue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'Cleaning: '&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;plugins&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;util&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;colors&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;blue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
     &lt;span class=&quot;c1&quot;&gt;// utilizes del node module&lt;/span&gt;
     &lt;span class=&quot;nx&quot;&gt;del&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;cb&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 
-&lt;span class=&quot;nx&quot;&gt;gulp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;task&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;clean-styles&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;cb&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;files&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;./styles/*.css&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// glob pattern to any existing css&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;gulp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;task&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'clean-styles'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;cb&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;files&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'./styles/*.css'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// glob pattern to any existing css&lt;/span&gt;
     &lt;span class=&quot;nx&quot;&gt;clean&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;files&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;cb&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
 
     &lt;span class=&quot;c1&quot;&gt;// cb is called because clean uses del,&lt;/span&gt;
@@ -960,10 +964,10 @@ npm install --save-dev gulp
 
 &lt;span class=&quot;c1&quot;&gt;// 2nd param signifies task dependencies&lt;/span&gt;
 &lt;span class=&quot;c1&quot;&gt;// in this case, clean-styles will run first.&lt;/span&gt;
-&lt;span class=&quot;nx&quot;&gt;gulp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;task&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;styles&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;clean-styles&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;Compiling Less --&amp;gt; CSS&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;gulp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;task&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'styles'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'clean-styles'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'Compiling Less --&amp;gt; CSS'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
     &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;gulp&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;src&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;./src/styles/*.less&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;src&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'./src/styles/*.less'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
         &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pipe&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;plugins&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;less&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// utilizes gulp-less to compile less -&amp;gt; css&lt;/span&gt;
 
         &lt;span class=&quot;c1&quot;&gt;// utilizes gulp-autoprefixer to add&lt;/span&gt;
@@ -971,7 +975,7 @@ npm install --save-dev gulp
         &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pipe&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;plugins&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;autoprefixer&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt;
 
         &lt;span class=&quot;c1&quot;&gt;// copies the generated css to a destination folder.&lt;/span&gt;
-        &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pipe&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;gulp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;dest&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;./styles/*.css&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;pipe&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;gulp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;dest&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'./styles/*.css'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
@@ -979,8 +983,8 @@ npm install --save-dev gulp
 &lt;p&gt;Hopefully it’s obvious why taking the time to create gulp tasks for automating repetitive development tasks can increase productivity. Gulp has over 1470 (at the time of this article) (&lt;strong&gt;Edit on 5/29/16:&lt;/strong&gt; &lt;em&gt;Now 2429&lt;/em&gt;) plugins already created that you can take advantage of on the &lt;a href=&quot;http://gulpjs.com/plugins/&quot; target=&quot;_blank&quot;&gt;GulpJS Plugins&lt;/a&gt; page. In most cases, if you need to do something common, the plugin will already exist. If not, taking the time to do some research now may save from wasting time on repetitive tasks in the future.&lt;/p&gt;
 </description>
         <pubDate>Fri, 10 Apr 2015 00:00:00 -0500</pubDate>
-        <link>http://brandonclapp.com/what-is-gulp-js-and-why-use-it/</link>
-        <guid isPermaLink="true">http://brandonclapp.com/what-is-gulp-js-and-why-use-it/</guid>
+        <link>http://localhost:4000/what-is-gulp-js-and-why-use-it/</link>
+        <guid isPermaLink="true">http://localhost:4000/what-is-gulp-js-and-why-use-it/</guid>
         
         <category>Build-Automation</category>
         
@@ -1005,15 +1009,15 @@ npm install --save-dev gulp
 
 &lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// ** ChildCtrl Angular Controller **&lt;/span&gt;
 &lt;span class=&quot;nx&quot;&gt;$scope&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;emitToParent&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;$scope&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;$emit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;somethingHappened&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;na&quot;&gt;message&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;I clicked it&#39;&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;$scope&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;$emit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'somethingHappened'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;na&quot;&gt;message&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'I clicked it'&lt;/span&gt;
     &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 
 &lt;span class=&quot;c1&quot;&gt;// ** ParentCtrl Angular Controller **&lt;/span&gt;
-&lt;span class=&quot;nx&quot;&gt;$scope&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;$on&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;somethingHappened&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;event&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;$scope&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;$on&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'somethingHappened'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;event&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
     &lt;span class=&quot;c1&quot;&gt;// .. Do whatever you need to do.&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;the message that we sent: &#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;message&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'the message that we sent: '&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;message&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
@@ -1022,11 +1026,11 @@ npm install --save-dev gulp
 
 &lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// ** ParentCtrl Angular Controller **&lt;/span&gt;
 &lt;span class=&quot;nx&quot;&gt;$scope&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;broadcastToChild&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(){&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;$scope&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;$broadcast&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;publish&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;$scope&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;$broadcast&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'publish'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
 
 &lt;span class=&quot;c1&quot;&gt;// ** ChildCtrl Angular Controller **&lt;/span&gt;
-&lt;span class=&quot;nx&quot;&gt;$scope&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;$on&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;publish&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(){&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;$scope&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;$on&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'publish'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(){&lt;/span&gt;
     &lt;span class=&quot;c1&quot;&gt;// .. subscribe &amp;amp; do something&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
@@ -1044,8 +1048,8 @@ npm install --save-dev gulp
 &lt;p&gt;In order to keep our controllers a little bit cleaner, as well as solve the problem stated above, we can move the broadcasting logic into a service of it’s own.&lt;/p&gt;
 
 &lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// Services&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;app&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;angular&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;module&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;MyModule&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;nx&quot;&gt;app&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;factory&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;broadcastService&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;$rootScope&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;app&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;angular&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;module&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'MyModule'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;app&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;factory&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'broadcastService'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;$rootScope&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
     &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
         &lt;span class=&quot;na&quot;&gt;send&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;msg&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
             &lt;span class=&quot;nx&quot;&gt;$rootScope&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;$broadcast&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;msg&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
@@ -1053,13 +1057,13 @@ npm install --save-dev gulp
     &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
 
-&lt;span class=&quot;nx&quot;&gt;app&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;factory&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;searchService&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;$scope&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;broadcastService&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;app&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;factory&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'searchService'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;$scope&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;broadcastService&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
     &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
         &lt;span class=&quot;na&quot;&gt;search&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;searchCriteria&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
             &lt;span class=&quot;c1&quot;&gt;// Do some kind of searching&lt;/span&gt;
             &lt;span class=&quot;c1&quot;&gt;// then broadcast the results&lt;/span&gt;
             &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;results&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{};&lt;/span&gt;
-            &lt;span class=&quot;nx&quot;&gt;broadcastService&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;send&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;search&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;results&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+            &lt;span class=&quot;nx&quot;&gt;broadcastService&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;send&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'search'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;results&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
         &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
     &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
@@ -1080,7 +1084,7 @@ npm install --save-dev gulp
 &lt;p&gt;The broadcastService uses the &lt;code class=&quot;highlighter-rouge&quot;&gt;$rootScope&lt;/code&gt; in order to broadcast the message. This means that all of our controllers throughout our application will be able to subscribe to the messages that it broadcasts.&lt;/p&gt;
 
 &lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;someOtherCtrl&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;$scope&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;$scope&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;$on&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;search&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;event&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;$scope&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;$on&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'search'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;event&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
         &lt;span class=&quot;c1&quot;&gt;// args is the search results&lt;/span&gt;
         &lt;span class=&quot;c1&quot;&gt;// from the searchService&lt;/span&gt;
     &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
@@ -1089,8 +1093,8 @@ npm install --save-dev gulp
 &lt;/div&gt;
 </description>
         <pubDate>Mon, 16 Mar 2015 00:00:00 -0500</pubDate>
-        <link>http://brandonclapp.com/using-angularjs-services-to-broadcast-messages-between-controllers/</link>
-        <guid isPermaLink="true">http://brandonclapp.com/using-angularjs-services-to-broadcast-messages-between-controllers/</guid>
+        <link>http://localhost:4000/using-angularjs-services-to-broadcast-messages-between-controllers/</link>
+        <guid isPermaLink="true">http://localhost:4000/using-angularjs-services-to-broadcast-messages-between-controllers/</guid>
         
         <category>AngularJS</category>
         
@@ -1149,8 +1153,8 @@ enc_GroupPwd=595533KJL3KJ4L2K3J4LKJ2L...etc
 &lt;p&gt;&lt;img src=&quot;/assets/images/posts/content/vpn3.png&quot; alt=&quot;Add machine authentication&quot; target=&quot;_blank&quot; /&gt;&lt;/p&gt;
 </description>
         <pubDate>Sun, 15 Mar 2015 00:00:00 -0500</pubDate>
-        <link>http://brandonclapp.com/connecting-to-a-cisco-ipsec-vpn-on-mac-osx-with-a-pcf-file/</link>
-        <guid isPermaLink="true">http://brandonclapp.com/connecting-to-a-cisco-ipsec-vpn-on-mac-osx-with-a-pcf-file/</guid>
+        <link>http://localhost:4000/connecting-to-a-cisco-ipsec-vpn-on-mac-osx-with-a-pcf-file/</link>
+        <guid isPermaLink="true">http://localhost:4000/connecting-to-a-cisco-ipsec-vpn-on-mac-osx-with-a-pcf-file/</guid>
         
         <category>Cisco-IPSec</category>
         
@@ -1180,10 +1184,10 @@ enc_GroupPwd=595533KJL3KJ4L2K3J4LKJ2L...etc
             &lt;span class=&quot;n&quot;&gt;Microwave&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;microwave&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Microwave&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
             &lt;span class=&quot;n&quot;&gt;Refrigerator&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;refrigerator&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Refrigerator&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
 
-            &lt;span class=&quot;c1&quot;&gt;// Dad&#39;s purpose is to make lunch.
+            &lt;span class=&quot;c1&quot;&gt;// Dad's purpose is to make lunch.
 &lt;/span&gt;            &lt;span class=&quot;n&quot;&gt;Dad&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dad&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Dad&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;microwave&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;refrigerator&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
 
-            &lt;span class=&quot;c1&quot;&gt;// Kid&#39;s purpose is to play.
+            &lt;span class=&quot;c1&quot;&gt;// Kid's purpose is to play.
 &lt;/span&gt;            &lt;span class=&quot;c1&quot;&gt;// But they must eat first before they play.
 &lt;/span&gt;            &lt;span class=&quot;n&quot;&gt;Kid&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;kid&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Kid&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dad&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
 
@@ -1284,7 +1288,7 @@ enc_GroupPwd=595533KJL3KJ4L2K3J4LKJ2L...etc
 
 &lt;ol&gt;
 &lt;li&gt;If Dad had been constructing the Microwave and Refrigerator objects internally, a concrete implementation would have had to been created before he could make lunch. This means that when the new kitchen appliance models (concrete implementations) comes along, the creation of the appliances need to be changed in the Dad class. Imagine if the Microwave and Refrigerator were being used by the entire family and/or there were more than two appliances in the kitchen.&lt;/li&gt;
-&lt;li&gt;If Dad&#39;s constructor now takes interfaces instead of concrete implementations, nothing inside of the Dad class needs to change. The new model (concrete implementation) of IMicrowave should still know how to *Zap()* and the new concrete of IRefrigerator should still know how to hold an array of *Ingredient*&#39;s. So long as the new classes still implement the same interface, there shouldn&#39;t be any breaking changes.&lt;/li&gt;
+&lt;li&gt;If Dad's constructor now takes interfaces instead of concrete implementations, nothing inside of the Dad class needs to change. The new model (concrete implementation) of IMicrowave should still know how to *Zap()* and the new concrete of IRefrigerator should still know how to hold an array of *Ingredient*'s. So long as the new classes still implement the same interface, there shouldn't be any breaking changes.&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;h4 id=&quot;why-should-i-use-dependency-injection&quot;&gt;Why should I use dependency injection?&lt;/h4&gt;
@@ -1309,8 +1313,8 @@ enc_GroupPwd=595533KJL3KJ4L2K3J4LKJ2L...etc
 &lt;p&gt;Because of the con listed above, dependency injection frameworks were created to help with the creation of dependency objects. This is also known as &lt;strong&gt;inversion of control&lt;/strong&gt;, which I’ll cover in a follow up post.&lt;/p&gt;
 </description>
         <pubDate>Thu, 12 Mar 2015 00:00:00 -0500</pubDate>
-        <link>http://brandonclapp.com/what-is-dependency-injection-and-why-is-it-useful/</link>
-        <guid isPermaLink="true">http://brandonclapp.com/what-is-dependency-injection-and-why-is-it-useful/</guid>
+        <link>http://localhost:4000/what-is-dependency-injection-and-why-is-it-useful/</link>
+        <guid isPermaLink="true">http://localhost:4000/what-is-dependency-injection-and-why-is-it-useful/</guid>
         
         <category>Dependency-Injection</category>
         
@@ -1496,8 +1500,8 @@ A static class allows only static methods.&lt;/p&gt;
 &lt;/ul&gt;
 </description>
         <pubDate>Tue, 10 Mar 2015 00:00:00 -0500</pubDate>
-        <link>http://brandonclapp.com/what-is-a-singleton-how-do-i-implement-it-and-when-do-i-use-it/</link>
-        <guid isPermaLink="true">http://brandonclapp.com/what-is-a-singleton-how-do-i-implement-it-and-when-do-i-use-it/</guid>
+        <link>http://localhost:4000/what-is-a-singleton-how-do-i-implement-it-and-when-do-i-use-it/</link>
+        <guid isPermaLink="true">http://localhost:4000/what-is-a-singleton-how-do-i-implement-it-and-when-do-i-use-it/</guid>
         
         <category>Singleton</category>
         

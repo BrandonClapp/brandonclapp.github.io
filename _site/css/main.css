@@ -718,7 +718,7 @@ cite {
   text-align: right; }
 
 cite::before {
-  content: "ΓÇö ";
+  content: "— ";
   margin-left: -1em; }
 
 figure {
@@ -1023,18 +1023,28 @@ pre .diff .change {
     padding: 1em; }
 
 .banner-home {
-  background-image: url("/assets/images/bg2.JPG");
+  position: relative;
+  background-image: url("/assets/images/bg4.jpg");
   background-size: cover;
-  background-position: left top;
+  background-position: left bottom;
+  transition: background-position 5s;
+  background-color: #1b0e20;
   padding-top: 1px;
   height: 380px;
   border-bottom: 5px solid #457B9D; }
+  .banner-home:hover {
+    background-position: left top; }
+  .banner-home #particles {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 380px; }
   .banner-home .banner-film {
-    background: rgba(68, 64, 84, 0.7);
+    background: rgba(68, 64, 84, 0.5);
     height: 380px;
     transition: background .5s; }
     .banner-home .banner-film:hover {
-      background: rgba(68, 64, 84, 0.6); }
+      background: rgba(68, 64, 84, 0.3); }
   .banner-home .greetings {
     font-family: "Oswald", sans-serif;
     font-size: 48px;

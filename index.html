@@ -13,7 +13,7 @@ banner: home
                 <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
             </h2>
           <div class="post-exerpt">
-              {{ post.excerpt }}
+              <p>{{ post.content | strip_html | truncatewords: 70 }} <span><a  href="{{ post.url | prepend: site.baseurl }}">read more</a></span></p> 
           </div>
       </li>
       {% endfor %}
