@@ -12,7 +12,7 @@ banner: blog
       <div class="date">{{ post.date | date: "%b %-d, %Y" }}</div>
       <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
       <div class="excerpt">
-        {{ post.excerpt }}
+          {{ post.content | strip_html | truncatewords: 70 }}
       </div>
     </div>
     <hr />

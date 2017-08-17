@@ -665,7 +665,8 @@ a:focus {
 }
 
 hr {
-    $border-color: desaturate(lighten($color5, 40%), 40%);
+    // $border-color: desaturate(lighten($color5, 40%), 40%);
+    $border-color: $color4;
     border-bottom: 1px solid $border-color;
     border-left: 0;
     border-right: 0;

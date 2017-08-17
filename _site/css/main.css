@@ -61,7 +61,7 @@ a {
   a:hover,
   a :focus,
   a :visited {
-    color: #17BEBB; }
+    color: #41157a; }
 
 .pull-left {
   float: left; }
@@ -651,23 +651,23 @@ p {
   margin: 0 0 1.71rem; }
 
 a {
-  color: #DB3A3F;
+  color: #3B0086;
   text-decoration: none;
   transition: color 0.1s linear; }
 
 a:hover {
-  color: #bf2328; }
+  color: #250053; }
 
 a:active {
-  color: #bf2328;
+  color: #250053;
   outline: none; }
 
 a:focus {
-  outline-color: #bf2328;
+  outline-color: #250053;
   outline-offset: 2px; }
 
 hr {
-  border-bottom: 1px solid #bfe2e2;
+  border-bottom: 1px solid #457B9D;
   border-left: 0;
   border-right: 0;
   border-top: 0;
@@ -880,7 +880,7 @@ pre .diff .change {
 /* Header */
 .site-header {
   height: 80px;
-  border-bottom: 3px solid #17BEBB;
+  border-bottom: 3px solid #41157a;
   background: url("/assets/images/agsquare.png"); }
   @media (max-width: 1000px) {
     .site-header {
@@ -972,15 +972,15 @@ pre .diff .change {
 .contact-block-wrapper {
   font-family: brandon-grotesque, HelveticaNeue-Light, "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   background: url("/assets/images/gplaypattern.png");
-  border-top: 1px solid #bfe2e2;
-  border-bottom: 1px solid #bfe2e2; }
+  border-top: 1px solid #aa95c6;
+  border-bottom: 1px solid #aa95c6; }
   .contact-block-wrapper .contact-block {
     text-align: center;
     max-width: 500px;
     margin: 0 auto;
     padding: 1em 0; }
     .contact-block-wrapper .contact-block .footer-heading {
-      color: #17BEBB;
+      color: #41157a;
       font-size: 2.2em;
       font-weight: 400;
       margin: .75em; }
@@ -1004,7 +1004,7 @@ pre .diff .change {
 
 .site-footer {
   margin-top: 15px;
-  border-top: 1px solid #bfe2e2;
+  border-top: 1px solid #aa95c6;
   background: url("/assets/images/blu_stripes.png");
   font-family: brandon-grotesque, HelveticaNeue-Light, "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; }
   .site-footer .disclaimer {
@@ -1026,8 +1026,8 @@ pre .diff .change {
   position: relative;
   background-image: url("/assets/images/bg4.jpg");
   background-size: cover;
-  background-position: left bottom;
-  transition: background-position 5s;
+  background-position: left center;
+  transition: background-position 3s;
   background-color: #1b0e20;
   padding-top: 1px;
   height: 380px;
@@ -1040,11 +1040,11 @@ pre .diff .change {
     right: 0;
     height: 380px; }
   .banner-home .banner-film {
-    background: rgba(68, 64, 84, 0.5);
+    background: rgba(27, 14, 32, 0.7);
     height: 380px;
     transition: background .5s; }
     .banner-home .banner-film:hover {
-      background: rgba(68, 64, 84, 0.3); }
+      background: rgba(27, 14, 32, 0.9); }
   .banner-home .greetings {
     font-family: "Oswald", sans-serif;
     font-size: 48px;
@@ -1065,48 +1065,58 @@ pre .diff .change {
     padding-top: 20px; }
 
 .banner-about {
-  background-image: url("/assets/images/bg1.JPG");
+  position: relative;
+  background-image: url("/assets/images/bg3.jpg");
   background-size: cover;
-  background-position: left top;
+  background-position: left center;
+  transition: background-position 3s;
+  background-color: #1b0e20;
   padding-top: 1px;
-  height: 200px;
+  height: 250px;
   border-bottom: 5px solid #457B9D; }
+  .banner-about:hover {
+    background-position: left top; }
+  .banner-about #particles {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 250px; }
   .banner-about .banner-film {
-    background: rgba(68, 64, 84, 0.7);
-    height: 200px;
+    background: rgba(27, 14, 32, 0.7);
+    height: 250px;
     transition: background .5s; }
     .banner-about .banner-film:hover {
-      background: rgba(68, 64, 84, 0.6); }
-    .banner-about .banner-film #about-me {
-      width: 460px;
-      font-size: 3em;
-      font-weight: 300;
-      margin: 0 auto;
-      padding-top: 1.2em;
-      box-sizing: border-box;
-      color: #F1FAEE;
-      font-family: "Oswald", sans-serif;
-      text-transform: uppercase;
-      text-align: center;
-      text-shadow: 3px 3px 2px rgba(150, 150, 150, 0.75); }
-      @media (max-width: 500px) {
-        .banner-about .banner-film #about-me {
-          width: 100%;
-          font-size: 2em; } }
-    .banner-about .banner-film #tagline {
-      margin: 0 auto;
-      width: 460px;
-      text-align: center;
-      color: #7fefed;
-      font-family: "Oswald", sans-serif;
-      text-transform: uppercase;
-      font-size: 1.4em;
-      box-sizing: border-box;
-      padding-top: 1em; }
-      @media (max-width: 500px) {
-        .banner-about .banner-film #tagline {
-          width: 100%;
-          font-size: 1em; } }
+      background: rgba(27, 14, 32, 0.9); }
+  .banner-about #about-me {
+    width: 460px;
+    font-size: 3em;
+    font-weight: 300;
+    margin: 0 auto;
+    padding-top: 1.2em;
+    box-sizing: border-box;
+    color: #F1FAEE;
+    font-family: "Oswald", sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    text-shadow: 3px 3px 2px rgba(150, 150, 150, 0.75); }
+    @media (max-width: 500px) {
+      .banner-about #about-me {
+        width: 100%;
+        font-size: 2em; } }
+  .banner-about #tagline {
+    margin: 0 auto;
+    width: 460px;
+    text-align: center;
+    color: #8a48e0;
+    font-family: "Oswald", sans-serif;
+    text-transform: uppercase;
+    font-size: 1.4em;
+    box-sizing: border-box;
+    padding-top: 1em; }
+    @media (max-width: 500px) {
+      .banner-about #tagline {
+        width: 100%;
+        font-size: 1em; } }
 
 .banner-contact {
   background-image: url("/assets/images/bg1.JPG");
@@ -1141,7 +1151,7 @@ pre .diff .change {
       margin: 0 auto;
       width: 460px;
       text-align: center;
-      color: #7fefed;
+      color: #8a48e0;
       font-family: "Oswald", sans-serif;
       text-transform: uppercase;
       font-size: 1.4em;
@@ -1185,7 +1195,7 @@ pre .diff .change {
       margin: 0 auto;
       width: 580px;
       text-align: center;
-      color: #7fefed;
+      color: #8a48e0;
       font-family: "Oswald", sans-serif;
       text-transform: uppercase;
       font-size: 1.4em;
@@ -1222,7 +1232,7 @@ pre .diff .change {
   max-width: 1000px;
   margin: 0 auto; }
   #latest-posts h3 {
-    color: #17BEBB;
+    color: #41157a;
     margin-bottom: .5em;
     font-size: 20px;
     font-weight: 300;
@@ -1242,7 +1252,7 @@ ul.post-list {
   padding: 0; }
   ul.post-list .post .post-title {
     font-size: 22px;
-    font-weight: 300; }
+    font-weight: 400; }
   ul.post-list .post .post-meta {
     padding: 10px 0; }
 
@@ -1302,9 +1312,9 @@ ul.post-list {
   .contact #contact-form button#send {
     width: 100px;
     text-align: center;
-    background: #DB3A3F; }
+    background: #3B0086; }
     .contact #contact-form button#send:disabled {
-      background: #ac696b; }
+      background: #3e1b6b; }
     @media (max-width: 500px) {
       .contact #contact-form button#send {
         width: 100%; } }
@@ -1314,7 +1324,7 @@ ul.post-list {
 .categories ul {
   margin: 1em 0 1em 1em; }
 .categories .category-list a {
-  border-bottom: 1px dotted #DB3A3F;
+  border-bottom: 1px dotted #3B0086;
   padding-bottom: .2em; }
 .categories .category-details .category-post {
   margin-left: 1em; }
@@ -1322,7 +1332,7 @@ ul.post-list {
 .tags ul {
   margin: 1em 0 1em 1em; }
 .tags .tag-list a {
-  border-bottom: 1px dotted #DB3A3F;
+  border-bottom: 1px dotted #3B0086;
   padding-bottom: .2em; }
 .tags .tag-details .tag-post {
   margin-left: 1em; }
@@ -1479,7 +1489,7 @@ ul.post-list {
     font-weight: 300;
     margin-bottom: 0.7em; }
     #resume .employment-history .job .employer .job-title {
-      color: #DB3A3F; }
+      color: #3B0086; }
   #resume .employment-history .job:nth-child(even) {
     background-color: #efedff; }
   #resume .employment-history .job .tech-summary .tech-used {

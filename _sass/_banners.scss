@@ -1,57 +1,12 @@
-// .banner-home {
-//     $home-banner-height: 380px;
-
-//     background-image: url('/assets/images/bg2.JPG');
-//     background-size: cover;
-//     background-position: left top;
-//     padding-top: 1px;
-//     height: $home-banner-height;
-//     border-bottom: 5px solid $color4;
-
-//     .banner-film {
-//         background: rgba(68,64,84, 0.7);
-//         height: $home-banner-height;
-//         transition: background .5s;
-
-//         &:hover {
-//           background: rgba(68,64,84, 0.6);
-//         }
-//     }
-
-//     .greetings {
-//       font-family: $font1;
-//         font-size: 48px;
-//         text-transform: uppercase;
-//         color: white;
-//         text-align: center;
-//         padding-top: 80px;
-//         text-shadow: 3px 3px 2px rgba(150, 150, 150, 0.75);
-
-//         @media screen and (max-width: 500px) {
-//             font-size: 32px;
-//         }
-//     }
-
-//     #tagline {
-//       font-family: $font1;
-//       font-weight: 200;
-//       font-size: 24px;
-//       color: white;
-//       text-align: center;
-//       padding-top: 20px;
-//     }
-// }
 $home-banner-height: 380px;
-
-
 
 .banner-home {
   
   position: relative;
   background-image: url('/assets/images/bg4.jpg');
   background-size: cover;
-  background-position: left bottom;
-  transition: background-position 5s;
+  background-position: left center;
+  transition: background-position 3s;
 
   background-color: #1b0e20;
   padding-top: 1px;
@@ -70,12 +25,12 @@ $home-banner-height: 380px;
   }
 
   .banner-film {
-      background: rgba(68,64,84, 0.5);
+      background: rgba(27,14,32, 0.7);
       height: $home-banner-height;
       transition: background .5s;
 
       &:hover {
-        background: rgba(68,64,84, 0.3);
+        background: rgba(27,14,32, 0.9);
       }
   }
 
@@ -104,26 +59,98 @@ $home-banner-height: 380px;
 }
 
 
-.banner-about {
-  $about-banner-height: 200px;
+// .banner-about {
+//   $about-banner-height: 200px;
 
-  background-image: url('/assets/images/bg1.JPG');
+//   background-image: url('/assets/images/bg1.JPG');
+//   background-size: cover;
+//   background-position: left top;
+//   padding-top: 1px;
+//   height: $about-banner-height;
+//   border-bottom: 5px solid $color4;
+
+//   .banner-film {
+//       background: rgba(68,64,84, 0.7);
+//       height: $about-banner-height;
+//       transition: background .5s;
+
+//       &:hover {
+//         background: rgba(68,64,84, 0.6);
+//       }
+
+//       #about-me {
+//         width: 460px;
+//         font-size: 3em;
+//         font-weight: 300;
+//         margin: 0 auto;
+//         padding-top: 1.2em;
+//         box-sizing: border-box;
+//         color: $color2;
+//         font-family: $font1;
+//         text-transform: uppercase;
+//         text-align: center;
+//         text-shadow: 3px 3px 2px rgba(150, 150, 150, 0.75);
+
+//         @media (max-width: $breakpoint-mobile) {
+//             width: 100%;
+//             font-size:2em;
+//         }
+//       }
+
+//       #tagline {
+//         margin: 0 auto;
+//         width: 460px;
+//         text-align: center;
+//         color: lighten($color5, 30%);
+//         font-family: $font1;
+//         text-transform: uppercase;;
+//         font-size: 1.4em;
+//         box-sizing: border-box;
+//         padding-top: 1em;
+
+//         @media (max-width: $breakpoint-mobile) {
+//             width: 100%;
+//             font-size:1em;
+//         }
+//       }
+//   }
+// }
+
+.banner-about {
+  $about-banner-height: 250px;
+  position: relative;
+  background-image: url('/assets/images/bg3.jpg');
   background-size: cover;
-  background-position: left top;
+  background-position: left center;
+  transition: background-position 3s;
+
+  background-color: #1b0e20;
   padding-top: 1px;
   height: $about-banner-height;
   border-bottom: 5px solid $color4;
 
+  &:hover {
+    background-position: left top;
+  }
+
+  #particles {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: $about-banner-height;
+  }
+
   .banner-film {
-      background: rgba(68,64,84, 0.7);
+      background: rgba(27,14,32, 0.7);
       height: $about-banner-height;
       transition: background .5s;
 
       &:hover {
-        background: rgba(68,64,84, 0.6);
+        background: rgba(27,14,32, 0.9);
       }
+  }
 
-      #about-me {
+       #about-me {
         width: 460px;
         font-size: 3em;
         font-weight: 300;
@@ -158,7 +185,6 @@ $home-banner-height: 380px;
             font-size:1em;
         }
       }
-  }
 }
 
 
