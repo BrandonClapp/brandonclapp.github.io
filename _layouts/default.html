@@ -4,8 +4,16 @@
   <body>
     {% include header.html %}
     <div class="page">
+
+      {% if layout.banner %}
+      {% assign banner = layout.banner %}
+      {% endif %}
+
       {% if page.banner %}
       {% assign banner = page.banner %}
+      {% endif %}
+
+      {% if banner %}
       {% include banners/{{banner}}.html %}
       {% endif %}
 

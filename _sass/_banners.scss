@@ -148,3 +148,53 @@ $home-banner-height: 380px;
     background-position: left top;
   }
 }
+
+.post-banner {
+  $banner-height: 85px;
+  position: relative;
+  
+  transition: background-position 3s;
+
+  background-color: #1b0e20;
+  // padding-top: 1px;
+  height: $banner-height;
+  border-bottom: 5px solid $color4;
+
+  &:hover {
+    background-position: left top;
+  }
+
+  #particles {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: $banner-height;
+  }
+
+  .banner-film {
+      background: rgba(27,14,32, 0.7);
+      height: $banner-height;
+      transition: background .5s;
+
+      &:hover {
+        background: rgba(27,14,32, 0.9);
+      }
+  }
+
+      #tagline {
+        margin: 0 auto;
+        // width: 460px;
+        text-align: center;
+        color: lighten($color5, 30%);
+        font-family: $font1;
+        text-transform: uppercase;;
+        font-size: 1.4em;
+        box-sizing: border-box;
+        padding-top: 1em;
+
+        @media (max-width: $breakpoint-mobile) {
+            width: 100%;
+            font-size:1em;
+        }
+      } 
+}
