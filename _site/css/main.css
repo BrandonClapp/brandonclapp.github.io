@@ -1136,16 +1136,13 @@ pre .diff .change {
 .post-banner {
   position: relative;
   transition: background-position 3s;
-  background-color: #1b0e20;
+  background-image: url("/assets/images/keys.jpg");
+  background-size: cover;
+  background-position: left bottom;
   height: 85px;
   border-bottom: 5px solid #457B9D; }
   .post-banner:hover {
     background-position: left top; }
-  .post-banner #particles {
-    position: absolute;
-    left: 0;
-    right: 0;
-    height: 85px; }
   .post-banner .banner-film {
     background: rgba(27, 14, 32, 0.7);
     height: 85px;

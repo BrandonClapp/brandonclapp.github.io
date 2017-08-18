@@ -155,7 +155,9 @@ $home-banner-height: 380px;
   
   transition: background-position 3s;
 
-  background-color: #1b0e20;
+  background-image: url('/assets/images/keys.jpg');
+  background-size: cover;
+  background-position: left bottom;
   // padding-top: 1px;
   height: $banner-height;
   border-bottom: 5px solid $color4;
@@ -164,12 +166,12 @@ $home-banner-height: 380px;
     background-position: left top;
   }
 
-  #particles {
-    position: absolute;
-    left: 0;
-    right: 0;
-    height: $banner-height;
-  }
+  // #particles {
+  //   position: absolute;
+  //   left: 0;
+  //   right: 0;
+  //   height: $banner-height;
+  // }
 
   .banner-film {
       background: rgba(27,14,32, 0.7);
