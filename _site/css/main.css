@@ -1443,12 +1443,14 @@ ul.post-list {
   padding: 1em; }
   #resume .employment-history .job .employer {
     font-size: 24px;
-    font-weight: 300;
+    font-weight: 400;
     margin-bottom: 0.7em; }
     #resume .employment-history .job .employer .job-title {
       color: #197BBD; }
   #resume .employment-history .job:nth-child(even) {
     background-color: #efedff; }
+  #resume .employment-history .job .job-info .location {
+    margin-left: 1em; }
   #resume .employment-history .job .tech-summary .tech-used {
     font-weight: 300;
     font-size: 20px;
