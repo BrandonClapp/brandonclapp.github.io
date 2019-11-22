@@ -10,7 +10,7 @@ banner: home
       <li class="post">
           <div class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</div>
           <h2 class="post-title">
-                <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">Test {{ post.title }}</a>
+                <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
             </h2>
           <div class="post-exerpt">
               <p>{{ post.content | strip_html | truncatewords: 70 }} <span><a  href="{{ post.url | prepend: site.baseurl }}">read more</a></span></p> 
